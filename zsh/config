@@ -38,6 +38,8 @@ setopt HIST_REDUCE_BLANKS
 zle -N newtab
 
 bindkey -v
+bindkey -M viins '^r' history-incremental-search-backward
+bindkey -M vicmd '^r' history-incremental-search-backward
 
 # bindkey '^[^[[D' backward-word
 # bindkey '^[^[[C' forward-word

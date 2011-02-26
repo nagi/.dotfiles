@@ -22,9 +22,6 @@
 [submodule "vim/bundle/markdown-preview"]
 	path = vim/bundle/markdown-preview
 	url = git://github.com/robgleeson/vim-markdown-preview.git
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = git://github.com/wycats/nerdtree.git
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = git://github.com/ddollar/nerdcommenter.git

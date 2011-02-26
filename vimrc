@@ -37,8 +37,8 @@ set laststatus=2
 set noequalalways
 
 " NERDTree configuration
-let NERDTreeIgnore=['\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
+"let NERDTreeIgnore=['\.rbc$', '\~$']
+"map <Leader>n :NERDTreeToggle<CR>
 
 " Command-T configuration
 let g:CommandTMaxHeight=20

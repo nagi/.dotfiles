@@ -115,6 +115,10 @@ color desert
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
+" netrw settings
+let g:netrw_preview = 1 " preview window shown in a vertically split
+let g:netrw_winsize = 40
+
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local

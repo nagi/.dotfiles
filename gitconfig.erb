@@ -2,14 +2,18 @@
 	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
+  ci = commit -v
 	co = checkout
 [color]
-	diff = auto
-	status = auto
 	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	pager = true
+	ui = true
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mvim -f
+	editor = vim
 	autocrlf = input
 [apply]
 	whitespace = nowarn
@@ -18,3 +22,16 @@
 [github]
 	user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
 	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
+[remote "copy"]
+	url = git@heroku.com:copy-victoria.git
+	fetch = +refs/heads/*:refs/remotes/copy/*
+[remote "staging"]
+	url = git@heroku.com:staging-victoria.git
+	fetch = +refs/heads/*:refs/remotes/staging/*
+[remote "design"]
+	url = git@heroku.com:design-victoria.git
+	fetch = +refs/heads/*:refs/remotes/design/*
+[remote "production"]
+	url = git@heroku.com:victoria.git
+	fetch = +refs/heads/*:refs/remotes/production/*
+

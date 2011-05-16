@@ -1,18 +1,27 @@
 # cd
+alias .='cd .' # Loads rvm in new tab
 alias ..='cd ..'
+alias cdv='cd /home/nagi/rails/victoria' 
 
 # ls
-alias ls="ls -F"
+alias ls="ls --color=auto"
 alias l="ls -lAh"
 alias ll="ls -l"
-alias la='ls -A'
+alias la="ls -A"
+
+# grep
+alias grep='grep --color=auto'
 
 # git
-alias gl='git pull'
+alias ga='git add .'
+alias gl='git log'
+alias gpl='git pull'
+alias gplr='git pull --rebase'
 alias gp='git push'
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'
+alias gci='git commit -v'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
@@ -20,14 +29,26 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
 # rails
+alias rc='rails console --debugger'
+alias rs='rails server --debugger'
+alias rsn='rails server nano'
 alias sc='script/console'
 alias ss='script/server'
 alias sg='script/generate'
-alias a='autotest -rails'
+alias a='autotest'
 alias tlog='tail -f log/development.log'
 alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 
+alias hcd='heroku console --app design-victoria'
+alias hcs='heroku console --app staging-victoria'
+alias hcc='heroku console --app copy-victoria'
+alias hcv='heroku console --app victoria'
+
+alias hconfigd='heroku config --app design-victoria'
+alias hconfigs='heroku config --app staging-victoria'
+alias hconfigc='heroku config --app copy-victoria'
+alias hconfigv='heroku config --app victoria'
 # commands starting with % for pasting from web
-alias %=' '
+# alias %=' '

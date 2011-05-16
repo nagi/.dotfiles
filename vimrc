@@ -11,8 +11,9 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
-let mapleader = "\"
-let g:mapleader = "\"
+" Leave as \
+"let mapleader = ","
+"let g:mapleader = ","
 
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
@@ -29,7 +30,7 @@ set cmdheight=2
 set encoding=utf-8
 
 " Whitespace stuff
-set nowrap
+set wrap
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2

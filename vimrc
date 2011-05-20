@@ -73,8 +73,10 @@ set magic
 map <silent> <leader><cr> :noh<cr>
 
 " Use the arrows to something usefull
-map <right> :bn<cr>
-map <left> :bp<cr>
+map <s-right> :tabnext<cr>
+map <s-left> :tabNext<cr>
+map <s-up> :tabnew<cr>
+map <s-down> :tabclose<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Cope
@@ -175,9 +177,19 @@ let g:speckyRunRdocCmd = "fri -L -f plain"
 let g:speckyWindowType = 2
 " **********
 
+map <leader>s <Esc>:w<CR>
+map <leader>a <Esc>ggVG<CR>
+map <leader>x <Esc>"+x<CR>
+map <leader>c <Esc>"+y<CR>
+map <leader>p <Esc>"+gP<CR>
+map <leader>v <Esc>"+gP<CR>
+
+" CommandT
+map <leader>t <Esc>:CommandT<CR>
+
 " Pretty JSON
 " sudo cpan JSON::XS
-map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
+map <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e

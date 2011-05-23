@@ -5,7 +5,9 @@ export ZLSCOLORS="${LS_COLORS}"
 if [[ -n $SSH_CONNECTION ]]; then
   export PS1='%m:%3~$(git_info_for_prompt)%# '
 else
-  export PS1='%3~$(git_info_for_prompt)%# '
+  #export PS1='%3~$(git_info_for_prompt)%# '
+  #export PS1='%K{white}%F{red}<red on white>%f%k<default colours>'
+  export PS1='%F{yellow}%3~$(git_info_for_prompt)%f%k%# '
 fi
 
 export EDITOR='vim'

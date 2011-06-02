@@ -93,6 +93,7 @@ set noequalalways
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
+let g:CommandTMaxFiles=40000
 
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>

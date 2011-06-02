@@ -2,8 +2,9 @@
 require 'irb/completion'
 require 'irb/ext/save-history'
 require 'rubygems'
-require 'looksee'
+#require 'looksee/shortcuts'
 require 'wirble'
+require 'awesome_print'
 
 Wirble.init
 Wirble.colorize

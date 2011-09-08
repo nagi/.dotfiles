@@ -30,3 +30,60 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/home/nagi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/nagi/android/bin/android-sdk-linux_x86/platform-tools:/home/nagi/.rvm/bin
+
+################################################################################
+## aliases
+################################################################################
+# cd
+alias ..='cd ..'
+alias cdv='cd /home/nagi/rails/victoria' 
+alias cdq='cd /home/nagi/rails/Quipper-Entry-System' 
+
+# ls
+# alias ls="ls --color=auto"
+alias l="ls -lAh"
+alias ll="ls -l"
+alias la="ls -A"
+
+# grep
+# alias grep='grep --color=auto'
+
+# git
+alias ga='git add .'
+alias gl='git log'
+alias gpl='git pull'
+alias gplr='git pull --rebase'
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gci='git commit -v'
+alias gco='git checkout'
+alias gb='git branch'
+alias gs='git status'
+alias grm="git ls-files --deleted | xargs git rm"
+alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
+
+# rails
+alias rc='rails console --debugger'
+alias rs='rails server --debugger'
+alias rp='RAILS_ENV=production rails server thin'
+alias sc='script/console'
+alias ss='script/server'
+alias sg='script/generate'
+alias a='autotest'
+alias tld='tail -f log/development.log'
+alias tlt='tail -f log/test.log'
+
+alias hcc='heroku console --app copy-victoria'
+alias hcv='heroku console --app victoria'
+alias hcq='heroku console --app quipper-entry-system'
+
+alias hconfigc='heroku config --app copy-victoria'
+alias hconfigv='heroku config --app victoria'
+alias hconfigq='heroku config --app quipper-entry-system'
+
+################################################################################
+## rvm
+################################################################################
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

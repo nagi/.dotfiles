@@ -136,11 +136,6 @@ set backspace=indent,eol,start
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
-" **************************
-" My Old Keyboard Mappings
-" **********
-imap <S-CR> <Esc>
-imap jj <Esc>
 " **********
 map Y y$
 " **********
@@ -222,14 +217,3 @@ colorscheme jellybeans
 "Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
-
-" netrw settings
-let g:netrw_preview = 1 " preview window shown in a vertically split
-let g:netrw_winsize = 40
-
-
-" Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif
-

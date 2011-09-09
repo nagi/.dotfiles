@@ -11,8 +11,8 @@ import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
 myManageHook = composeAll
-    [ className =? "GNU Image Manipulation Program"      --> doFloat
-    [ className =? "Toolbox"      --> doFloat
+    [ className =? "GNU Image Manipulation Program" --> doFloat
+    , className =? "Toolbox" --> doFloat
     , className =? "screenruler" --> doFloat
     , className =? "Vncviewer" --> doFloat
     , className =? "VirtualBox" --> doFloat

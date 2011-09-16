@@ -5,7 +5,14 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+#
+#  Themes with time since last commit...
+# ./wedisagree.zsh-theme
+# ./Soliah.zsh-theme
+# ./dogenpunk.zsh-theme
+# ./smt.zsh-theme
+#
+ZSH_THEME="smt"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -24,7 +31,7 @@ ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby rails3 rvm vi-mode)
+plugins=(git git-flow ruby rails3 rvm vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 

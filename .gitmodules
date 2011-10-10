@@ -78,4 +78,4 @@
 	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "bash-it"]
 	path = bash-it
-	url = https://github.com/revans/bash-it.git
+	url = git://github.com/nagi/bash-it.git

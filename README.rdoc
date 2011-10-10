@@ -13,15 +13,4 @@ These are config files to set up a system the way I like it.
 
 == For Bash it
 
-modify install.sh
-
-#!/usr/bin/env bash
--BASH="$HOME/.bash_it"
-+BASH="$HOME/dotfiles/bash-it"
-
-modify bash_profile.template.bash
- 
--source $BASH/bash_it.sh
-+source $BASH/dotfiles/bash_it.sh
-
-run install.sh
+Run install.sh to set up links to aliases / plugins etc.

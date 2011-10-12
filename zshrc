@@ -12,7 +12,7 @@ ZSH=$HOME/.oh-my-zsh
 # ./dogenpunk.zsh-theme
 # ./smt.zsh-theme
 #
-ZSH_THEME="smt"
+ZSH_THEME="wedisagree"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -81,14 +81,6 @@ alias sg='script/generate'
 alias a='autotest'
 alias tld='tail -f log/development.log'
 alias tlt='tail -f log/test.log'
-
-alias hcc='heroku console --app copy-victoria'
-alias hcv='heroku console --app victoria'
-alias hcq='heroku console --app quipper-entry-system'
-
-alias hconfigc='heroku config --app copy-victoria'
-alias hconfigv='heroku config --app victoria'
-alias hconfigq='heroku config --app quipper-entry-system'
 
 ################################################################################
 ## rvm

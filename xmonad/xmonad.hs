@@ -24,8 +24,8 @@ main = do
         { modMask            = mod5Mask
         , borderWidth        = 6
         , terminal           = "gnome-terminal"
-        , normalBorderColor  = "#cccccc"
-        , focusedBorderColor = "#2211EE" 
+        , normalBorderColor  = "#CCCCCC"
+        , focusedBorderColor = "#035EF3" 
         , manageHook = manageDocks <+> myManageHook -- make sure to include myManageHook definition from above
                         <+> manageHook defaultConfig
         , layoutHook = avoidStruts  $  layoutHook defaultConfig

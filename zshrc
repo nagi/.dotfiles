@@ -36,8 +36,15 @@ plugins=(git git-flow ruby rails3 rvm vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/home/nagi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/nagi/android/bin/android-sdk-linux_x86/platform-tools:/home/nagi/.rvm/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/home/nagi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/android-sdk-linux_x86/tools:/opt/android-sdk-linux_x86/platform-tools:/home/nagi/.rvm/bin
 
+################################################################################
+## Debain / Ubuntu / Mint command not found
+################################################################################
+if [ -f /etc/zsh_command_not_found ]
+  then
+    . /etc/zsh_command_not_found
+fi
 ################################################################################
 ## aliases
 ################################################################################

@@ -49,7 +49,6 @@ fi
 ## aliases
 ################################################################################
 # cd
-alias ..='cd ..'
 alias cdv='cd /home/nagi/rails/victoria' 
 alias cdq='cd /home/nagi/rails/Quipper-Entry-System' 
 

@@ -22,16 +22,3 @@
 [github]
 	user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
 	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
-[remote "copy"]
-	url = git@heroku.com:copy-victoria.git
-	fetch = +refs/heads/*:refs/remotes/copy/*
-[remote "staging"]
-	url = git@heroku.com:staging-victoria.git
-	fetch = +refs/heads/*:refs/remotes/staging/*
-[remote "design"]
-	url = git@heroku.com:design-victoria.git
-	fetch = +refs/heads/*:refs/remotes/design/*
-[remote "production"]
-	url = git@heroku.com:victoria.git
-	fetch = +refs/heads/*:refs/remotes/production/*
-

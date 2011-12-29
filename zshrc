@@ -12,13 +12,13 @@ ZSH=$HOME/.oh-my-zsh
 # ./dogenpunk.zsh-theme
 # ./smt.zsh-theme
 #
-ZSH_THEME="smt"
+ZSH_THEME="wedisagree"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -36,13 +36,19 @@ plugins=(git git-flow ruby rails3 rvm vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/home/nagi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/nagi/android/bin/android-sdk-linux_x86/platform-tools:/home/nagi/.rvm/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/home/nagi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/android-sdk-linux_x86/tools:/opt/android-sdk-linux_x86/platform-tools:/home/nagi/.rvm/bin:/usr/local/zend/bin
 
+################################################################################
+## Debain / Ubuntu / Mint command not found
+################################################################################
+if [ -f /etc/zsh_command_not_found ]
+  then
+    . /etc/zsh_command_not_found
+fi
 ################################################################################
 ## aliases
 ################################################################################
 # cd
-alias ..='cd ..'
 alias cdv='cd /home/nagi/rails/victoria' 
 alias cdq='cd /home/nagi/rails/Quipper-Entry-System' 
 
@@ -81,14 +87,6 @@ alias sg='script/generate'
 alias a='autotest'
 alias tld='tail -f log/development.log'
 alias tlt='tail -f log/test.log'
-
-alias hcc='heroku console --app copy-victoria'
-alias hcv='heroku console --app victoria'
-alias hcq='heroku console --app quipper-entry-system'
-
-alias hconfigc='heroku config --app copy-victoria'
-alias hconfigv='heroku config --app victoria'
-alias hconfigq='heroku config --app quipper-entry-system'
 
 ################################################################################
 ## rvm

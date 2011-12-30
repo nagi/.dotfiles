@@ -10,17 +10,20 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
-" Leave as \
-"let mapleader = ","
-"let g:mapleader = ","
+" Directories for swp files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
+set number
+set ruler
 
-nmap <leader>v :tabedit $MYVIMRC<CR>
-
+" Use modeline overrides
+set modeline
+set modelines=10
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set number
-set ruler
+" Default color scheme
+colorscheme jellybeans
 syntax on
 
 set cmdheight=2
@@ -54,23 +57,6 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%0
 "Set magic on, for regular expressions
 set magic
 
-" remove the search highlight
-map <silent> <leader><cr> :noh<cr>
-
-" Use the arrows to something usefull
-map <s-right> :tabnext<cr>
-map <s-left> :tabNext<cr>
-map <s-up> :tabnew<cr>
-map <s-down> :tabclose<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Cope
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Do :help cope if you are unsure what cope is. It's super useful!
-map <leader>cc :bo cope<cr>
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
-
 " Without setting this, ZoomWin restores windows in a way that causes
 " equalalways behavior to be triggered the next time CommandT is used.
 " This is likely a bludgeon to solve some other issue, but it works
@@ -80,92 +66,78 @@ set noequalalways
 let g:CommandTMaxHeight=20
 let g:CommandTMaxFiles=60000
 
-" ZoomWin configuration
-map <Leader><Leader> :ZoomWin<CR>
-
-" CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-
 " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
 
-function! s:setupWrapping()
-  set wrap
-  set wm=2
-  set textwidth=72
-endfunction
-
-function! s:setupMarkup()
-  call s:setupWrapping()
-  map <buffer> <Leader>p :Mm <CR>
-endfunction
-
 " make and python use real tabs
-au FileType make                                     set noexpandtab
-au FileType python                                   set noexpandtab
+au FileType make set noexpandtab
+au FileType python set noexpandtab
 
 " Thorfile, Rakefile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 
-" md, markdown, and mk are markdown and define buffer-local preview
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
-
-au BufRead,BufNewFile *.txt call s:setupWrapping()
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
-" **********
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map Y y$
 " **********
-map <leader>1 <Esc>:Rmodel<CR>
-map <leader>2 <Esc>:Rcontroller<CR>
-map <leader>3 <Esc>:Rview<CR>
+map <leader>1 <esc>:Rmodel<cr>
+map <leader>2 <esc>:Rcontroller<cr>
+map <leader>3 <esc>:Rview<cr>
 " **********
-map <leader>n <Esc>:NERDTree<CR>
+map <leader>n <esc>:NERDTree<cr>
 " **********
-map <leader>s <Esc>:w<CR>
-map <leader>a <Esc>ggVG<CR>
-map <leader>x <Esc>"+x<CR>
-map <leader>c <Esc>"+y<CR>
-map <leader>p <Esc>"+gP<CR>
-map <leader>v <Esc>"+gP<CR>
+map <leader>s <esc>:w<cr>
+map <leader>a <esc>ggVG<cr>
+map <leader>x <esc>"+x<cr>
+map <leader>c <esc>"+y<cr>
+map <leader>p <esc>"+gP<cr>
+map <leader>v <esc>"+gP<cr>
 " **********
-map <leader>t <Esc>:CommandT<CR>
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
+map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
+map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
+map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
 
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+" swap to last buffer
+map <silent> <leader><cr> <esc><C-^><cr>
 
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+" Use the arrows to manage tabs
+map <s-right> :tabnext<cr>
+map <s-left> :tabNext<cr>
+map <s-up> :tabnew<cr>
+map <s-down> :tabclose<cr>
 
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
 
 " Unimpaired configuration
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nmap <c-Up> [e
+nmap <c-Down> ]e
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vmap <c-Up> [egv
+vmap <c-Down> ]egv
 
-" Use modeline overrides
-set modeline
-set modelines=10
+" ZoomWin configuration
+map <Leader><Leader> :ZoomWin<cr>
 
-" Default color scheme
-colorscheme jellybeans
+" CTags
+map <Leader>rt :!ctags --extra=+f -R *<cr><cr>
 
-"Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
+" TODO Learn cope
+map <leader>cc :bo cope<cr>
+map <leader>n :cn<cr>
+map <leader>p :cp<cr>

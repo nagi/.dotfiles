@@ -124,53 +124,20 @@ filetype plugin indent on
 " **********
 map Y y$
 " **********
-map <F2> :w<CR>
-imap <F2> <Esc>:w<CR>
-map <F3> :wa<CR>
-imap <F3> <Esc>:wa<CR>
+map <leader>1 <Esc>:Rmodel<CR>
+map <leader>2 <Esc>:Rcontroller<CR>
+map <leader>3 <Esc>:Rview<CR>
 " **********
-" map <F5> :!nanoc compile<CR>
-" imap <F5> <Esc>:!nanoc compile<CR>
+map <leader>n <Esc>:NERDTree<CR>
 " **********
-map <F7> :Rmodel<CR>
-imap <F7> <Esc>:Rmodel<CR>
-map <F8> :Rcontroller<CR>
-imap <F8> <Esc>:Rcontroller<CR>
-map <F9> :Rview 
-imap <F9> <Esc>:Rview 
-" **********
-map <F10> :CommandT<CR>
-imap <F10> <Esc>:CommandT<CR>
-" **********
-map <F11> :NERDTreeToggle<CR>
-imap <F11> <Esc>:NERDTreeToggle<CR>
-map <F12> :NERDTree<CR>
-imap <F12> <Esc>:NERDTree<CR>
-" Specky
-" **********
-let g:speckyBannerKey = "<C-S>b"
-let g:speckyQuoteSwitcherKey = "<C-S>'"
-let g:speckyRunRdocKey = "<C-S>r"
-let g:speckySpecSwitcherKey = "<C-S>x"
-let g:speckyRunSpecKey = "<C-S>s"
-let g:speckyRunSpecCmd = "spec -fs -r loadpath.rb"
-let g:speckyRunRdocCmd = "fri -L -f plain"
-let g:speckyWindowType = 2
-" **********
-
 map <leader>s <Esc>:w<CR>
 map <leader>a <Esc>ggVG<CR>
 map <leader>x <Esc>"+x<CR>
 map <leader>c <Esc>"+y<CR>
 map <leader>p <Esc>"+gP<CR>
 map <leader>v <Esc>"+gP<CR>
-
-" CommandT
+" **********
 map <leader>t <Esc>:CommandT<CR>
-
-" Pretty JSON
-" sudo cpan JSON::XS
-map <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e

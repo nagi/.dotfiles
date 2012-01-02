@@ -43,9 +43,6 @@
 [submodule "vim/bundle/zoomwin"]
 	path = vim/bundle/zoomwin
 	url = git://github.com/vim-scripts/ZoomWin.git
-[submodule "vim/bundle/conque"]
-	path = vim/bundle/conque
-	url = git://github.com/vim-scripts/Conque-Shell.git
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git

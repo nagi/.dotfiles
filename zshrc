@@ -81,12 +81,10 @@ alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG
 alias rc='rails console --debugger'
 alias rs='rails server --debugger'
 alias rp='RAILS_ENV=production rails server thin'
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
-alias a='autotest'
 alias tld='tail -f log/development.log'
 alias tlt='tail -f log/test.log'
+
+alias cdb='cd $HOME/rails/best100'
 
 ################################################################################
 ## rvm

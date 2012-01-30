@@ -1,24 +1,30 @@
 [user]
-	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+	name = Andrew Nagi
+	email = andrew.nagi@gmail.com
 [alias]
-  ci = commit -v
+	amend = commit --amend
+	aa = add --all
+	b = branch
+	ci = commit -v
 	co = checkout
+	dc = diff --cached
+	di = diff
+	l = "!source ~/.githelpers && pretty_git_log"
+	la = !git l --all
+	pom = push origin master
+	phm = push heroku master
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
-	pager = true
 	ui = true
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
 	editor = vim
 	autocrlf = input
+[merge]
+	tool = meld
 [apply]
 	whitespace = nowarn
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
 [github]
-	user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
+	user = nagi
 	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>

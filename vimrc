@@ -99,6 +99,7 @@ map <leader>x <esc>"+x<cr>
 map <leader>c <esc>"+y<cr>
 map <leader>p <esc>"+gP<cr>
 map <leader>v <esc>"+gP<cr>
+map <leader>r <esc>:w<cr><esc>:!ruby %<cr>
 " **********
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
@@ -134,10 +135,11 @@ vmap <c-Down> ]egv
 " ZoomWin configuration
 map <Leader>z :ZoomWin<cr>
 
+" TODO Learn CTags
 " CTags
-map <Leader>rt :!ctags --extra=+f -R *<cr><cr>
+" map <Leader>ct :!ctags --extra=+f -R *<cr><cr>
 
 " TODO Learn cope
-map <leader>cc :bo cope<cr>
-map <leader>[ :cp<cr>
-map <leader>] :cn<cr>
+" map <leader>cc :bo cope<cr>
+" map <leader>[ :cp<cr>
+" map <leader>] :cn<cr>

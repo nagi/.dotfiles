@@ -35,8 +35,10 @@ plugins=(git git-flow ruby rails3 rvm vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# Exports
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/home/nagi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/android-sdk-linux_x86/tools:/opt/android-sdk-linux_x86/platform-tools:/home/nagi/.rvm/bin:/usr/local/zend/bin
+export EDITOR=vim
+export BUNDLE_EDITOR=view
 
 ################################################################################
 ## Debain / Ubuntu / Mint command not found
@@ -48,9 +50,6 @@ fi
 ################################################################################
 ## aliases
 ################################################################################
-# cd
-alias cdv='cd /home/nagi/rails/victoria' 
-alias cdq='cd /home/nagi/rails/Quipper-Entry-System' 
 
 # ls
 # alias ls="ls --color=auto"
@@ -84,7 +83,9 @@ alias rp='RAILS_ENV=production rails server thin'
 alias tld='tail -f log/development.log'
 alias tlt='tail -f log/test.log'
 
+# navigation
 alias cdb='cd $HOME/rails/best100'
+alias cdp='cd $HOME/rails/programmingfonts'
 
 ################################################################################
 ## rvm

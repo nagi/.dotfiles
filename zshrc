@@ -60,22 +60,6 @@ alias la="ls -A"
 # grep
 # alias grep='grep --color=auto'
 
-# git
-alias ga='git add .'
-alias gl='git log'
-alias gpl='git pull'
-alias gplr='git pull --rebase'
-alias gp='git push'
-alias gd='git diff'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gci='git commit -v'
-alias gco='git checkout'
-alias gb='git branch'
-alias gs='git status'
-alias grm="git ls-files --deleted | xargs git rm"
-alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
-
 # rails
 alias rc='rails console --debugger'
 alias rs='rails server --debugger'

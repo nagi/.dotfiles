@@ -2,9 +2,10 @@
 	name = Andrew Nagi
 	email = andrew.nagi@gmail.com
 [alias]
-	amend = commit --amend
 	aa = add --all
+	amend = commit --amend
 	b = branch
+	ba = branch -a
 	ci = commit -v
 	co = checkout
 	dc = diff --cached
@@ -13,6 +14,10 @@
 	la = !git l --all
 	pom = push origin master
 	phm = push heroku master
+	r = remote
+	rv = remote -v 
+	rm="!git ls-files --deleted | xargs git rm"
+	st = status
 [color]
 	ui = true
 [core]

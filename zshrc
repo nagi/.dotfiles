@@ -61,15 +61,21 @@ alias la="ls -A"
 # alias grep='grep --color=auto'
 
 # rails
+alias be='bundle exec'
+alias beg='bundle exec guard'
+alias bers='bundle exec rails server'
+alias berc='bundle exec rails console'
+alias berk='bundle exec rake'
+alias bersd='bundle exec rails server --debugger'
 alias rc='rails console --debugger'
 alias rs='rails server --debugger'
-alias rp='RAILS_ENV=production rails server thin'
-alias tld='tail -f log/development.log'
-alias tlt='tail -f log/test.log'
+alias tld='tail --folllow log/development.log'
+alias tlt='tail --folllow log/test.log'
 
 # navigation
 alias cdb='cd $HOME/rails/best100'
 alias cdp='cd $HOME/rails/programmingfonts'
+alias cdm='cd $HOME/rails/mylocalplanet'
 
 ################################################################################
 ## rvm

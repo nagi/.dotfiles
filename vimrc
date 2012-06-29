@@ -72,9 +72,11 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-" make and python use real tabs
+" make uses real tabs
 au FileType make set noexpandtab
-au FileType python set noexpandtab
+" python uses 4 spaces
+" au FileType python set shiftwidth=4 softtabstop=4
+au FileType python set tabstop=4 shiftwidth=4  noexpandtab
 
 " Thorfile, Rakefile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Thorfile,config.ru}    set ft=ruby
@@ -102,15 +104,19 @@ map <leader>v <esc>"+gP<cr>
 map <leader>r <esc>:w<cr><esc>:!ruby %<cr>
 " **********
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
+map <leader>gg :CommandTFlush<cr>\|:CommandT %%<cr>
+map <leader>gf :CommandTFlush<cr>\|:CommandT features<cr>
 map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+map <leader>gV :CommandTFlush<cr>\|:CommandT app/vendor<cr>
 map <leader>ga :CommandTFlush<cr>\|:CommandT app/assets<cr>
 map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
 map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
 map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
+map <leader>gj :CommandTFlush<cr>\|:CommandT public/javascripts<cr>
 map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
+map <leader>gS :CommandTFlush<cr>\|:CommandT public/stylesheets<cr>
 
 " swap to last buffer
 map <silent> <leader><leader> <esc><C-^><cr>

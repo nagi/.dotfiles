@@ -110,13 +110,16 @@ map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 map <leader>gV :CommandTFlush<cr>\|:CommandT app/vendor<cr>
-map <leader>ga :CommandTFlush<cr>\|:CommandT app/assets<cr>
+map <leader>gaa :CommandTFlush<cr>\|:CommandT app/assets<cr>
+map <leader>gaj :CommandTFlush<cr>\|:CommandT app/assets/javascripts<cr>
+map <leader>gas :CommandTFlush<cr>\|:CommandT app/assets/stylesheets<cr>
+map <leader>gpp :CommandTFlush<cr>\|:CommandT public<cr>
+map <leader>gpj :CommandTFlush<cr>\|:CommandT public/javascripts<cr>
+map <leader>gps :CommandTFlush<cr>\|:CommandT public/stylesheets<cr>
 map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
 map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
-map <leader>gj :CommandTFlush<cr>\|:CommandT public/javascripts<cr>
 map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
-map <leader>gS :CommandTFlush<cr>\|:CommandT public/stylesheets<cr>
+map <leader>gt :CommandTFlush<cr>\|:CommandT test<cr>
 
 " swap to last buffer
 map <silent> <leader><leader> <esc><C-^><cr>

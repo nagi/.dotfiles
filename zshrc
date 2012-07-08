@@ -69,13 +69,14 @@ alias berk='bundle exec rake'
 alias bersd='bundle exec rails server --debugger'
 alias rc='rails console --debugger'
 alias rs='rails server --debugger'
-alias tld='tail --folllow log/development.log'
-alias tlt='tail --folllow log/test.log'
+alias tld='tail --follow log/development.log'
+alias tlt='tail --follow log/test.log'
 
 # navigation
 alias cdb='cd $HOME/rails/best100'
 alias cdp='cd $HOME/rails/programmingfonts'
 alias cdm='cd $HOME/rails/mylocalplanet'
+alias cdr='cd $HOME/rails/RoomPortfolio'
 
 ################################################################################
 ## rvm

@@ -1,15 +1,9 @@
-[submodule "vim/bundle/ack"]
-	path = vim/bundle/ack
-	url = git://github.com/mileszs/ack.vim.git
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/haml"]
 	path = vim/bundle/haml
 	url = git://github.com/tpope/vim-haml.git
-[submodule "vim/bundle/indent-object"]
-	path = vim/bundle/indent-object
-	url = git://github.com/michaeljsmith/vim-indent-object.git
 [submodule "vim/bundle/javascript"]
 	path = vim/bundle/javascript
 	url = git://github.com/pangloss/vim-javascript.git
@@ -49,15 +43,9 @@
 [submodule "vim/bundle/markdown"]
 	path = vim/bundle/markdown
 	url = git://github.com/tpope/vim-markdown.git
-[submodule "vim/bundle/align"]
-	path = vim/bundle/align
-	url = git://github.com/tsaleh/vim-align.git
 [submodule "vim/bundle/unimpaired"]
 	path = vim/bundle/unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
-[submodule "vim/bundle/searchfold"]
-	path = vim/bundle/searchfold
-	url = git://github.com/vim-scripts/searchfold.vim.git
 [submodule "vim/bundle/coffee-script"]
 	path = vim/bundle/coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
@@ -70,3 +58,6 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "vim/bundle/handlebars"]
+	path = vim/bundle/handlebars
+	url = git://github.com/nono/vim-handlebars.git

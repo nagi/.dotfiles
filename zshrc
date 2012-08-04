@@ -77,6 +77,7 @@ alias cdb='cd $HOME/rails/best100'
 alias cdp='cd $HOME/rails/programmingfonts'
 alias cdm='cd $HOME/rails/mylocalplanet'
 alias cdr='cd $HOME/rails/RoomPortfolio'
+alias cdw='cd $HOME/rails/web_app'
 
 ################################################################################
 ## rvm

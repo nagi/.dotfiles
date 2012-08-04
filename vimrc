@@ -79,7 +79,7 @@ au FileType make set noexpandtab
 au FileType python set tabstop=4 shiftwidth=4  noexpandtab
 
 " Thorfile, Rakefile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile {Capfile,Gemfile,Guardfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on

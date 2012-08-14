@@ -61,3 +61,9 @@
 [submodule "vim/bundle/handlebars"]
 	path = vim/bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "vim/bundle/molokai"]
+	path = vim/bundle/molokai
+	url = git://github.com/tomasr/molokai.git
+[submodule "vim/bundle/jellybeans"]
+	path = vim/bundle/jellybeans
+	url = git://github.com/nanotech/jellybeans.vim.git

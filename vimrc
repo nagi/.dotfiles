@@ -10,6 +10,10 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
+if has('gui_running')
+  set guifont=DejaVu\ Sans\ Mono\ 10
+endif
+
 " Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup

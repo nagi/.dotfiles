@@ -78,6 +78,7 @@ alias cdp='cd $HOME/rails/programmingfonts'
 alias cdm='cd $HOME/rails/mylocalplanet'
 alias cdr='cd $HOME/rails/RoomPortfolio'
 alias cdw='cd $HOME/rails/web_app'
+alias cdd='cd $HOME/rails/drop_a_mail'
 
 ################################################################################
 ## rvm

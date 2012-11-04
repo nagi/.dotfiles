@@ -10,10 +10,6 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
-if has('gui_running')
-  set guifont=DejaVu\ Sans\ Mono\ 10
-endif
-
 " Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
@@ -26,9 +22,18 @@ set modelines=10
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Default color scheme
-" colorscheme jellybeans
-colorscheme molokai
+if has('gui_running')
+  " Font
+  set guifont=DejaVu\ Sans\ Mono\ 10
+  " Start without the toolbar
+  set guioptions-=T
+  " Default gui color scheme
+  colorscheme molokai
+else
+  " Term color scheme
+  colorscheme jellybeans
+endif
+
 syntax on
 
 set cmdheight=2

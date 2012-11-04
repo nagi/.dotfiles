@@ -22,10 +22,10 @@ main = do
     xmproc <- spawnPipe "xmobar"
     xmonad $ defaultConfig
         { modMask            = mod5Mask
-        , borderWidth        = 6
+        , borderWidth        = 2
         , terminal           = "gnome-terminal"
-        , normalBorderColor  = "#CCCCCC"
-        , focusedBorderColor = "#035EF3" 
+        , normalBorderColor  = "#222222"
+        , focusedBorderColor = "#ae224a" 
         , manageHook = manageDocks <+> myManageHook -- make sure to include myManageHook definition from above
                         <+> manageHook defaultConfig
         , layoutHook = avoidStruts  $  layoutHook defaultConfig

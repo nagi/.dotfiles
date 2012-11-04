@@ -25,8 +25,10 @@ set modelines=10
 if has('gui_running')
   " Font
   set guifont=DejaVu\ Sans\ Mono\ 10
-  " Start without the toolbar
-  set guioptions-=T
+  " Minimal GUI
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  set guioptions-=r  "remove right-hand scroll bar
   " Default gui color scheme
   colorscheme molokai
 else

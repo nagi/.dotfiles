@@ -84,3 +84,5 @@ alias cdd='cd $HOME/rails/drop_a_mail'
 ## rvm
 ################################################################################
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

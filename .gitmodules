@@ -16,9 +16,6 @@
 [submodule "vim/bundle/surround"]
 	path = vim/bundle/surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/taglist"]
-	path = vim/bundle/taglist
-	url = git://github.com/vim-scripts/taglist.vim.git
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
@@ -34,15 +31,9 @@
 [submodule "vim/bundle/rails"]
 	path = vim/bundle/rails
 	url = git://github.com/tpope/vim-rails.git
-[submodule "vim/bundle/rspec"]
-	path = vim/bundle/rspec
-	url = git://github.com/taq/vim-rspec.git
 [submodule "vim/bundle/zoomwin"]
 	path = vim/bundle/zoomwin
 	url = git://github.com/vim-scripts/ZoomWin.git
-[submodule "vim/bundle/snipmate"]
-	path = vim/bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "vim/bundle/markdown"]
 	path = vim/bundle/markdown
 	url = git://github.com/tpope/vim-markdown.git

@@ -64,3 +64,6 @@
 [submodule "vim/bundle/slim"]
 	path = vim/bundle/slim
 	url = git://github.com/bbommarito/vim-slim.git
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
+	url = git://github.com/mileszs/ack.vim.git

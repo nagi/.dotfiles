@@ -1,4 +1,5 @@
 --type-set=haml=.haml
+--type-set=slim=.slim
 --type-set=sass=.sass,.scss
 --type-set=js=.coffee,.hbs
 

@@ -63,7 +63,7 @@
 	url = git://github.com/nanotech/jellybeans.vim.git
 [submodule "vim/bundle/slim"]
 	path = vim/bundle/slim
-	url = git://github.com/bbommarito/vim-slim.git
+	url = git://github.com/slim-template/vim-slim.git
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
 	url = git://github.com/mileszs/ack.vim.git

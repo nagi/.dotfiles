@@ -21,7 +21,8 @@ myManageHook = composeAll
 main = do
     xmproc <- spawnPipe "xmobar"
     xmonad $ defaultConfig
-        { modMask            = mod5Mask
+        -- To set up modMask see; https://wiki.archlinux.org/index.php/Xmodmap
+        { modMask            = mod3Mask
         , borderWidth        = 2
         , terminal           = "gnome-terminal"
         , normalBorderColor  = "#000000"

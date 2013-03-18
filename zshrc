@@ -37,7 +37,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Exports
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games
-export PATH=$PATH:/opt/android-sdk-linux_x86/tools:/opt/android-sdk-linux_x86/platform-tools:
+ADT=/opt/adt-bundle-linux-x86_64-20130219
+export PATH=$PATH:$ADT/eclipse
+export PATH=$PATH:$ADT/sdk/tools
+export PATH=$PATH:$ADT/sdk/platform-tools
 
 export EDITOR=vim
 export BUNDLE_EDITOR=view

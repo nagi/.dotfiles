@@ -33,7 +33,8 @@ if has('gui_running')
   colorscheme molokai
 else
   " Term color scheme
-  colorscheme jellybeans
+  " colorscheme jellybeans
+  colorscheme molokai
 endif
 
 syntax on

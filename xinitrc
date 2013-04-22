@@ -13,7 +13,7 @@ Noppoo_detect () {
 Map_keys () {
   if [ -f /home/nagi/.Xmodmap ] 
   then
-    /usr/bin/xmodmap .Xmodmap 
+    /usr/bin/xmodmap /home/nagi/.Xmodmap 
   fi
 }
 

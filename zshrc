@@ -79,11 +79,11 @@ alias tlt='tail --follow log/test.log'
 
 # navigation
 alias cdb='cd $HOME/rails/best100'
-alias cdp='cd $HOME/rails/programmingfonts'
-alias cdm='cd $HOME/rails/mylocalplanet'
-alias cdr='cd $HOME/rails/RoomPortfolio'
-alias cdw='cd $HOME/rails/web_app'
 alias cdd='cd $HOME/rails/drop_a_mail'
+alias cdp='cd $HOME/rails/programmingfonts'
+alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
+alias cdr='cd $HOME/rails/RoomPortfolio'
+alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
 
 ################################################################################
 ## rvm

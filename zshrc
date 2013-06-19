@@ -43,7 +43,7 @@ export PATH=$PATH:$ADT/sdk/tools
 export PATH=$PATH:$ADT/sdk/platform-tools
 
 export EDITOR=vim
-export BUNDLE_EDITOR=view
+export BUNDLE_EDITOR=gview
 
 ################################################################################
 ## Debain / Ubuntu / Mint command not found
@@ -84,6 +84,10 @@ alias cdp='cd $HOME/rails/programmingfonts'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
 alias cdr='cd $HOME/rails/RoomPortfolio'
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
+
+# utils
+rcat() { cat $1 | coderay -ruby }
+pcat() { cat $1 | coderay -python }
 
 ################################################################################
 ## rvm

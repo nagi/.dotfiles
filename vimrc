@@ -1,7 +1,42 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vundle
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle' " required!
+
+" My Bundles here:
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'pangloss/vim-javascript'
+Bundle 'hallettj/jslint.vim'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-surround'
+Bundle 'ervandew/supertab'
+Bundle 'majutsushi/tagbar'
+Bundle 'timcharper/textile.vim'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'wincent/Command-T'
+Bundle 'scrooloose/nerdtree'
+Bundle 'nono/vim-handlebars'
+Bundle 'tomasr/molokai'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'slim-template/vim-slim'
+Bundle 'mileszs/ack.vim'
+
+ filetype plugin indent on     " required!
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
 
 " apply vimrc settings after the vimrc is saved
 if has("autocmd")

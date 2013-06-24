@@ -8,7 +8,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle' " required!
+" required!
+Bundle 'gmarik/vundle'
 
 " My Bundles here:
 Bundle 'tpope/vim-rails'
@@ -31,8 +32,10 @@ Bundle 'tomasr/molokai'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'mileszs/ack.vim'
+Bundle 'jl/gundo.vim'
+Bundle 'matchit.zip'
 
- filetype plugin indent on     " required!
+filetype plugin indent on     " required!
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General

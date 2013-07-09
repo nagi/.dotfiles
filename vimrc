@@ -180,6 +180,8 @@ map <leader>3 <esc>:Rmodel<cr>
 " **********
 map <leader>n <esc>:NERDTreeToggle<cr>
 " **********
+map <leader>u <esc>:GundoToggle<cr>
+" **********
 map <leader>s <esc>:w<cr>
 map <leader>a <esc>ggVG<cr>
 map <leader>x <esc>"+x<cr>

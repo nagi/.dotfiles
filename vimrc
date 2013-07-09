@@ -25,14 +25,14 @@ Bundle 'timcharper/textile.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'nono/vim-handlebars'
 Bundle 'tomasr/molokai'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'mileszs/ack.vim'
-Bundle 'jl/gundo.vim'
+Bundle 'sjl/gundo.vim'
 Bundle 'matchit.zip'
 
 filetype plugin indent on     " required!
@@ -188,23 +188,23 @@ map <leader>p <esc>"*p<cr>
 map <leader>v <esc>"+gP<cr>
 map <leader>r <esc>:w<cr><esc>:!ruby %<cr>
 " **********
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>gg :CommandTFlush<cr>\|:CommandT %%<cr>
-map <leader>gf :CommandTFlush<cr>\|:CommandT features<cr>
-map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-map <leader>gV :CommandTFlush<cr>\|:CommandT app/vendor<cr>
-map <leader>gaa :CommandTFlush<cr>\|:CommandT app/assets<cr>
-map <leader>gaj :CommandTFlush<cr>\|:CommandT app/assets/javascripts<cr>
-map <leader>gas :CommandTFlush<cr>\|:CommandT app/assets/stylesheets<cr>
-map <leader>gpp :CommandTFlush<cr>\|:CommandT public<cr>
-map <leader>gpj :CommandTFlush<cr>\|:CommandT public/javascripts<cr>
-map <leader>gps :CommandTFlush<cr>\|:CommandT public/stylesheets<cr>
-map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
-map <leader>gt :CommandTFlush<cr>\|:CommandT test<cr>
+map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
+map <leader>gg :CtrlPClearCache<cr>\|:CtrlP %%<cr>
+map <leader>gf :CtrlPClearCache<cr>\|:CtrlP features<cr>
+map <leader>gm :CtrlPClearCache<cr>\|:CtrlP app/models<cr>
+map <leader>gc :CtrlPClearCache<cr>\|:CtrlP app/controllers<cr>
+map <leader>gv :CtrlPClearCache<cr>\|:CtrlP app/views<cr>
+map <leader>gV :CtrlPClearCache<cr>\|:CtrlP app/vendor<cr>
+map <leader>gaa :CtrlPClearCache<cr>\|:CtrlP app/assets<cr>
+map <leader>gaj :CtrlPClearCache<cr>\|:CtrlP app/assets/javascripts<cr>
+map <leader>gas :CtrlPClearCache<cr>\|:CtrlP app/assets/stylesheets<cr>
+map <leader>gpp :CtrlPClearCache<cr>\|:CtrlP public<cr>
+map <leader>gpj :CtrlPClearCache<cr>\|:CtrlP public/javascripts<cr>
+map <leader>gps :CtrlPClearCache<cr>\|:CtrlP public/stylesheets<cr>
+map <leader>gh :CtrlPClearCache<cr>\|:CtrlP app/helpers<cr>
+map <leader>gl :CtrlPClearCache<cr>\|:CtrlP lib<cr>
+map <leader>gs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
+map <leader>gt :CtrlPClearCache<cr>\|:CtrlP test<cr>
 
 " swap to last buffer
 map <silent> <leader><leader> <esc><C-^><cr>

@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'pangloss/vim-javascript'

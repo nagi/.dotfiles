@@ -55,7 +55,7 @@ set ruler
 
 " Use modeline overrides
 set modeline
-set modelines=10
+" set modelines=10
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -65,7 +65,7 @@ if has('gui_running')
   " Minimal GUI
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
-  set guioptions-=r  "remove right-hand scroll bar
+  " set guioptions-=r  "remove right-hand scroll bar
   " Default gui color scheme
   colorscheme molokai
 else
@@ -208,6 +208,7 @@ map <leader>gh :CtrlPClearCache<cr>\|:CtrlP app/helpers<cr>
 map <leader>gl :CtrlPClearCache<cr>\|:CtrlP lib<cr>
 map <leader>gs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
 map <leader>gt :CtrlPClearCache<cr>\|:CtrlP test<cr>
+map <leader>gi :CtrlPClearCache<cr>\|:CtrlP config/initializers<cr>
 
 " swap to last buffer
 map <silent> <leader><leader> <esc><C-^><cr>

@@ -36,7 +36,14 @@ plugins=(git git-flow ruby rails3 rvm vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Exports
-export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games
+if [ `uname`=Darwin ]
+then
+  # Prefer homebrew applications.
+  export PATH=/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/sbin:/usr/local/games
+else
+  # Prefer apt / pacman applications.
+  export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games
+fi
 ADT=/opt/adt-bundle-linux-x86_64-20130219
 export PATH=$PATH:$ADT/eclipse
 export PATH=$PATH:$ADT/sdk/tools
@@ -70,7 +77,10 @@ alias be='bundle exec'
 alias beg='bundle exec guard'
 alias bers='bundle exec rails server'
 alias berc='bundle exec rails console'
-alias berk='bundle exec rake'
+alias ber='bundle exec rake'
+alias ber='bundle exec rake'
+alias berr='bundle exec rake routes'
+alias bert='bundle exec rake --tasks'
 alias bersd='bundle exec rails server --debugger'
 alias rc='rails console --debugger'
 alias rs='rails server --debugger'
@@ -84,6 +94,7 @@ alias cdp='cd $HOME/rails/programmingfonts'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
 alias cdr='cd $HOME/rails/RoomPortfolio'
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
+alias cdl='cd $HOME/rails/learn-to-trade'
 
 # utils
 rcat() { cat $1 | coderay -ruby }

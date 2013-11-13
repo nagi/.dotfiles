@@ -31,7 +31,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow ruby rails3 rvm vi-mode)
+plugins=(git brew bundler capistrano coffee colorize github github ruby rails rails3 rails4 rake rvm vi-mode tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,7 +39,7 @@ source $ZSH/oh-my-zsh.sh
 if [ `uname`=Darwin ]
 then
   # Prefer homebrew applications.
-  export PATH=/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/sbin:/usr/local/games
+  export PATH=/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/sbin:/usr/local/games:/usr/texbin
 else
   # Prefer apt / pacman applications.
   export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games
@@ -88,6 +88,7 @@ alias tld='tail --follow log/development.log'
 alias tlt='tail --follow log/test.log'
 
 # navigation
+alias cda='cd $HOME/rails/aboutcorpfin'
 alias cdb='cd $HOME/rails/best100'
 alias cdd='cd $HOME/rails/drop_a_mail'
 alias cdp='cd $HOME/rails/programmingfonts'

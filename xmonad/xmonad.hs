@@ -24,7 +24,7 @@ main = do
         -- To set up modMask see; https://wiki.archlinux.org/index.php/Xmodmap
         { modMask            = mod3Mask
         , borderWidth        = 2
-        , terminal           = "gnome-terminal"
+        , terminal           = "urxvt"
         , normalBorderColor  = "#000000"
         , focusedBorderColor = "#F92672" 
         , manageHook = manageDocks <+> myManageHook -- make sure to include myManageHook definition from above

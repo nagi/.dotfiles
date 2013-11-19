@@ -2,7 +2,7 @@
 URxvt*buffered: true
 URxvt*cursorBlink: true
 URxvt*underlineColor: yellow
-URxvt.font: xft:DejaVu Sans Mono:pixelsize=10
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=11
 URxvt*depth: 32
 URxvt*borderless: 1
 URxvt*scrollBar: false
@@ -10,14 +10,14 @@ URxvt*loginShell: true
 Urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 URxvt*saveLines: 5000
 URxvt*termName: rxvt-unicode
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,tabbed
 URxvt.urlLauncher: chromium
 URxvt.matcher.button: 1
 
-urxvt*foreground: white
-urxvt*background: black
-
-URxvt.perl-ext-common:  default,tabbed
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    9
+URxvt.tabbed.tab-bg:    8
 
 ! Molokai theme
 urxvt*background: #101010

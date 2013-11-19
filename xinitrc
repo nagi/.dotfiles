@@ -40,14 +40,13 @@ fi
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
-#case $1 in
-#  xmonad)
-#    exec xmonad
-#    ;;
-#  xfce4)
-#    exec startxfce4
-#    ;;
-#esac
-exec startxfce4
+case $1 in
+  xmonad)
+    exec xmonad
+    ;;
+  xfce4)
+    exec startxfce4
+    ;;
+esac
 
 exit 0

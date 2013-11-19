@@ -74,6 +74,16 @@ else
   colorscheme molokai
 endif
 
+" Color in linux terminals. For iTerm2 set 'Report Terminal Type" to
+" xterm-256color in profiles section of settings.
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+elseif $COLORTERM == 'xfce4-terminal'
+  set t_Co=256
+elseif $COLORTERM == 'rxvt'
+  set t_Co=256
+endif
+
 syntax on
 
 set cmdheight=2

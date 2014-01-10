@@ -35,6 +35,7 @@ Bundle 'slim-template/vim-slim'
 Bundle 'mileszs/ack.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'matchit.zip'
+Bundle 'groenewege/vim-less'
 
 filetype plugin indent on     " required!
 
@@ -141,7 +142,7 @@ au FileType make set noexpandtab
 au FileType python set tabstop=4 shiftwidth=4  noexpandtab
 
 " Thorfile, Rakefile and Gemfile are Ruby
-au BufRead,BufNewFile {Capfile,Gemfile,Guardfile,Rakefile,Thorfile,config.ru,.simplecov}    set ft=ruby
+au BufRead,BufNewFile {Capfile,Gemfile,Guardfile,Rakefile,Thorfile,config.ru,.simplecov,.rbs}    set ft=ruby
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
@@ -220,6 +221,10 @@ map <leader>gs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
 map <leader>gt :CtrlPClearCache<cr>\|:CtrlP test<cr>
 map <leader>gi :CtrlPClearCache<cr>\|:CtrlP config/initializers<cr>
 
+" Spring
+map <leader>ss :!spring rspec --color --tty > tmp/fifo 2> tmp/fifo<CR><CR>
+map <leader>sc :!spring cucumber -p wip > tmp/fifo 2> tmp/fifo<CR><CR>
+
 " swap to last buffer
 map <silent> <leader><leader> <esc><C-^><cr>
 
@@ -232,14 +237,6 @@ map <s-down> :tabclose<cr>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 map <leader>v :view %%
-
-" Unimpaired configuration
-" Bubble single lines
-nmap <c-Up> [e
-nmap <c-Down> ]e
-" Bubble multiple lines
-vmap <c-Up> [egv
-vmap <c-Down> ]egv
 
 " ZoomWin configuration
 map <Leader>z :ZoomWin<cr>

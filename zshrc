@@ -35,6 +35,12 @@ plugins=(git brew bundler capistrano coffee colorize github github ruby rails ra
 
 source $ZSH/oh-my-zsh.sh
 
+# iTerm2 tab color helpers
+if [ `uname`=Darwin ]
+then
+[[ -s ~/.dotfiles/iterm2-helpers.sh ]] && source ~/.dotfiles/iterm2-helpers.sh
+fi
+
 # Exports
 if [ `uname`=Darwin ]
 then
@@ -50,7 +56,7 @@ export PATH=$PATH:$ADT/sdk/tools
 export PATH=$PATH:$ADT/sdk/platform-tools
 
 export EDITOR=vim
-export BUNDLE_EDITOR=gview
+export BUNDLE_EDITOR=view
 
 ################################################################################
 ## Debain / Ubuntu / Mint command not found

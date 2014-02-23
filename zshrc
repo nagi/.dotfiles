@@ -35,6 +35,8 @@ plugins=(git brew bundler capistrano coffee colorize github github ruby rails ra
 
 source $ZSH/oh-my-zsh.sh
 
+bindkey "^R" history-incremental-search-backward
+
 # iTerm2 tab color helpers
 if [ `uname`=Darwin ]
 then
@@ -97,7 +99,9 @@ alias tlt='tail --follow log/test.log'
 alias cda='cd $HOME/rails/aboutcorpfin'
 alias cdb='cd $HOME/rails/best100'
 alias cdd='cd $HOME/rails/drop_a_mail'
+alias cda='cd $HOME/iPhone/iPhone-App'
 alias cdp='cd $HOME/rails/programmingfonts'
+alias cdi='cd $HOME/iPhone/iPhone-App'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
 alias cdr='cd $HOME/rails/RoomPortfolio'
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '

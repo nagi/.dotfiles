@@ -31,11 +31,23 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew bundler capistrano coffee colorize github github ruby rails rails3 rails4 rake rvm vi-mode tmux)
+plugins=(history-substring-search git brew bundler capistrano coffee colorize github github ruby rails rake rvm vi-mode tmux)
 
 source $ZSH/oh-my-zsh.sh
 
 bindkey "^R" history-incremental-search-backward
+
+#history-substring-search bindings
+#bind UP and DOWN arrow keys
+#zmodload zsh/terminfo
+#bindkey "$terminfo[kcuu1]" history-substring-search-up
+#bindkey "$terminfo[kcud1]" history-substring-search-down
+# bind P and N for EMACS mode
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+# bind k and j for VI mode
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # iTerm2 tab color helpers
 if [ `uname`=Darwin ]

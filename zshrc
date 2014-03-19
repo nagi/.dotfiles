@@ -31,9 +31,29 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew bundler capistrano coffee colorize github github ruby rails rails3 rails4 rake rvm vi-mode tmux)
+plugins=(history-substring-search git brew bundler capistrano coffee colorize github github ruby rails rake rvm vi-mode tmux)
 
 source $ZSH/oh-my-zsh.sh
+
+bindkey "^R" history-incremental-search-backward
+
+#history-substring-search bindings
+#bind UP and DOWN arrow keys
+#zmodload zsh/terminfo
+#bindkey "$terminfo[kcuu1]" history-substring-search-up
+#bindkey "$terminfo[kcud1]" history-substring-search-down
+# bind P and N for EMACS mode
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+# bind k and j for VI mode
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
+# iTerm2 tab color helpers
+if [ `uname`=Darwin ]
+then
+[[ -s ~/.dotfiles/iterm2-helpers.sh ]] && source ~/.dotfiles/iterm2-helpers.sh
+fi
 
 # Exports
 if [ `uname`=Darwin ]
@@ -50,7 +70,7 @@ export PATH=$PATH:$ADT/sdk/tools
 export PATH=$PATH:$ADT/sdk/platform-tools
 
 export EDITOR=vim
-export BUNDLE_EDITOR=gview
+export BUNDLE_EDITOR=view
 
 ################################################################################
 ## Debain / Ubuntu / Mint command not found
@@ -91,7 +111,9 @@ alias tlt='tail --follow log/test.log'
 alias cda='cd $HOME/rails/aboutcorpfin'
 alias cdb='cd $HOME/rails/best100'
 alias cdd='cd $HOME/rails/drop_a_mail'
+alias cda='cd $HOME/iPhone/iPhone-App'
 alias cdp='cd $HOME/rails/programmingfonts'
+alias cdi='cd $HOME/iPhone/iPhone-App'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
 alias cdr='cd $HOME/rails/RoomPortfolio'
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '

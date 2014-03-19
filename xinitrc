@@ -44,7 +44,7 @@ case $1 in
   xmonad)
     exec xmonad
     ;;
-  xfce4)
+  *)
     exec startxfce4
     ;;
 esac

@@ -42,7 +42,7 @@ then
   export PATH=/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/sbin:/usr/local/games:/usr/texbin
 else
   # Prefer apt / pacman applications.
-  export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games
+  export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games:~/.gem/ruby/2.0.0/bin
 fi
 ADT=/opt/adt-bundle-linux-x86_64-20130219
 export PATH=$PATH:$ADT/eclipse

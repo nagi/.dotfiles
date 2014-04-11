@@ -17,7 +17,7 @@ Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'pangloss/vim-javascript'
-Bundle 'hallettj/jslint.vim'
+Bundle 'mrkschan/vim-node-jslint'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'ervandew/supertab'
@@ -27,7 +27,6 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
 Bundle 'nono/vim-handlebars'
 Bundle 'tomasr/molokai'
 Bundle 'nanotech/jellybeans.vim'
@@ -62,7 +61,7 @@ set modeline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
   " Font
-  set guifont=DejaVu\ Sans\ Mono\ 10
+  " set guifont=DejaVu\ Sans\ Mono\ 10
   " Minimal GUI
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
@@ -189,8 +188,6 @@ map Y y$
 map <leader>1 <esc>:Rview<cr>
 map <leader>2 <esc>:Rcontroller<cr>
 map <leader>3 <esc>:Rmodel<cr>
-" **********
-map <leader>n <esc>:NERDTreeToggle<cr>
 " **********
 map <leader>u <esc>:GundoToggle<cr>
 " **********

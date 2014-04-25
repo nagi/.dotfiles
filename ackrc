@@ -2,7 +2,10 @@
 --type-set=slim=.slim
 --type-set=sass=.sass,.scss
 --type-set=js=.coffee,.hbs
---ignore-dir=coverage
+
+--ignore-dir=coverage/
+--ignore-dir=tmp/
+--ignore-dir=log/
 
 --type-set=bin=.idx,.pack,.sqlite3,.sqlite3-journal,.rdb,.swf,.gif,.png,.ico,.jpg,.jpeg,.tiff,.pdf,.mp3,.JPG,.sqlite,.dat,.crt
 --nobin

@@ -113,10 +113,13 @@ alias cdb='cd $HOME/rails/best100'
 alias cde='cd $HOME/rails/eme-server'
 alias cdp='cd $HOME/rails/programmingfonts'
 alias cdi='cd $HOME/iPhone/iPhone-App'
+alias cdg='cd $HOME/rails/g4s/give4sure'
+alias cdgp='cd $HOME/rails/g4s/plugin'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
 alias cdr='cd $HOME/rails/RoomPortfolio'
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
 alias cdl='cd $HOME/rails/learn-to-trade'
+alias cdf='cd $HOME/rails/fuji'
 
 # utils
 rcat() { cat $1 | coderay -ruby }

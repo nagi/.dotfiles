@@ -141,11 +141,18 @@ au FileType make set noexpandtab
 au FileType python set tabstop=4 shiftwidth=4  noexpandtab
 
 " Thorfile, Rakefile and Gemfile are Ruby
-au BufRead,BufNewFile {Capfile,Gemfile,Guardfile,Rakefile,Thorfile,config.ru,.simplecov,.rbs}    set ft=ruby
+au BufRead,BufNewFile {Capfile,Gemfile,Guardfile,Rakefile,Thorfile,config.ru,.simplecov,.rbs,.rabl}    set ft=ruby
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
+function G4S()
+    set tabstop=4
+    set shiftwidth=4
+    set softtabstop=4
+    set textwidth=120
+    set noexpandtab
+endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -218,6 +225,7 @@ map <leader>gs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
 map <leader>gt :CtrlPClearCache<cr>\|:CtrlP test<cr>
 map <leader>gi :CtrlPClearCache<cr>\|:CtrlP config/initializers<cr>
 
+map <leader>t :!bundle exec rspec --color --tty > tmp/fifo 2> tmp/fifo<CR><CR>
 " Spring
 map <leader>ss :!spring rspec --color --tty > tmp/fifo 2> tmp/fifo<CR><CR>
 map <leader>sc :!spring cucumber -p wip > tmp/fifo 2> tmp/fifo<CR><CR>

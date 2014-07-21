@@ -228,7 +228,7 @@ map <leader>gi :CtrlPClearCache<cr>\|:CtrlP config/initializers<cr>
 map <leader>t :!bundle exec rspec --color --tty > tmp/fifo 2> tmp/fifo<CR><CR>
 " Spring
 map <leader>ss :!spring rspec --color --tty > tmp/fifo 2> tmp/fifo<CR><CR>
-map <leader>sc :!spring cucumber -p wip > tmp/fifo 2> tmp/fifo<CR><CR>
+map <leader>sc :!spring cucumber -c -p wip > tmp/fifo 2> tmp/fifo<CR><CR>
 
 " swap to last buffer
 map <silent> <leader><leader> <esc><C-^><cr>

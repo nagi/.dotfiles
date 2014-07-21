@@ -71,6 +71,8 @@ export PATH=$PATH:$ADT/sdk/platform-tools
 
 export EDITOR=vim
 export BUNDLE_EDITOR=view
+export RUBYMINE_HOME=/Applications/Rubymine.app
+
 
 ################################################################################
 ## Debain / Ubuntu / Mint command not found
@@ -151,6 +153,13 @@ egg() {
     sleep 3 ; say --interactive=yellow -v 'Hysterical' ay aya ay
   fi
 }
+function lt() { ls -ltrsa "$@" | tail; }
+function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
+function fname() { find . -iname "*$@*"; }
+function remove_lines_from() { grep -F -x -v -f $2 $1; }
+alias pp="ps axuf | pager"
+alias sum="xargs | tr ' ' '+' | bc" ## Usage: echo 1 2 3 | sum
+function mcd() { mkdir $1 && cd $1; }
 
 ################################################################################
 ## rvm

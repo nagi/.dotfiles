@@ -12,29 +12,30 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'pangloss/vim-javascript'
-Bundle 'mrkschan/vim-node-jslint'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-surround'
+Bundle 'bling/vim-airline.git'
 Bundle 'ervandew/supertab'
-Bundle 'majutsushi/tagbar'
-Bundle 'timcharper/textile.vim'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-unimpaired'
+Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
-Bundle 'nono/vim-handlebars'
-Bundle 'tomasr/molokai'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'slim-template/vim-slim'
-Bundle 'mileszs/ack.vim'
-Bundle 'sjl/gundo.vim'
+Bundle 'majutsushi/tagbar'
 Bundle 'matchit.zip'
-Bundle 'groenewege/vim-less'
+Bundle 'mileszs/ack.vim'
+Bundle 'mrkschan/vim-node-jslint'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'nono/vim-handlebars'
+Bundle 'pangloss/vim-javascript'
+Bundle 'sjl/gundo.vim'
+Bundle 'slim-template/vim-slim'
+Bundle 'timcharper/textile.vim'
+Bundle 'tomasr/molokai'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
 
 filetype plugin indent on     " required!
 
@@ -117,7 +118,7 @@ set laststatus=2
 set fillchars="vert: "
 
 " Format the statusline
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
 "Set magic on, for regular expressions
 set magic

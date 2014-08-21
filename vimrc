@@ -84,6 +84,9 @@ elseif $COLORTERM == 'rxvt'
   set t_Co=256
 endif
 
+" Patch colorscheme
+" autocmd ColorScheme * highlight Normal guifg=#F8F8F2 guibg=#101010
+
 syntax on
 
 set cmdheight=2
@@ -130,18 +133,20 @@ let g:CommandTMaxFiles=60000
 
 " Remember last location in file
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+  autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
 
+autocmd Filetype gitcommit setlocal spell
+
 " make uses real tabs
-au FileType make set noexpandtab
+autocmd FileType make set noexpandtab
 " python uses 4 spaces
-" au FileType python set shiftwidth=4 softtabstop=4
-au FileType python set tabstop=4 shiftwidth=4  noexpandtab
+" autocmd FileType python set shiftwidth=4 softtabstop=4
+autocmd FileType python set tabstop=4 shiftwidth=4  noexpandtab
 
 " Thorfile, Rakefile and Gemfile are Ruby
-au BufRead,BufNewFile {Capfile,Gemfile,Guardfile,Rakefile,Thorfile,config.ru,.simplecov,.rbs,.rabl}    set ft=ruby
+autocmd BufRead,BufNewFile {Capfile,Gemfile,Guardfile,Rakefile,Thorfile,config.ru,*.simplecov,*.rbs,*.rabl,*.jbuilder} set ft=ruby
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
@@ -214,18 +219,21 @@ map <leader>gc :CtrlPClearCache<cr>\|:CtrlP app/controllers<cr>
 map <leader>gv :CtrlPClearCache<cr>\|:CtrlP app/views<cr>
 map <leader>gV :CtrlPClearCache<cr>\|:CtrlP app/vendor<cr>
 map <leader>gaa :CtrlPClearCache<cr>\|:CtrlP app/assets<cr>
-map <leader>gaj :CtrlPClearCache<cr>\|:CtrlP app/assets/javascripts<cr>
-map <leader>gas :CtrlPClearCache<cr>\|:CtrlP app/assets/stylesheets<cr>
+map <leader>gj :CtrlPClearCache<cr>\|:CtrlP app/assets/javascripts<cr>
+map <leader>gss :CtrlPClearCache<cr>\|:CtrlP app/assets/stylesheets<cr>
+map <leader>gas :CtrlPClearCache<cr>\|:CtrlP app/services<cr>
+map <leader>gad :CtrlPClearCache<cr>\|:CtrlP app/decorators<cr>
 map <leader>gpp :CtrlPClearCache<cr>\|:CtrlP public<cr>
 map <leader>gpj :CtrlPClearCache<cr>\|:CtrlP public/javascripts<cr>
 map <leader>gps :CtrlPClearCache<cr>\|:CtrlP public/stylesheets<cr>
 map <leader>gh :CtrlPClearCache<cr>\|:CtrlP app/helpers<cr>
 map <leader>gl :CtrlPClearCache<cr>\|:CtrlP lib<cr>
-map <leader>gs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
+map <leader>grs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
 map <leader>gt :CtrlPClearCache<cr>\|:CtrlP test<cr>
 map <leader>gi :CtrlPClearCache<cr>\|:CtrlP config/initializers<cr>
 
-map <leader>t :!bundle exec rspec --color --tty > tmp/fifo 2> tmp/fifo<CR><CR>
+" map <leader>t :!bundle exec rspec --color --tty > tmp/fifo 2> tmp/fifo<CR><CR>
+map <leader>t :!be spring rspec --color --tty spec/lib/exports/employee_spec.rb > tmp/fifo 2> tmp/fifo 
 " Spring
 map <leader>ss :!spring rspec --color --tty > tmp/fifo 2> tmp/fifo<CR><CR>
 map <leader>sc :!spring cucumber -c -p wip > tmp/fifo 2> tmp/fifo<CR><CR>

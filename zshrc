@@ -12,7 +12,7 @@ ZSH=$HOME/.oh-my-zsh
 # ./dogenpunk.zsh-theme
 # ./smt.zsh-theme
 #
-ZSH_THEME="wedisagree"
+ZSH_THEME="robbyrussell"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -78,23 +78,22 @@ export RUBYMINE_HOME=/Applications/Rubymine.app
 ## Debain / Ubuntu / Mint command not found
 ################################################################################
 if [ -f /etc/zsh_command_not_found ]
-  then
-    . /etc/zsh_command_not_found
+then
+  . /etc/zsh_command_not_found
 fi
 ################################################################################
 ## aliases
 ################################################################################
 
 # ls
-# alias ls="ls --color=auto"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la="ls -A"
 
-# grep
-# alias grep='grep --color=auto'
-
 # rails
+alias bi='bundle install'
+alias bs='bundle show'
+alias bo='bundle open'
 alias be='bundle exec'
 alias beg='bundle exec guard'
 alias bers='bundle exec rails server'
@@ -106,10 +105,10 @@ alias bert='bundle exec rake --tasks'
 alias bersd='bundle exec rails server --debugger'
 alias rc='rails console --debugger'
 alias rs='rails server --debugger'
-alias tld='tail --follow log/development.log'
-alias tlt='tail --follow log/test.log'
+alias tld='tail -f log/development.log'
+alias tlt='tail -f log/test.log'
 
-# navigation
+# Navigation
 alias cda='cd $HOME/rails/aboutcorpfin'
 alias cdb='cd $HOME/rails/best100'
 alias cde='cd $HOME/rails/eme-server'
@@ -122,44 +121,16 @@ alias cdr='cd $HOME/rails/RoomPortfolio'
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
 alias cdl='cd $HOME/rails/learn-to-trade'
 alias cdf='cd $HOME/rails/fuji'
+alias cdfj='cd $HOME/javascript/wps-fuji'
 
-# utils
-rcat() { cat $1 | coderay -ruby }
-pcat() { cat $1 | coderay -python }
-round() { echo $1 | awk '{printf("%d\n",$1 + 0.5)}' }
-progress_bar() {
-  local percent=$1
-  local bar_length=$(($COLUMNS - 12))
-  local octothorpes=$(round $((bar_length * (percent / 100))))
-  local gaps=$((bar_length - octothorpes))
-  echo -n '[ '
-  for n ({0..$octothorpes}) { echo -n '#' }
-  for n ({0..$gaps}) { echo -n ' ' }
-  echo -n "] $(round $percent)% \r"
-}
-egg() {
-  let "countdown_time=60 * $1"
-  let "i=0"
-  while (( i < countdown_time ))
-  do
-     (( i += 1 ))
-     progress_bar $(((i * 100.0) / countdown_time))
-     sleep 1
-  done
-
-  if [ `uname`=Darwin ]
-  then
-    say --interactive=red -v 'Pipe Organ' 'Ding ding. End of round. Bitch ay da doo doo.' &
-    sleep 3 ; say --interactive=yellow -v 'Hysterical' ay aya ay
-  fi
-}
-function lt() { ls -ltrsa "$@" | tail; }
-function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
-function fname() { find . -iname "*$@*"; }
-function remove_lines_from() { grep -F -x -v -f $2 $1; }
+# Misc.
 alias pp="ps axuf | pager"
 alias sum="xargs | tr ' ' '+' | bc" ## Usage: echo 1 2 3 | sum
-function mcd() { mkdir $1 && cd $1; }
+alias ctagit='ctags -R --exclude=.git --exclude=log --exclude=tmp'
+alias ctagall='ctagit . $(bundle list --paths)'
+
+# utils
+source $HOME/.dotfiles/functions.sh
 
 ################################################################################
 ## rvm

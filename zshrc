@@ -31,7 +31,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(history-substring-search git brew bundler capistrano coffee colorize github github ruby rails rake rvm vi-mode tmux)
+plugins=(history-substring-search git git-flow brew bundler capistrano coffee colorize github github ruby rails rake rvm vi-mode tmux)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -1,6 +1,4 @@
 --nobin
---nocss
---nominifiedjs
 
 --type-set=haml=.haml
 --type-set=js=.coffee,.hbs
@@ -20,6 +18,7 @@
 
 --ignore-file=ext:bak
 --ignore-file=ext:pdf
+--ignore-file=is:tags
 
 --ignore-file=match:.gitignore
 --ignore-file=match:.powrc

@@ -107,6 +107,7 @@ alias rc='rails console --debugger'
 alias rs='rails server --debugger'
 alias tld='tail -f log/development.log'
 alias tlt='tail -f log/test.log'
+alias srr='spring rake routes'
 
 # Navigation
 alias cda='cd $HOME/rails/aboutcorpfin'
@@ -120,14 +121,19 @@ alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalpl
 alias cdr='cd $HOME/rails/RoomPortfolio'
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
 alias cdl='cd $HOME/rails/learn-to-trade'
+alias cdf='cd $HOME/rails/fuji-sqhc'
 alias cdf='cd $HOME/rails/fuji'
+alias cds='cd $HOME/rails/fuji-sqhc'
 alias cdfj='cd $HOME/javascript/wps-fuji'
+alias cdfd='cd $HOME/ruby/Fuji-Api-Documentation'
 
 # Misc.
 alias pp="ps axuf | pager"
 alias sum="xargs | tr ' ' '+' | bc" ## Usage: echo 1 2 3 | sum
 alias ctagit='ctags -R --exclude=.git --exclude=log --exclude=tmp'
 alias ctagall='ctagit . $(bundle list --paths)'
+alias pgd='postgres -D /usr/local/var/postgres'
+alias myd='mysql.server start'
 
 # utils
 source $HOME/.dotfiles/functions.sh

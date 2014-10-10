@@ -60,20 +60,33 @@ set modeline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"            /--------------------------------------
+"           /  You saved this in your .dotfiles repo
+let g:airline_powerline_fonts = 1
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+"           \ 
+"            \--------------------------------------
+"
+
 if has('gui_running')
-  " Font
-  " set guifont=DejaVu\ Sans\ Mono\ 10
   " Minimal GUI
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
-  " set guioptions-=r  "remove right-hand scroll bar
-  " Default gui color scheme
-  colorscheme molokai
-else
-  " Term color scheme
-  " colorscheme jellybeans
-  colorscheme molokai
+  set guioptions-=r  "remove right-hand scroll bar
 endif
+
+
+function! DarkerBlack()
+  if g:colors_name == 'molokai'
+    highlight Normal guifg=#F8F8F2 guibg=#101010
+  endif
+endfunction
+
+" Patch molokai
+autocmd ColorScheme * call DarkerBlack()
+
+colorscheme molokai
 
 " Color in linux terminals. For iTerm2 set 'Report Terminal Type" to
 " xterm-256color in profiles section of settings.
@@ -84,9 +97,6 @@ elseif $COLORTERM == 'xfce4-terminal'
 elseif $COLORTERM == 'rxvt'
   set t_Co=256
 endif
-
-" Patch colorscheme
-" autocmd ColorScheme * highlight Normal guifg=#F8F8F2 guibg=#101010
 
 syntax on
 
@@ -152,7 +162,7 @@ autocmd BufRead,BufNewFile {Capfile,Gemfile,Guardfile,Rakefile,Thorfile,config.r
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
-function G4S()
+function! G4S()
     set tabstop=4
     set shiftwidth=4
     set softtabstop=4
@@ -176,18 +186,42 @@ map <leader>n :call RenameFile()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" arrow keys are unacceptable
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
+" Press Ctrl-Tab to switch between open tabs (like browser tabs) to 
+" the right side. Ctrl-Shift-Tab goes the other way.
+if has("gui_macvim")
+  noremap <C-Tab> :tabnext<CR>
+  noremap <C-S-Tab> :tabprev<CR>
+
+  " Switch to specific tab numbers with Command-number
+  noremap <D-1> :tabn 1<CR>
+  noremap <D-2> :tabn 2<CR>
+  noremap <D-3> :tabn 3<CR>
+  noremap <D-4> :tabn 4<CR>
+  noremap <D-5> :tabn 5<CR>
+  noremap <D-6> :tabn 6<CR>
+  noremap <D-7> :tabn 7<CR>
+  noremap <D-8> :tabn 8<CR>
+  noremap <D-9> :tabn 9<CR>
+  " Command-0 goes to the last tab
+  noremap <D-0> :tablast<CR>
+endif
 " Yank to * buffer
 map <leader>y "*y
 " Move around splits with <c-hjkl>
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+" nnoremap <c-j> <c-w>j
+" nnoremap <c-k> <c-w>k
+" nnoremap <c-h> <c-w>h
+" nnoremap <c-l> <c-w>l
+" Use the arrows to manage tabs
+" map <s-right> :tabnext<cr>
+" map <s-left> :tabNext<cr>
+" map <s-up> :tabnew<cr>
+" map <s-down> :tabclose<cr>
+nnoremap <Down> <c-w>j
+nnoremap <Up> <c-w>k
+nnoremap <Left> <c-w>h
+nnoremap <Right> <c-w>l
+
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
 " Clear the search buffer when hitting return
@@ -221,7 +255,7 @@ map <leader>gv :CtrlPClearCache<cr>\|:CtrlP app/views<cr>
 map <leader>gV :CtrlPClearCache<cr>\|:CtrlP app/vendor<cr>
 map <leader>gaa :CtrlPClearCache<cr>\|:CtrlP app/assets<cr>
 map <leader>gj :CtrlPClearCache<cr>\|:CtrlP app/assets/javascripts<cr>
-map <leader>gss :CtrlPClearCache<cr>\|:CtrlP app/assets/stylesheets<cr>
+map <leader>gy :CtrlPClearCache<cr>\|:CtrlP app/assets/stylesheets<cr>
 map <leader>gas :CtrlPClearCache<cr>\|:CtrlP app/services<cr>
 map <leader>gad :CtrlPClearCache<cr>\|:CtrlP app/decorators<cr>
 map <leader>gpp :CtrlPClearCache<cr>\|:CtrlP public<cr>
@@ -229,7 +263,7 @@ map <leader>gpj :CtrlPClearCache<cr>\|:CtrlP public/javascripts<cr>
 map <leader>gps :CtrlPClearCache<cr>\|:CtrlP public/stylesheets<cr>
 map <leader>gh :CtrlPClearCache<cr>\|:CtrlP app/helpers<cr>
 map <leader>gl :CtrlPClearCache<cr>\|:CtrlP lib<cr>
-map <leader>grs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
+map <leader>gs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
 map <leader>gt :CtrlPClearCache<cr>\|:CtrlP test<cr>
 map <leader>gi :CtrlPClearCache<cr>\|:CtrlP config/initializers<cr>
 
@@ -241,12 +275,6 @@ map <leader>sc :!spring cucumber -c -p wip > tmp/fifo 2> tmp/fifo<CR><CR>
 
 " swap to last buffer
 map <silent> <leader><leader> <esc><C-^><cr>
-
-" Use the arrows to manage tabs
-map <s-right> :tabnext<cr>
-map <s-left> :tabNext<cr>
-map <s-up> :tabnew<cr>
-map <s-down> :tabclose<cr>
 
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%

@@ -251,6 +251,7 @@ map <leader>gg :CtrlPClearCache<cr>\|:CtrlP %%<cr>
 map <leader>gf :CtrlPClearCache<cr>\|:CtrlP features<cr>
 map <leader>gm :CtrlPClearCache<cr>\|:CtrlP app/models<cr>
 map <leader>gc :CtrlPClearCache<cr>\|:CtrlP app/controllers<cr>
+map <leader>gd :CtrlPClearCache<cr>\|:CtrlP app/decorators<cr>
 map <leader>gv :CtrlPClearCache<cr>\|:CtrlP app/views<cr>
 map <leader>gV :CtrlPClearCache<cr>\|:CtrlP app/vendor<cr>
 map <leader>gaa :CtrlPClearCache<cr>\|:CtrlP app/assets<cr>

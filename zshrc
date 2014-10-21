@@ -113,7 +113,8 @@ alias cdf='cd $HOME/rails/fuji-sqhc'
 alias cdf='cd $HOME/rails/fuji'
 alias cds='cd $HOME/rails/fuji-sqhc'
 alias cdfj='cd $HOME/javascript/wps-fuji'
-alias cdfd='cd $HOME/ruby/Fuji-Api-Documentation'
+alias cdfds='cd $HOME/ruby/sqhc-documentation'
+alias cdfde='cd $HOME/ruby/engage-documentation'
 
 # Misc.
 alias pp="ps axuf | pager"

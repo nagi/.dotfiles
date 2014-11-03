@@ -133,15 +133,6 @@ set fillchars="vert: "
 "Set magic on, for regular expressions
 set magic
 
-" Without setting this, ZoomWin restores windows in a way that causes
-" equalalways behavior to be triggered the next time CommandT is used.
-" This is likely a bludgeon to solve some other issue, but it works
-set noequalalways
-
-" Command-T configuration
-let g:CommandTMaxHeight=20
-let g:CommandTMaxFiles=60000
-
 " Remember last location in file
 if has("autocmd")
   autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -169,6 +160,7 @@ function! G4S()
     set textwidth=120
     set noexpandtab
 endfunction
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -267,6 +259,7 @@ map <leader>gl :CtrlPClearCache<cr>\|:CtrlP lib<cr>
 map <leader>gs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
 map <leader>gt :CtrlPClearCache<cr>\|:CtrlP test<cr>
 map <leader>gi :CtrlPClearCache<cr>\|:CtrlP config/initializers<cr>
+map <leader>gz :CtrlPClearCache<cr>\|:CtrlP app/serializers<cr>
 
 " map <leader>t :!bundle exec rspec --color --tty > tmp/fifo 2> tmp/fifo<CR><CR>
 map <leader>t :!be spring rspec --color --tty spec/lib/exports/employee_spec.rb > tmp/fifo 2> tmp/fifo 

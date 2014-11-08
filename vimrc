@@ -24,6 +24,7 @@ Bundle 'mrkschan/vim-node-jslint'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'nono/vim-handlebars'
 Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'timcharper/textile.vim'
@@ -159,6 +160,14 @@ function! G4S()
     set softtabstop=4
     set textwidth=120
     set noexpandtab
+endfunction
+
+function! HK()
+    set tabstop=8     "A tab is 8 spaces
+    set expandtab     "Always uses spaces instead of tabs
+    set softtabstop=4 "Insert 4 spaces when tab is pressed
+    set shiftwidth=4  "An indent is 4 spaces
+    set shiftround    "Round indent to nearest shiftwidth multiple
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

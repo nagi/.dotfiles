@@ -31,7 +31,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler capistrano coffee colorize cp docker git git-flow-avh github github node npm osx pip postgres rails rake ruby rvm tmux vi-mode xcode)
+plugins=(brew bundler capistrano coffee colorize cp docker git git-flow-avh github node npm osx pip postgres rake ruby rvm tmux vi-mode xcode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,7 +99,7 @@ alias sr='spring rspec'
 alias srr='spring rake routes'
 
 # Navigation
-alias cda='cd $HOME/rails/aboutcorpfin'
+alias cda='cd $HOME/rails/about-corp-finance'
 alias cdb='cd $HOME/rails/best100'
 alias cde='cd $HOME/rails/eme-server'
 alias cdp='cd $HOME/rails/programmingfonts'
@@ -118,13 +118,20 @@ alias cdfde='cd $HOME/ruby/engage-documentation'
 # Misc.
 alias pp="ps axuf | pager"
 alias sum="xargs | tr ' ' '+' | bc" ## Usage: echo 1 2 3 | sum
+# Uses system ctag executable
 alias ctagit='ctags -R --exclude=.git --exclude=log --exclude=tmp'
 alias ctagall='ctagit . $(bundle list --paths)'
+# Uses brewed ctag executable
+alias ectagit='/usr/local/bin/ctags -R --exclude=.git --exclude=log --exclude=tmp'
+alias ectagall='ectagit . $(bundle list --paths)'
 alias pgd='postgres -D /usr/local/var/postgres'
 alias myd='mysql.server start'
 
 # utils
 source $HOME/.dotfiles/functions.sh
+
+# Confidential stuff
+[[ -s "$HOME/.dotfiles/secrets.sh" ]] && source "$HOME/.dotfiles/secrets.sh"
 
 ################################################################################
 ## rvm

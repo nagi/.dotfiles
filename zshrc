@@ -61,6 +61,9 @@ export EDITOR=vim
 export BUNDLE_EDITOR=view
 export RUBYMINE_HOME=/Applications/Rubymine.app
 
+export VISUAL=vim
+autoload edit-command-line; zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 
 ################################################################################
 ## Debain / Ubuntu / Mint command not found

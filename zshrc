@@ -104,19 +104,23 @@ alias srr='spring rake routes'
 # Navigation
 alias cda='cd $HOME/rails/about-corp-finance'
 alias cdb='cd $HOME/rails/best100'
-alias cde='cd $HOME/rails/eme-server'
+alias cdeme='cd $HOME/rails/eme-server'
 alias cdp='cd $HOME/rails/programmingfonts'
 alias cdi='cd $HOME/iPhone/iPhone-App'
 alias cdg='cd $HOME/rails/g4s/give4sure'
 alias cdgp='cd $HOME/rails/g4s/plugin'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
-alias cdf='cd $HOME/rails/fuji'
-alias cdo='cd $HOME/rails/fuji-optimiser'
-alias cds='cd $HOME/rails/fuji-sqhc'
-alias cdfj='cd $HOME/javascript/wps-fuji'
-alias cdfds='cd $HOME/ruby/sqhc-documentation'
-alias cdfde='cd $HOME/ruby/engage-documentation'
+
+alias cdo='cd $HOME/rails/optimiser'
+
+alias cde='cd $HOME/rails/engage'
+alias cdej='cd $HOME/javascript/wps-fuji'
+alias cded='cd $HOME/ruby/engage-documentation'
+
+alias cds='cd $HOME/rails/sqhc'
+alias cdsd='cd $HOME/ruby/sqhc-documentation'
+alias cdsj='cd $HOME/javascript/wps-schedule'
 
 # Misc.
 alias pp="ps axuf | pager"

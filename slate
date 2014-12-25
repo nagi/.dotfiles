@@ -10,6 +10,7 @@ bind v:ctrl;alt;cmd focus 'MacVim'
 bind i:ctrl;alt;cmd focus 'IntelliJ IDEA'
 bind x:ctrl;alt;cmd focus 'Xcode'
 bind s:ctrl;alt;cmd focus 'iOS Simulator'
+bind r:ctrl;alt;cmd focus 'RubyMine'
 
 # Push Bindings - Windows esq spilt
 bind right:ctrl;alt;cmd push right bar-resize:screenSizeX/2

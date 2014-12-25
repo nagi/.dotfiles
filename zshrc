@@ -12,7 +12,7 @@ ZSH=$HOME/.oh-my-zsh
 # ./dogenpunk.zsh-theme
 # ./smt.zsh-theme
 #
-ZSH_THEME="wedisagree"
+ZSH_THEME="robbyrussell"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -31,23 +31,11 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(history-substring-search git brew bundler capistrano coffee colorize github github ruby rails rake rvm vi-mode tmux)
+plugins=(brew bundler capistrano coffee colorize cp docker git git-flow-avh github node npm osx pip postgres rake ruby rvm tmux vi-mode xcode)
 
 source $ZSH/oh-my-zsh.sh
 
 bindkey "^R" history-incremental-search-backward
-
-#history-substring-search bindings
-#bind UP and DOWN arrow keys
-#zmodload zsh/terminfo
-#bindkey "$terminfo[kcuu1]" history-substring-search-up
-#bindkey "$terminfo[kcud1]" history-substring-search-down
-# bind P and N for EMACS mode
-bindkey -M emacs '^P' history-substring-search-up
-bindkey -M emacs '^N' history-substring-search-down
-# bind k and j for VI mode
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
 
 # iTerm2 tab color helpers
 if [ `uname`=Darwin ]
@@ -71,28 +59,32 @@ export PATH=$PATH:$ADT/sdk/platform-tools
 
 export EDITOR=vim
 export BUNDLE_EDITOR=view
+export RUBYMINE_HOME=/Applications/Rubymine.app
+
+export VISUAL=vim
+autoload edit-command-line; zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 
 ################################################################################
 ## Debain / Ubuntu / Mint command not found
 ################################################################################
 if [ -f /etc/zsh_command_not_found ]
-  then
-    . /etc/zsh_command_not_found
+then
+  . /etc/zsh_command_not_found
 fi
 ################################################################################
 ## aliases
 ################################################################################
 
 # ls
-# alias ls="ls --color=auto"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la="ls -A"
 
-# grep
-# alias grep='grep --color=auto'
-
 # rails
+alias bi='bundle install'
+alias bs='bundle show'
+alias bo='bundle open'
 alias be='bundle exec'
 alias beg='bundle exec guard'
 alias bers='bundle exec rails server'
@@ -104,24 +96,49 @@ alias bert='bundle exec rake --tasks'
 alias bersd='bundle exec rails server --debugger'
 alias rc='rails console --debugger'
 alias rs='rails server --debugger'
-alias tld='tail --follow log/development.log'
-alias tlt='tail --follow log/test.log'
+alias tld='tail -f log/development.log'
+alias tlt='tail -f log/test.log'
+alias sr='spring rspec'
+alias srr='spring rake routes'
 
-# navigation
-alias cda='cd $HOME/rails/aboutcorpfin'
+# Navigation
+alias cda='cd $HOME/rails/about-corp-finance'
 alias cdb='cd $HOME/rails/best100'
-alias cdd='cd $HOME/rails/drop_a_mail'
-alias cda='cd $HOME/iPhone/iPhone-App'
+alias cdeme='cd $HOME/rails/eme-server'
 alias cdp='cd $HOME/rails/programmingfonts'
 alias cdi='cd $HOME/iPhone/iPhone-App'
+alias cdg='cd $HOME/rails/g4s/give4sure'
+alias cdgp='cd $HOME/rails/g4s/plugin'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
-alias cdr='cd $HOME/rails/RoomPortfolio'
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
-alias cdl='cd $HOME/rails/learn-to-trade'
+
+alias cdo='cd $HOME/rails/optimiser'
+
+alias cde='cd $HOME/rails/engage'
+alias cdej='cd $HOME/javascript/wps-fuji'
+alias cded='cd $HOME/ruby/engage-documentation'
+
+alias cds='cd $HOME/rails/sqhc'
+alias cdsd='cd $HOME/ruby/sqhc-documentation'
+alias cdsj='cd $HOME/javascript/wps-schedule'
+
+# Misc.
+alias pp="ps axuf | pager"
+alias sum="xargs | tr ' ' '+' | bc" ## Usage: echo 1 2 3 | sum
+# Uses system ctag executable
+alias ctagit='ctags -R --exclude=.git --exclude=log --exclude=tmp'
+alias ctagall='ctagit . $(bundle list --paths)'
+# Uses brewed ctag executable
+alias ectagit='/usr/local/bin/ctags -R --exclude=.git --exclude=log --exclude=tmp'
+alias ectagall='ectagit . $(bundle list --paths)'
+alias pgd='postgres -D /usr/local/var/postgres'
+alias myd='mysql.server start'
 
 # utils
-rcat() { cat $1 | coderay -ruby }
-pcat() { cat $1 | coderay -python }
+source $HOME/.dotfiles/functions.sh
+
+# Confidential stuff
+[[ -s "$HOME/.dotfiles/secrets.sh" ]] && source "$HOME/.dotfiles/secrets.sh"
 
 ################################################################################
 ## rvm

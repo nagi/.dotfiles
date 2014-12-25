@@ -2,16 +2,6 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#
-#  Themes with time since last commit...
-# ./wedisagree.zsh-theme
-# ./Soliah.zsh-theme
-# ./dogenpunk.zsh-theme
-# ./smt.zsh-theme
-#
 ZSH_THEME="robbyrussell"
 
 # Set to this to use case-sensitive completion
@@ -38,20 +28,25 @@ source $ZSH/oh-my-zsh.sh
 bindkey "^R" history-incremental-search-backward
 
 # iTerm2 tab color helpers
-if [ `uname`=Darwin ]
+if [ `uname` = Darwin ]
 then
 [[ -s ~/.dotfiles/iterm2-helpers.sh ]] && source ~/.dotfiles/iterm2-helpers.sh
 fi
 
 # Exports
-if [ `uname`=Darwin ]
+if [ `uname` = Darwin ]
 then
   # Prefer homebrew applications.
   export PATH=/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/sbin:/usr/local/games:/usr/texbin
 else
   # Prefer apt / pacman applications.
-  export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games:~/.gem/ruby/2.0.0/bin
+  export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games
+  [[ -s $HOME/.rbenv/bin ]] && export PATH="$HOME/.rbenv/bin:$PATH"
+  # [[ -s $HOME/.gem/ruby/2.0.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
+  # [[ -s $HOME/.gem/ruby/2.1.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
+  # [[ -s $HOME/.gem/ruby/2.2.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
 fi
+
 ADT=/opt/adt-bundle-linux-x86_64-20130219
 export PATH=$PATH:$ADT/eclipse
 export PATH=$PATH:$ADT/sdk/tools

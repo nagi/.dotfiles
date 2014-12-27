@@ -3,3 +3,4 @@ NERD_tree_*
 .svn
 *~
 .*.swp
+/tags

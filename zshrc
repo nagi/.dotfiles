@@ -21,6 +21,10 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
+
+# https://github.com/chef/chef-dk/issues/256
+UNBUNDLED_COMMANDS=(kitchen knife)
+
 plugins=(brew bundler capistrano coffee colorize cp docker git git-flow-avh github node npm osx pip postgres rake ruby rvm tmux vi-mode xcode)
 
 source $ZSH/oh-my-zsh.sh

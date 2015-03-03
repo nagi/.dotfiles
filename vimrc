@@ -1,14 +1,15 @@
+set nocompatible
+nnoremap Q <nop>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible               " be iMproved
-filetype off                   " required!
+filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required!
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
@@ -30,15 +31,17 @@ Bundle 'slim-template/vim-slim'
 Bundle 'timcharper/textile.vim'
 Bundle 'tomasr/molokai'
 Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-leiningen'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 
-filetype plugin indent on     " required!
+filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -149,7 +152,7 @@ autocmd FileType make set noexpandtab
 autocmd FileType python set tabstop=4 shiftwidth=4  noexpandtab
 
 " Thorfile, Rakefile and Gemfile are Ruby
-autocmd BufRead,BufNewFile {Capfile,Gemfile,Guardfile,Rakefile,Thorfile,config.ru,*.simplecov,*.rbs,*.rabl,*.jbuilder} set ft=ruby
+autocmd BufRead,BufNewFile {Capfile,Gemfile,Guardfile,Rakefile,Thorfile,Podfile,config.ru,*.simplecov,*.rbs,*.rabl,*.jbuilder} set ft=ruby
 
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on

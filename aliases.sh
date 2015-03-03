@@ -37,7 +37,7 @@ alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else 
 alias cdo='cd $HOME/rails/optimiser'
 
 alias cde='cd $HOME/rails/engage'
-alias cdej='cd $HOME/javascript/wps-fuji'
+alias cdej='cd $HOME/javascript/engage-ui'
 alias cded='cd $HOME/ruby/engage-documentation'
 
 alias cds='cd $HOME/rails/sqhc'

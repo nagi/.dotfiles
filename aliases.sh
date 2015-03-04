@@ -33,13 +33,13 @@ alias cdg='cd $HOME/rails/g4s/give4sure'
 alias cdgp='cd $HOME/rails/g4s/plugin'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
-
-alias cdo='cd $HOME/rails/optimiser'
-
+# WP Navigation
 alias cde='cd $HOME/rails/engage'
-alias cdej='cd $HOME/javascript/engage-ui'
 alias cded='cd $HOME/ruby/engage-documentation'
-
+alias cdej='cd $HOME/javascript/engage-ui'
+alias cdf='cd $HOME/ruby/fuji-core'
+alias cdn='cd $HOME/rails/fuji-notification-service'
+alias cdo='cd $HOME/rails/optimiser'
 alias cds='cd $HOME/rails/sqhc'
 alias cdsd='cd $HOME/ruby/sqhc-documentation'
 alias cdsj='cd $HOME/javascript/wps-schedule'

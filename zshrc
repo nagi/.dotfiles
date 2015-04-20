@@ -25,7 +25,7 @@ DISABLE_AUTO_UPDATE="true"
 # https://github.com/chef/chef-dk/issues/256
 UNBUNDLED_COMMANDS=(kitchen knife)
 
-plugins=(brew bundler capistrano coffee colorize cp docker git git-flow-avh github node npm osx pip postgres rake ruby rvm tmux vi-mode xcode)
+plugins=(brew bundler capistrano coffee colorize cp docker git git-flow-avh github node npm osx pip postgres rake ruby rvm tmux vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 

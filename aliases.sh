@@ -36,8 +36,8 @@ alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else 
 # WP Navigation
 alias cdfa='cd $HOME/rails/fuji-accout-service'
 alias cdfc='cd $HOME/ruby/fuji-core'
-alias cdfe='cd $HOME/rails/engage'
-alias cdfed='cd $HOME/ruby/engage-documentation'
+alias cdfe='cd $HOME/rails/fuji-engage'
+alias cdfed='cd $HOME/ruby/fuji-engage-documentation'
 alias cdfej='cd $HOME/javascript/engage-ui'
 alias cdfn='cd $HOME/rails/fuji-notification-service'
 alias cdfo='cd $HOME/rails/optimiser'

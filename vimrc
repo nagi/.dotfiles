@@ -69,7 +69,8 @@ set modeline
 "            /--------------------------------------
 "           /  You saved this in your .dotfiles repo
 let g:airline_powerline_fonts = 1
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+set guifont=Monaco\ for\ Powerline\ 12
 "           \ 
 "            \--------------------------------------
 "

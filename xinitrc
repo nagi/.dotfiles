@@ -23,18 +23,31 @@ Noppoo_detect () {
   lsusb | grep -q $NOPPOO_KEYBOARD_DEV_ID
 }
 
-Map_keys () {
-  if [ -f /home/nagi/.Xmodmap ] 
+Map_noppoo () {
+  if [ -f /home/nagi/.Xmodmap.noppoo ]
   then
-    /usr/bin/xmodmap /home/nagi/.Xmodmap 
+    /usr/bin/xmodmap /home/nagi/.Xmodmap.noppoo
   fi
 }
 
-Noppoo_detect
-if [ $? -eq 0 ] # Noppoo detected
-then
-  Map_keys
-fi
+Map_compaq () {
+  if [ -f /home/nagi/.Xmodmap.compaq ]
+  then
+    /usr/bin/xmodmap /home/nagi/.Xmodmap.compaq
+  fi
+}
+
+Map_keys () {
+  Noppoo_detect
+  if [ $? -eq 0 ] # Noppoo detected
+  then
+    Map_noppoo
+  else
+    Map_compaq
+  fi
+}
+
+Map_keys
 
 # exec gnome-session
 # exec startkde

@@ -46,9 +46,11 @@ else
   # Prefer apt / pacman applications.
   export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games
   [[ -s $HOME/.rbenv/bin ]] && export PATH="$HOME/.rbenv/bin:$PATH"
-  # [[ -s $HOME/.gem/ruby/2.0.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
-  # [[ -s $HOME/.gem/ruby/2.1.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
-  # [[ -s $HOME/.gem/ruby/2.2.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
+  # Arch system ruby paths
+  [[ -s $HOME/.gem/ruby/2.0.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
+  [[ -s $HOME/.gem/ruby/2.1.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
+  [[ -s $HOME/.gem/ruby/2.2.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
+  [[ -s $HOME/.gem/ruby/2.3.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
 fi
 
 ADT=/opt/adt-bundle-linux-x86_64-20130219

@@ -256,13 +256,16 @@ map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
 map <leader>gg :CtrlPClearCache<cr>\|:CtrlP %%<cr>
 map <leader>gf :CtrlPClearCache<cr>\|:CtrlP features<cr>
 map <leader>gm :CtrlPClearCache<cr>\|:CtrlP app/models<cr>
-map <leader>gc :CtrlPClearCache<cr>\|:CtrlP app/controllers<cr>
-map <leader>gd :CtrlPClearCache<cr>\|:CtrlP app/decorators<cr>
+map <leader>gc :CtrlPClearCache<cr>\|:CtrlP app/config<cr>
+map <leader>gce :CtrlPClearCache<cr>\|:CtrlP app/config/environments<cr>
+map <leader>gd :CtrlPClearCache<cr>\|:CtrlP app/db<cr>
 map <leader>gv :CtrlPClearCache<cr>\|:CtrlP app/views<cr>
 map <leader>gV :CtrlPClearCache<cr>\|:CtrlP app/vendor<cr>
 map <leader>gaa :CtrlPClearCache<cr>\|:CtrlP app/assets<cr>
 map <leader>gj :CtrlPClearCache<cr>\|:CtrlP app/assets/javascripts<cr>
 map <leader>gy :CtrlPClearCache<cr>\|:CtrlP app/assets/stylesheets<cr>
+map <leader>gaa :CtrlPClearCache<cr>\|:CtrlP app/admin<cr>
+map <leader>gac :CtrlPClearCache<cr>\|:CtrlP app/controllers<cr>
 map <leader>gas :CtrlPClearCache<cr>\|:CtrlP app/services<cr>
 map <leader>gad :CtrlPClearCache<cr>\|:CtrlP app/decorators<cr>
 map <leader>gpp :CtrlPClearCache<cr>\|:CtrlP public<cr>
@@ -294,8 +297,3 @@ map <Leader>z :ZoomWin<cr>
 " TODO Learn CTags
 " CTags
 " map <Leader>ct :!ctags --extra=+f -R *<cr><cr>
-
-" TODO Learn cope
-" map <leader>cc :bo cope<cr>
-" map <leader>[ :cp<cr>
-" map <leader>] :cn<cr>

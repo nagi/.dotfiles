@@ -41,9 +41,9 @@ alias cdfed='cd $HOME/ruby/fuji-engage-documentation'
 alias cdfej='cd $HOME/javascript/engage-ui'
 alias cdfn='cd $HOME/rails/fuji-notification-service'
 alias cdfo='cd $HOME/rails/optimiser'
-alias cdfs='cd $HOME/rails/sqhc'
+alias cdfs='cd $HOME/rails/fuji-ssa'
 alias cdfsd='cd $HOME/ruby/sqhc-documentation'
-alias cdfsj='cd $HOME/javascript/wps-schedule'
+alias cdfsj='cd $HOME/javascript/schedule-ui'
 
 # Misc.
 alias pp="ps axuf | pager"

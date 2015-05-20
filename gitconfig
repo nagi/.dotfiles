@@ -11,6 +11,7 @@
 	dc = diff --cached
 	di = diff
 	l = "!. ~/.githelpers && pretty_git_log"
+	me = "!git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\" | grep -i nagi | less"
 	la = !git l --all
 	pom = push origin master
 	phm = push heroku master
@@ -21,15 +22,9 @@
 [color]
 	ui = true
 [core]
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
 	editor = vim
 	autocrlf = input
 [merge]
 	tool = vimdiff
 [apply]
 	whitespace = nowarn
-[format]
-	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
-[github]
-	user = nagi
-	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>

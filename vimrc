@@ -69,8 +69,8 @@ set modeline
 "            /--------------------------------------
 "           /  You saved this in your .dotfiles repo
 let g:airline_powerline_fonts = 1
-" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
-set guifont=Monaco\ for\ Powerline\ 12
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+" set guifont=Monaco\ for\ Powerline\ 12
 "           \ 
 "            \--------------------------------------
 "
@@ -237,6 +237,12 @@ endfunction
 call MapCR()
 nnoremap <leader><leader> <c-^>
 map Y y$
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrlp
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_custom_ignore = 'node_modules\|lib\\bower_components|\DS_Store\|git'
 " **********
 map <leader>1 <esc>:Rview<cr>
 map <leader>2 <esc>:Rcontroller<cr>

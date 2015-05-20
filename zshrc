@@ -31,17 +31,15 @@ source $ZSH/oh-my-zsh.sh
 
 bindkey "^R" history-incremental-search-backward
 
-# iTerm2 tab color helpers
-if [ `uname` = Darwin ]
-then
-[[ -s ~/.dotfiles/iterm2-helpers.sh ]] && source ~/.dotfiles/iterm2-helpers.sh
-fi
-
 # Exports
 if [ `uname` = Darwin ]
 then
+  # iTerm2 tab color helpers
+  [[ -s ~/.dotfiles/iterm2-helpers.sh ]] && source ~/.dotfiles/iterm2-helpers.sh
   # Prefer homebrew applications.
   export PATH=/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/sbin:/usr/local/games:/usr/texbin
+  # Put vagrant boxes on pendrive
+  export VAGRANT_HOME='/Volumes/Quicker/vagrant.d'
 else
   # Prefer apt / pacman applications.
   export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games

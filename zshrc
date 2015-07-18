@@ -34,7 +34,7 @@ bindkey "^R" history-incremental-search-backward
 # Exports
 if [ `uname` = Darwin ]
 then
-  # iTerm2 tab color helpers
+  # load iTerm2 tab color helpers
   [[ -s ~/.dotfiles/iterm2-helpers.sh ]] && source ~/.dotfiles/iterm2-helpers.sh
   # Prefer homebrew applications.
   export PATH=/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/sbin:/usr/local/games:/usr/texbin
@@ -49,6 +49,8 @@ else
   [[ -s $HOME/.gem/ruby/2.1.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
   [[ -s $HOME/.gem/ruby/2.2.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
   [[ -s $HOME/.gem/ruby/2.3.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
+  # Run ssh-agent: https://wiki.archlinux.org/index.php/SSH_keys#ssh-agent
+  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
 
 ADT=/opt/adt-bundle-linux-x86_64-20130219

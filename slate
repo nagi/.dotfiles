@@ -5,7 +5,7 @@ config defaultToCurrentScreen true
 bind c:ctrl;alt;cmd focus 'Google Chrome'
 bind f:ctrl;alt;cmd focus 'Firefox'
 bind s:ctrl;alt;cmd focus 'Safari'
-bind t:ctrl;alt;cmd focus 'iTerm'
+bind t:ctrl;alt;cmd focus 'iTerm2'
 bind v:ctrl;alt;cmd focus 'MacVim'
 bind i:ctrl;alt;cmd focus 'IntelliJ IDEA'
 bind x:ctrl;alt;cmd focus 'Xcode'

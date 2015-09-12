@@ -259,10 +259,12 @@ map <leader>v <esc>"+gP<cr>
 map <leader>r <esc>:w<cr><esc>:!ruby %<cr>
 " **********
 map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
+map <leader>ga :CtrlPClearCache<cr>\|:CtrlP app/<cr>
 map <leader>gg :CtrlPClearCache<cr>\|:CtrlP %%<cr>
 map <leader>gf :CtrlPClearCache<cr>\|:CtrlP features<cr>
-map <leader>gm :CtrlPClearCache<cr>\|:CtrlP app/models<cr>
-map <leader>gc :CtrlPClearCache<cr>\|:CtrlP app/config<cr>
+map <leader>gm :CtrlPClearCache<cr>\|:CtrlP app/models/<cr>
+map <leader>gw :CtrlPClearCache<cr>\|:CtrlP app/workers/<cr>
+map <leader>gc :CtrlPClearCache<cr>\|:CtrlP app/config/<cr>
 map <leader>gce :CtrlPClearCache<cr>\|:CtrlP app/config/environments<cr>
 map <leader>gd :CtrlPClearCache<cr>\|:CtrlP app/db<cr>
 map <leader>gv :CtrlPClearCache<cr>\|:CtrlP app/views<cr>

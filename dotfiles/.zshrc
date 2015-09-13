@@ -43,12 +43,12 @@ then
 else
   # Prefer apt / pacman applications.
   export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games
-  [[ -s $HOME/.rbenv/bin ]] && export PATH="$HOME/.rbenv/bin:$PATH"
+  [[ -x $HOME/.rbenv/bin ]] && export PATH="$HOME/.rbenv/bin:$PATH"
   # Arch system ruby paths
-  [[ -s $HOME/.gem/ruby/2.0.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
-  [[ -s $HOME/.gem/ruby/2.1.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
-  [[ -s $HOME/.gem/ruby/2.2.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
-  [[ -s $HOME/.gem/ruby/2.3.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
+  [[ -x $HOME/.gem/ruby/2.0.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
+  [[ -x $HOME/.gem/ruby/2.1.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
+  [[ -x $HOME/.gem/ruby/2.2.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
+  [[ -x $HOME/.gem/ruby/2.3.0/bin ]] && export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
   # Run ssh-agent: https://wiki.archlinux.org/index.php/SSH_keys#ssh-agent
   export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
@@ -79,8 +79,11 @@ source $HOME/.dotfiles/functions/functions.sh
 [[ -s "$HOME/.dotfiles/secrets.sh" ]] && source "$HOME/.dotfiles/secrets.sh"
 
 # rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -x "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -x "$HOME/.rvm/scripts/rvm" ]] && PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # rbenv
 which rbenv > /dev/null && eval "$(rbenv init -)"
+
+# chruby
+[[ -x /usr/local/share/chruby/chruby.sh ]] && source /usr/local/share/chruby/chruby.sh

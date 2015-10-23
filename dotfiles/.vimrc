@@ -87,16 +87,15 @@ if has('gui_running')
 endif
 
 
-function! DarkerBlack()
-  if g:colors_name == 'molokai'
-    highlight Normal guifg=#F8F8F2 guibg=#101010
-  endif
-endfunction
-
-" Patch molokai
-autocmd ColorScheme * call DarkerBlack()
-
-colorscheme molokai
+" function! DarkerBlack()
+"   if g:colors_name == 'molokai'
+"     highlight Normal guifg=#F8F8F2 guibg=#101010
+"   endif
+" endfunction
+" 
+" " Patch molokai
+" autocmd ColorScheme * call DarkerBlack()
+" colorscheme molokai
 
 " Color in linux terminals. For iTerm2 set 'Report Terminal Type" to
 " xterm-256color in profiles section of settings.

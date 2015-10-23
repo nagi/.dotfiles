@@ -6,11 +6,11 @@ nnoremap Q <nop>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
-" let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles here:
 Plugin 'DrowsySaturn/VIvid.vim.git'

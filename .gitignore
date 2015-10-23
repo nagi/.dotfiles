@@ -3,6 +3,7 @@ xmonad/xmonad.errors
 xmonad/xmonad-x86_64-linux
 xmonad/xmonad.hi
 xmonad/xmonad.o
-vim/backup/*
-vim/bundle/*
+dotfiles/.vim/backup/*
+dotfiles/.vim/bundle/*
 secrets.sh
+functions/secrets.sh

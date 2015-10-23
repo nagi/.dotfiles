@@ -35,7 +35,7 @@ bindkey "^R" history-incremental-search-backward
 if [ `uname` = Darwin ]
 then
   # load iTerm2 tab color helpers
-  [[ -s ~/.dotfiles/iterm2-helpers.sh ]] && source ~/.dotfiles/iterm2-helpers.sh
+  [[ -s ~/.dotfiles/functions/iterm2-helpers.sh ]] && source ~/.dotfiles/functions/iterm2-helpers.sh
   # Prefer homebrew applications.
   export PATH=/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/sbin:/usr/local/games:/usr/texbin
   # Put vagrant boxes on pendrive
@@ -72,8 +72,8 @@ then
   . /etc/zsh_command_not_found
 fi
 
-source $HOME/.dotfiles/aliases.sh
-source $HOME/.dotfiles/functions.sh
+source $HOME/.dotfiles/functions/aliases.sh
+source $HOME/.dotfiles/functions/functions.sh
 
 # Confidential stuff
 [[ -s "$HOME/.dotfiles/secrets.sh" ]] && source "$HOME/.dotfiles/secrets.sh"

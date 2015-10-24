@@ -95,7 +95,7 @@ endif
 " 
 " " Patch molokai
 " autocmd ColorScheme * call DarkerBlack()
-" colorscheme molokai
+colorscheme molokai
 
 " Color in linux terminals. For iTerm2 set 'Report Terminal Type" to
 " xterm-256color in profiles section of settings.

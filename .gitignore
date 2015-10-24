@@ -6,5 +6,4 @@ xmonad/xmonad.o
 dotfiles/.vim/backup/*
 dotfiles/.vim/bundle/*
 dotfiles/.vim/.netrwhist
-secrets.sh
 functions/secrets.sh

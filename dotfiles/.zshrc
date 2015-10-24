@@ -76,7 +76,7 @@ source $HOME/.dotfiles/functions/aliases.sh
 source $HOME/.dotfiles/functions/functions.sh
 
 # Confidential stuff
-[[ -s "$HOME/.dotfiles/secrets.sh" ]] && source "$HOME/.dotfiles/secrets.sh"
+[[ -s "$HOME/.dotfiles/functions/secrets.sh" ]] && source "$HOME/.dotfiles/functions/secrets.sh"
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

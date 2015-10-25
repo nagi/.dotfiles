@@ -17,4 +17,5 @@ else
   then
     . /etc/zsh_command_not_found
   fi
+  eval `keychain --eval --agents ssh id_rsa --quiet`
 fi

@@ -13,34 +13,38 @@ call vundle#rc()
 Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles here:
-Bundle 'bling/vim-airline.git'
-Bundle 'ervandew/supertab'
-Bundle 'groenewege/vim-less'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'matchit.zip'
-Bundle 'mileszs/ack.vim'
-Bundle 'mrkschan/vim-node-jslint'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'nono/vim-handlebars'
-Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-Bundle 'slim-template/vim-slim'
-Bundle 'takac/vim-hardtime'
-Bundle 'timcharper/textile.vim'
-Bundle 'tomasr/molokai'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-leiningen'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
+Plugin 'DrowsySaturn/VIvid.vim.git'
+Plugin 'bling/vim-airline.git'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ervandew/supertab'
+Plugin 'groenewege/vim-less'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'kylef/apiblueprint.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'matchit.zip'
+Plugin 'mattn/emmet-vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'mrkschan/vim-node-jslint'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'nono/vim-handlebars'
+Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/syntastic'
+Plugin 'sjl/gundo.vim'
+Plugin 'slim-template/vim-slim'
+Plugin 'takac/vim-hardtime'
+Plugin 'timcharper/textile.vim'
+Plugin 'tomasr/molokai'
+Plugin 'tpope/vim-cucumber'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-leiningen'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
 
 filetype plugin indent on
 
@@ -82,15 +86,14 @@ if has('gui_running')
   set guioptions-=r  "remove right-hand scroll bar
 endif
 
-function! DarkerBlack()
-  if g:colors_name == 'molokai'
-    highlight Normal guifg=#F8F8F2 guibg=#101010
-  endif
-endfunction
-
-" Patch molokai
-autocmd ColorScheme * call DarkerBlack()
-
+" function! DarkerBlack()
+"   if g:colors_name == 'molokai'
+"     highlight Normal guifg=#F8F8F2 guibg=#101010
+"   endif
+" endfunction
+" 
+" " Patch molokai
+" autocmd ColorScheme * call DarkerBlack()
 colorscheme molokai
 
 " Color in linux terminals. For iTerm2 set 'Report Terminal Type" to
@@ -258,6 +261,8 @@ map <leader>v <esc>"+gP<cr>
 map <leader>r <esc>:w<cr><esc>:!ruby %<cr>
 map <leader>e <esc>:Eval<cr>
 " **********
+map <leader>b :CtrlPBuffer<cr>
+" **********
 map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
 map <leader>ga :CtrlPClearCache<cr>\|:CtrlP app/<cr>
 map <leader>gg :CtrlPClearCache<cr>\|:CtrlP %%<cr>
@@ -284,6 +289,7 @@ map <leader>gl :CtrlPClearCache<cr>\|:CtrlP lib<cr>
 map <leader>gs :CtrlPClearCache<cr>\|:CtrlP spec<cr>
 map <leader>gt :CtrlPClearCache<cr>\|:CtrlP test<cr>
 map <leader>gi :CtrlPClearCache<cr>\|:CtrlP config/initializers<cr>
+map <leader>gz :CtrlPClearCache<cr>\|:CtrlP app/serializers<cr>
 map <leader>gz :CtrlPClearCache<cr>\|:CtrlP app/serializers<cr>
 
 " map <leader>t :!bundle exec rspec --color --tty > tmp/fifo 2> tmp/fifo<CR><CR>

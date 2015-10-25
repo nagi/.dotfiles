@@ -76,7 +76,7 @@ source $HOME/.dotfiles/functions/aliases.sh
 source $HOME/.dotfiles/functions/functions.sh
 
 # Confidential stuff
-[[ -s "$HOME/.dotfiles/secrets.sh" ]] && source "$HOME/.dotfiles/secrets.sh"
+[[ -s "$HOME/.dotfiles/functions/secrets.sh" ]] && source "$HOME/.dotfiles/functions/secrets.sh"
 
 # rvm
 [[ -x "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -86,4 +86,7 @@ source $HOME/.dotfiles/functions/functions.sh
 which rbenv > /dev/null && eval "$(rbenv init -)"
 
 # chruby
-[[ -x /usr/local/share/chruby/chruby.sh ]] && source /usr/local/share/chruby/chruby.sh
+[[ -s /usr/local/share/chruby/chruby.sh ]] && source /usr/local/share/chruby/chruby.sh
+
+# Confidential stuff
+[[ -s "$HOME/.dotfiles/functions/system-specific.sh" ]] && source "$HOME/.dotfiles/functions/system-specific.sh"

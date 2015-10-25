@@ -69,7 +69,7 @@ set modeline
 "            /--------------------------------------
 "           /  You saved this in your .dotfiles repo
 let g:airline_powerline_fonts = 1
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
 " set guifont=Monaco\ for\ Powerline\ 12
 "           \ 
 "            \--------------------------------------
@@ -81,7 +81,6 @@ if has('gui_running')
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
 endif
-
 
 function! DarkerBlack()
   if g:colors_name == 'molokai'
@@ -257,6 +256,7 @@ map <leader>c <esc>"+y<cr>
 map <leader>p <esc>"*p<cr>
 map <leader>v <esc>"+gP<cr>
 map <leader>r <esc>:w<cr><esc>:!ruby %<cr>
+map <leader>e <esc>:Eval<cr>
 " **********
 map <leader>f :CtrlPClearCache<cr>\|:CtrlP<cr>
 map <leader>ga :CtrlPClearCache<cr>\|:CtrlP app/<cr>

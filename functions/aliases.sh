@@ -3,10 +3,6 @@ alias l="ls -lAh"
 alias ll="ls -l"
 alias la="ls -A"
 
-# sane clipboard
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-
 # rails
 alias bi='bundle install'
 alias bs='bundle show'

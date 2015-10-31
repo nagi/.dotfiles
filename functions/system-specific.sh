@@ -18,4 +18,8 @@ else
     . /etc/zsh_command_not_found
   fi
   eval `keychain --eval --agents ssh id_rsa --quiet`
+
+  # sane clipboard
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
 fi

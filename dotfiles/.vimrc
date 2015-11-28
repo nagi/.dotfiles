@@ -73,8 +73,8 @@ set modeline
 "            /--------------------------------------
 "           /  You saved this in your .dotfiles repo
 let g:airline_powerline_fonts = 1
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
-" set guifont=Monaco\ for\ Powerline\ 12
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+set guifont=Monaco\ for\ Powerline:h18 
 "           \ 
 "            \--------------------------------------
 "
@@ -279,6 +279,7 @@ map <leader>gj :CtrlPClearCache<cr>\|:CtrlP app/assets/javascripts<cr>
 map <leader>gy :CtrlPClearCache<cr>\|:CtrlP app/assets/stylesheets<cr>
 map <leader>gaa :CtrlPClearCache<cr>\|:CtrlP app/admin<cr>
 map <leader>gac :CtrlPClearCache<cr>\|:CtrlP app/controllers<cr>
+map <leader>gar :CtrlPClearCache<cr>\|:CtrlP app/resque<cr>
 map <leader>gas :CtrlPClearCache<cr>\|:CtrlP app/services<cr>
 map <leader>gad :CtrlPClearCache<cr>\|:CtrlP app/decorators<cr>
 map <leader>gpp :CtrlPClearCache<cr>\|:CtrlP public<cr>

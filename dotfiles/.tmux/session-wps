@@ -1,0 +1,27 @@
+neww -n zeus shell
+splitw -v -p 70 -t 0 start
+send-keys 'cd ~/rails/fuji-engage && zeus start' C-m
+rename-window moblie-api
+
+neww -n m-api-r
+send-keys 'cd ~/rails/fuji-engage && bundle exec rails server' C-m
+rename-window m-api-r
+
+neww -n m-api-s
+send-keys 'cd ~/rails/fuji-engage && bundle exec sidekiq' C-m
+rename-window m-api-s
+
+neww -n m-api-h
+send-keys 'cd ~/rails/fuji-engage && bundle exec hutch' C-m
+rename-window m-api-h
+
+neww -n logs
+send-keys "cd ~/rails && tail -F fuji-engage/log/*.log schedule-api/log/*.log fuji-notification-service/log/*.log fuji-account-service/log/*.log" C-m
+rename-window logs
+
+selectw -t zeus
+selectp -t shell
+
+new -s db -n db
+send-keys 'mysql -h 0.0.0.0 -u root' C-m
+rename-window db

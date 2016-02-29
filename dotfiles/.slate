@@ -3,6 +3,7 @@ config defaultToCurrentScreen true
 
 # App swtiching
 bind c:ctrl;alt;cmd focus 'Google Chrome'
+bind e:ctrl;alt;cmd focus 'Emacs'
 bind f:ctrl;alt;cmd focus 'Firefox'
 bind s:ctrl;alt;cmd focus 'Safari'
 bind t:ctrl;alt;cmd focus 'iTerm2'

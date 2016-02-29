@@ -1,12 +1,13 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
-plugins=(brew capistrano coffee colorize cp docker git git-flow-avh github node npm osx pip postgres rake ruby rvm tmux vi-mode)
+plugins=(brew capistrano coffee colorize cp docker git git-flow-avh github node npm osx pip postgres rake ruby rvm tmux tmuxinator vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
 bindkey "^R" history-incremental-search-backward
 
+export PATH=$PATH:$HOME/.dotfiles/bin
 export RUBYMINE_HOME=/Applications/Rubymine.app
 export BUNDLE_EDITOR=view
 export EDITOR=vim

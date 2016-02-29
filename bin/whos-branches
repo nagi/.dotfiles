@@ -1,0 +1,20 @@
+#!/bin/bash
+
+FAIL=0
+
+report () {
+  echo
+  echo '--------------------------------------'
+  echo '| ' `basename "$1"`
+  echo '--------------------------------------'
+  cd "$1"
+  paste -s -d' \n' <(for f in `git branch -a | grep remotes/origin/fea` ; do echo $f ; git show $f | grep '^Author:' ; done) | column -t -s ':' | sed s/Author//
+}
+
+report /Users/nagi/rails/schedule-api
+report /Users/nagi/rails/fuji-engage
+report /Users/nagi/rails/fuji-notification-service
+report /Users/nagi/rails/fuji-account-service
+
+report /Users/nagi/js/schedule-ui
+report /Users/nagi/js/engage-ui

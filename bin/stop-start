@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cd ~
+
+tmux kill-session -t sch >/dev/null 2>&1
+tmux kill-session -t mov >/dev/null 2>&1
+
+tmuxinator start sch&
+tmuxinator start mob&
+
+echo
+echo Done.

@@ -15,6 +15,7 @@
 --ignore-dir=test
 --ignore-dir=tmp
 --ignore-dir=vendor
+--ignore-dir=.idea
 
 --ignore-file=ext:bak
 --ignore-file=ext:pdf

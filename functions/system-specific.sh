@@ -3,7 +3,7 @@ then
   # load iTerm2 tab color helpers
   [[ -s ~/.dotfiles/functions/iterm2-helpers.sh ]] && source ~/.dotfiles/functions/iterm2-helpers.sh
   # Prefer homebrew applications.
-  export PATH=/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/sbin:/usr/local/games:/usr/texbin:/usr/local/mysql/bin
+  export PATH=$PATH:/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/sbin:/usr/local/games:/usr/texbin:/usr/local/mysql/bin
   # Put vagrant boxes on pendrive
   export VAGRANT_HOME='/Volumes/Quicker/vagrant.d'
 else

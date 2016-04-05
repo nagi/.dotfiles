@@ -33,6 +33,7 @@ alias cdi='cd $HOME/ios/iPhone-App'
 alias cdg='cd $HOME/rails/g4s/give4sure'
 alias cdgp='cd $HOME/rails/g4s/plugin'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
+alias cdo='cd $HOME/rails/ogl_remarkable'
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
 # WP Navigation
 alias cdfa='cd $HOME/rails/fuji-account-service'

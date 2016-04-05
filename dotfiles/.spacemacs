@@ -26,12 +26,14 @@ values."
      auto-completion
      clojure
      emacs-lisp
+     floobits
      git
      html
      javascript
      markdown
      org
      osx
+     ruby ;; (ruby :variables ruby-enable-enh-ruby-mode t)
      ruby-on-rails
      (shell :variables
             shell-default-height 30

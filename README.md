@@ -14,4 +14,6 @@ My config files for both Mac and Linux systems.
 
   git submodule init
   git submodule update
+
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   ```

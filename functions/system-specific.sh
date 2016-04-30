@@ -9,15 +9,15 @@ then
 else
   # Fix for tmux
   export TERM=xterm-256color
+
   # Run ssh-agent: https://wiki.archlinux.org/index.php/SSH_keys#ssh-agent
-  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+  eval `keychain --eval --agents ssh id_rsa --quiet`
 
   # Debain / Ubuntu / Mint command not found
   if [ -f /etc/zsh_command_not_found ]
   then
     . /etc/zsh_command_not_found
   fi
-  eval `keychain --eval --agents ssh id_rsa --quiet`
 
   # sane clipboard
   alias pbcopy='xclip -selection clipboard'

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# This file runs when you use a graphical login like gdm3 or slim
+
 Noppoo_detect () {
   NOPPOO_KEYBOARD_DEV_ID=1006:0022
   lsusb | grep -q $NOPPOO_KEYBOARD_DEV_ID

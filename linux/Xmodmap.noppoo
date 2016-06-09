@@ -5,7 +5,7 @@ clear Lock
 !clear Mod2
 clear Mod1
 !clear Mod3
-!clear Mod4
+clear Mod4
 !clear Mod5
 keycode   8 =
 !keycode   9 = Escape NoSymbol Escape
@@ -109,7 +109,8 @@ keycode 104 = KP_Enter NoSymbol KP_Enter
 keycode 105 = Control_R NoSymbol Control_R
 keycode 106 = KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide XF86Ungrab KP_Divide KP_Divide XF86Ungrab
 keycode 107 = Print Sys_Req Print Sys_Req
-keycode 108 = Alt_R Meta_R ISO_Level3_Shift Multi_key
+!! ORIGINAL: keycode 108 = Alt_R Meta_R ISO_Level3_Shift Multi_key
+keycode 108 = Hyper_L
 keycode 109 = Linefeed NoSymbol Linefeed
 keycode 110 = Home NoSymbol Home
 keycode 111 = Up NoSymbol Up
@@ -262,7 +263,7 @@ keycode 255 =
 !add Control = Control_L Control_R
 add Mod1    = Alt_L Meta_L
 !add Mod2    = Num_Lock
-add Mod3    = Alt_R
-!add Mod4    = Super_L Super_R
+add Mod3    = Hyper_L
+add Mod4    = Super_L Super_R
 !add Mod5    = ISO_Level3_Shift, Mode_switch
 !add Lock    = Escape

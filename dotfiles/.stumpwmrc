@@ -1,0 +1,73 @@
+;; ;; -*-Lisp-*-
+
+(in-package :stumpwm)
+
+;; Load swank.
+;; *prefix-key* ; swank will kick this off
+(load "/usr/share/common-lisp/source/slime/swank-loader.lisp")
+(swank-loader:init)
+(defcommand swank () ()
+  (swank:create-server :port 4005
+                       :style swank:*communication-style*
+                       :dont-close t)
+  (echo-string (current-screen) 
+               "Starting swank. M-x slime-connect RET RET, then (in-package stumpwm)."))
+(swank)
+
+;; Requires xmodmap hacks to set Hyper_L
+(stumpwm:set-prefix-key (stumpwm:kbd "H-space"))
+
+(defcommand google-chrome () ()
+  "run google-chrome"
+  (run-or-raise "google-chrome" '(:class "google-chrome")))
+
+(define-key *top-map* (kbd "H-c") "google-chrome")
+(define-key *top-map* (kbd "H-e") "emacs")
+(define-key *top-map* (kbd "H-F1") "gselect 1")
+(define-key *top-map* (kbd "H-F2") "gselect 2")
+(define-key *top-map* (kbd "H-F3") "gselect 3")
+(define-key *top-map* (kbd "H-F4") "gselect 4")
+(define-key *top-map* (kbd "H-F5") "gselect 5")
+(define-key *top-map* (kbd "H-F6") "gselect 6")
+(define-key *top-map* (kbd "H-F7") "gselect 7")
+(define-key *top-map* (kbd "H-F8") "gselect 8")
+(define-key *top-map* (kbd "H-F9") "gselect 9")
+(define-key *top-map* (kbd "H-F10") "gselect 10")
+(define-key *top-map* (kbd "H-F11") "gselect 11")
+(define-key *top-map* (kbd "H-F12") "gselect 12")
+
+(define-key *top-map* (kbd "s-j") "pull-hidden-next")
+(define-key *top-map* (kbd "s-space") "pull-hidden-next")
+(define-key *top-map* (kbd "s-k") "pull-hidden-previous")
+(define-key *top-map* (kbd "s-Delete") "remove")
+
+(define-key *top-map* (kbd "s-s") "vsplit")
+(define-key *top-map* (kbd "s-v") "hsplit")
+
+(define-key *top-map* (kbd "s-Up") "move-focus up")
+(define-key *top-map* (kbd "s-Down") "move-focus down")
+(define-key *top-map* (kbd "s-Left") "move-focus left")
+(define-key *top-map* (kbd "s-Right") "move-focus right")
+
+(define-key *top-map* (kbd "S-s-Up") "move-window up")
+(define-key *top-map* (kbd "S-s-Down") "move-window down")
+(define-key *top-map* (kbd "S-s-Left") "move-window left")
+(define-key *top-map* (kbd "S-s-Right") "move-window right")
+
+;; Follow mouse
+(setf *mouse-focus-policy* :sloppy) ;; :click, :ignore, :sloppy
+
+;; Create groups
+(gnewbg "Web")
+(gnewbg-float "Float")
+
+;; Clear rules
+(clear-window-placement-rules)
+
+(define-frame-preference "Default"
+  ;; frame raise lock (lock AND raise == jumpto)
+  (0 t   t :title "emacs"))
+
+(define-frame-preference "Web"
+  ;; frame raise lock (lock AND raise == jumpto)
+  (0 t   t :class "google-chrome"))

@@ -5,13 +5,13 @@ config defaultToCurrentScreen true
 bind c:ctrl;alt;cmd focus 'Google Chrome'
 bind e:ctrl;alt;cmd focus 'Emacs'
 bind f:ctrl;alt;cmd focus 'Firefox'
-bind s:ctrl;alt;cmd focus 'Safari'
+bind i:ctrl;alt;cmd focus 'IntelliJ IDEA'
+bind p:ctrl;alt;cmd focus 'Postman'
+bind r:ctrl;alt;cmd focus 'RubyMine'
+bind s:ctrl;alt;cmd focus 'Slack'
 bind t:ctrl;alt;cmd focus 'iTerm2'
 bind v:ctrl;alt;cmd focus 'MacVim'
-bind i:ctrl;alt;cmd focus 'IntelliJ IDEA'
 bind x:ctrl;alt;cmd focus 'Xcode'
-bind s:ctrl;alt;cmd focus 'iOS Simulator'
-bind r:ctrl;alt;cmd focus 'RubyMine'
 
 # Push Bindings - Windows esq spilt
 bind right:ctrl;alt;cmd push right bar-resize:screenSizeX/2

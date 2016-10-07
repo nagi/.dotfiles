@@ -21,8 +21,13 @@
   "run google-chrome"
   (run-or-raise "google-chrome" '(:class "google-chrome")))
 
+(defcommand slack () ()
+  "run slack"
+  (run-or-raise "slack" '(:class "slack")))
+
 (define-key *top-map* (kbd "H-c") "google-chrome")
 (define-key *top-map* (kbd "H-e") "emacs")
+(define-key *top-map* (kbd "H-s") "slack")
 (define-key *top-map* (kbd "H-F1") "gselect 1")
 (define-key *top-map* (kbd "H-F2") "gselect 2")
 (define-key *top-map* (kbd "H-F3") "gselect 3")
@@ -36,30 +41,34 @@
 (define-key *top-map* (kbd "H-F11") "gselect 11")
 (define-key *top-map* (kbd "H-F12") "gselect 12")
 
-(define-key *top-map* (kbd "s-j") "pull-hidden-next")
-(define-key *top-map* (kbd "s-space") "pull-hidden-next")
-(define-key *top-map* (kbd "s-k") "pull-hidden-previous")
-(define-key *top-map* (kbd "s-Delete") "remove")
+(define-key *top-map* (kbd "H-.") "pull-hidden-next")
+(define-key *top-map* (kbd "H-,") "pull-hidden-previous")
+
+(define-key *top-map* (kbd "H-Delete") "remove")
 
 (define-key *top-map* (kbd "s-s") "vsplit")
 (define-key *top-map* (kbd "s-v") "hsplit")
 
-(define-key *top-map* (kbd "s-Up") "move-focus up")
-(define-key *top-map* (kbd "s-Down") "move-focus down")
-(define-key *top-map* (kbd "s-Left") "move-focus left")
-(define-key *top-map* (kbd "s-Right") "move-focus right")
+(define-key *top-map* (kbd "H-Up") "move-focus up")
+(define-key *top-map* (kbd "H-Down") "move-focus down")
+(define-key *top-map* (kbd "H-Left") "move-focus left")
+(define-key *top-map* (kbd "H-Right") "move-focus right")
 
-(define-key *top-map* (kbd "S-s-Up") "move-window up")
-(define-key *top-map* (kbd "S-s-Down") "move-window down")
-(define-key *top-map* (kbd "S-s-Left") "move-window left")
-(define-key *top-map* (kbd "S-s-Right") "move-window right")
+(define-key *top-map* (kbd "H-S-Up") "move-window up")
+(define-key *top-map* (kbd "H-S-Down") "move-window down")
+(define-key *top-map* (kbd "H-S-Left") "move-window left")
+(define-key *top-map* (kbd "H-S-Right") "move-window right")
 
 ;; Follow mouse
 (setf *mouse-focus-policy* :sloppy) ;; :click, :ignore, :sloppy
 
 ;; Create groups
-(gnewbg "Web")
-(gnewbg-float "Float")
+(gnewbg "web")
+(gnewbg "fm")
+(gnewbg "book")
+(gnewbg "spotify")
+(gnewbg "slack")
+(gnewbg-float "float")
 
 ;; Clear rules
 (clear-window-placement-rules)
@@ -68,6 +77,14 @@
   ;; frame raise lock (lock AND raise == jumpto)
   (0 t   t :title "emacs"))
 
-(define-frame-preference "Web"
+(define-frame-preference "web"
   ;; frame raise lock (lock AND raise == jumpto)
   (0 t   t :class "google-chrome"))
+
+(define-frame-preference "slack"
+  ;; frame raise lock (lock AND raise == jumpto)
+  (0 t   t :class "slack"))
+
+(define-frame-preference "spotify"
+    ;; frame raise lock (lock AND raise == jumpto)
+    (0 t   t :class "spotify"))

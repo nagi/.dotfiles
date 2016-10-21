@@ -1,0 +1,1 @@
+/home/nagi/.dotfiles/dotfiles/.i3

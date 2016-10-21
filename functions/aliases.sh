@@ -25,32 +25,12 @@ alias srr='spring rake routes'
 
 # Navigation
 alias cda='cd $HOME/rails/about-corp-finance'
-alias cdb='cd $HOME/rails/best100'
 alias cde='cd $HOME/rails/eme-server'
 alias cdeme='cd $HOME/rails/eme-server'
-alias cdp='cd $HOME/rails/programmingfonts'
 alias cdi='cd $HOME/ios/iPhone-App'
-alias cdg='cd $HOME/rails/g4s/give4sure'
-alias cdgp='cd $HOME/rails/g4s/plugin'
+alias cdk='cd $HOME/clojure/kapow'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
-alias cdo='cd $HOME/rails/ogl_remarkable'
-alias cdor='cd $HOME/rails/ogl_remarkable'
-alias cdol='cd $HOME/rails/leaper'
-alias cdom='cd $HOME/ruby/odo_migrate'
-alias cdos='cd $HOME/rails/oup_sso'
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
-# WP Navigation
-alias cdfa='cd $HOME/rails/fuji-account-service'
-alias cdfc='cd $HOME/ruby/fuji-core'
-alias cdfe='cd $HOME/rails/fuji-engage'
-alias cdfed='cd $HOME/ruby/fuji-engage-documentation'
-alias cdfn='cd $HOME/rails/fuji-notification-service'
-alias cdfo='cd $HOME/rails/fuji-optimiser'
-alias cdfs='cd $HOME/rails/schedule-api'
-alias cds='cd $HOME/rails/schedule-api'
-alias cdfsd='cd $HOME/ruby/sqhc-documentation'
-alias cdjm='cd $HOME/js/engage-ui'
-alias cdjs='cd $HOME/js/schedule-ui'
 
 # Misc.
 alias pp="ps axuf | pager"

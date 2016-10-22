@@ -8,3 +8,4 @@ for f in $DOTFILES
 do
   ln -s "$DOTFILES_DIR"/$f "$HOME"/$f
 done
+rm "$HOME"/.dotfiles/dotfiles/.oh-my-zsh/.oh-my-zsh

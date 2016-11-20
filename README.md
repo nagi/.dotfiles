@@ -17,3 +17,7 @@ git submodule update
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+
+### Applications
+
+The APPLICATIONS.md file reminds me which applictions I need on a new system.

@@ -48,9 +48,7 @@ bar {
 # USAGE: i3-run-or-raise --class <WindowClass> --name <WindowName> <Command>
 bindsym $hyper+e exec /usr/bin/i3-run-or-raise -c Emacs emacs
 bindsym $hyper+t exec /usr/bin/i3-run-or-raise -c Gnome-terminal gnome-terminal
-bindsym $hyper+c exec /usr/bin/i3-run-or-raise -c google-chrome google-chrome
-
-bindsym i3-run-or-raise -c "google-chrome" google-chrome
+bindsym $hyper+c exec /usr/bin/i3-run-or-raise -c Google-chrome google-chrome
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

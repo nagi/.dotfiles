@@ -7,3 +7,4 @@ dotfiles/.vim/backup/*
 dotfiles/.vim/bundle/*
 dotfiles/.vim/.netrwhist
 functions/secrets.sh
+dotfiles/.tmux/plugins/*

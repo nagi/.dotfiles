@@ -4,3 +4,6 @@
 [submodule "dotfiles/.vim/bundle/Vundle.vim"]
 	path = dotfiles/.vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "dotfiles/.tmux/plugins/tpm"]
+	path = dotfiles/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm

@@ -224,12 +224,10 @@ user code."
     (my-setup-indent 2) ;; indent 4 spaces width
 
     ;; Scale fonts on Linux
-    (define-key global-map (kbd "s-=") 'text-scale-increase)
-    (define-key global-map (kbd "s--") 'text-scale-decrease)
     (define-key global-map (kbd "H-=") 'text-scale-increase)
     (define-key global-map (kbd "H--") 'text-scale-decrease)
 
-    ;; TODO: I think I put this in so I could type a "#" on OSx?
+    ;; This is needed in order to type a "#" on MacOS
     (setq-default
      mac-right-option-modifier nil)
   )

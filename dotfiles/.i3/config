@@ -30,8 +30,8 @@ font pango:DejaVu Sans Mono 8
 bar {
   # i3bar position
 	position top
-	# Using custom i3status.conf
-	status_command i3status -c ~/.i3status.conf
+	# Wraps i3status -c ~/.i3status.conf
+  status_command i3status | my-i3bar-additions
   colors {
     separator #dc322f
     background #002b36

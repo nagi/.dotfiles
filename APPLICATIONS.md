@@ -4,16 +4,17 @@ ack-grep
 tmux
 tmuxinator (Ruby Gems)
 zsh
-js-beautify (npm)
 jq
 git
 gitk
 tree
 xchat
-dos2unix`
+dos2unix
 xclip
 flashplugin-nonfree
 spotify-client
+rlwrap (gives clojure command tools readline capability)
+htop
 
 ### Fonts
 

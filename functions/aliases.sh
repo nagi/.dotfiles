@@ -26,7 +26,7 @@ alias srr='spring rake routes'
 # Navigation
 alias cda='cd $HOME/rails/about-corp-finance'
 alias cde='cd $HOME/rails/eme-server'
-alias cdeme='cd $HOME/rails/eme-server'
+alias cdv='cd $HOME/rails/vizamyl-app'
 alias cdi='cd $HOME/ios/iPhone-App'
 alias cdk='cd $HOME/clojure/kapow'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '

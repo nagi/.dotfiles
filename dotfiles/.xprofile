@@ -35,3 +35,5 @@ Map_keys () {
 
 Map_keys
 Set_desktop_wallpaper
+/usr/local/bin/tomtim&
+/usr/local/bin/i3-system-tray-shutdown&

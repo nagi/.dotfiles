@@ -44,14 +44,13 @@ values."
      floobits
      git
      html
-     ;; ivy
      javascript
      markdown
      nginx
      org
      osx
      python
-     ruby ;; (ruby :variables ruby-enable-enh-ruby-mode t)
+     ruby
      ruby-on-rails
      (shell :variables
             shell-default-height 30

@@ -9,7 +9,7 @@ bindkey "^R" history-incremental-search-backward
 
 export PATH=$PATH:$HOME/.dotfiles/bin
 export RUBYMINE_HOME=/Applications/Rubymine.app
-export BUNDLE_EDITOR=nvim -R
+export BUNDLE_EDITOR="nvim -R"
 export EDITOR=nvim
 export VISUAL=nvim
 

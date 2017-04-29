@@ -302,6 +302,26 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+
+  (setq ;; foreground and background
+   ;; monokai-foreground     "#ABB2BF"
+   monokai-background "#222222"
+   ;; ;; highlights and comments
+   ;; monokai-comments       "#F8F8F0"
+   ;; monokai-emphasis       "#282C34"
+   ;; monokai-highlight      "#FFB269"
+   ;; monokai-highlight-alt  "#66D9EF"
+   ;; monokai-highlight-line "#1B1D1E"
+   ;; monokai-line-number    "#F8F8F0"
+   ;; ;; colours
+   ;; monokai-blue           "#61AFEF"
+   ;; monokai-cyan           "#56B6C2"
+   monokai-green "#80FF00"
+   ;; monokai-gray           "#3E4451"
+   monokai-red "#FF0090"
+   ;; monokai-orange         "#D19A66"
+   ;; monokai-yellow         "#E5C07B"
+   )
   )
 
 (defun dotspacemacs/user-config ()

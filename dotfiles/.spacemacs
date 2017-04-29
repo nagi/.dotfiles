@@ -305,7 +305,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   (setq ;; foreground and background
    ;; monokai-foreground     "#ABB2BF"
-   monokai-background "#222222"
+   monokai-background "#151515"
    ;; ;; highlights and comments
    ;; monokai-comments       "#F8F8F0"
    ;; monokai-emphasis       "#282C34"

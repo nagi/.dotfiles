@@ -39,7 +39,7 @@
 !! ORIGINAL !! *color15:                         #E8E8E8
 
 !! Molokai theme
-*background: #101010
+*background: #151515
 *foreground: #d0d0d0
 *cursorColor: #8000BA
 
@@ -96,7 +96,7 @@ URxvt.font: xft:Inconsolata\ for\ Powerline
 !! terminus names see end of file!
 
 URxvt.depth:                      32
-URxvt.background:                 [80]#000000
+URxvt.background:                 [80]#151515
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true

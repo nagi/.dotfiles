@@ -7,9 +7,6 @@ then
   # Put vagrant boxes on pendrive
   export VAGRANT_HOME='/Volumes/Quicker/vagrant.d'
 else
-  # Fix for tmux
-  export TERM=xterm-256color
-
   # Datomic
   export PATH=$PATH:/usr/local/src/datomic-pro-0.9.5561/bin
   # export PATH=$PATH:/usr/local/src/datomic-free-0.9.5394/bin

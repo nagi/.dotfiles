@@ -42,7 +42,7 @@ To change font settings in rxvt-unicode, edit ~/.extend.Xresources, then run `xr
 
 ### Window manager
 
-TODO
+`sudo npm install -g i3-run-or-raise`
 
 ### SSH
 

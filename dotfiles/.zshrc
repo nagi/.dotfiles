@@ -9,9 +9,10 @@ bindkey "^R" history-incremental-search-backward
 
 export PATH=$PATH:$HOME/.dotfiles/bin
 export RUBYMINE_HOME=/Applications/Rubymine.app
-export BUNDLE_EDITOR="nvim -R"
-export EDITOR=nvim
-export VISUAL=nvim
+
+export BUNDLE_EDITOR=view
+export EDITOR=vim
+export VISUAL=vim
 
 autoload edit-command-line; zle -N edit-command-line
 bindkey -M vicmd v edit-command-line

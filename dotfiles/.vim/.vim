@@ -1,1 +1,0 @@
-/home/nagi/.dotfiles/dotfiles/.vim

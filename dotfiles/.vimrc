@@ -1,5 +1,4 @@
 set nocompatible
-nnoremap Q <nop>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vundle
@@ -7,12 +6,13 @@ nnoremap Q <nop>
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles here:
+" Diable edit more
 Plugin 'DrowsySaturn/VIvid.vim.git'
 Plugin 'bling/vim-airline.git'
 Plugin 'editorconfig/editorconfig-vim'
@@ -47,11 +47,14 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 
+call vundle#end()
 filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap Q <nop>
 
 " apply vimrc settings after the vimrc is saved
 if has("autocmd")

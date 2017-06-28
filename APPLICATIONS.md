@@ -34,7 +34,7 @@ See https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/javascript
 
 ### tmux
 
-The tmux plugins should be installed already, as `.tmux` is symlinked to `.dotfiles`.
+The tmux plugins need to be installed with `^j I`.
 
 To install powerline fonts: `yaourt -S powerline-fonts-git`
 

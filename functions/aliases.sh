@@ -25,6 +25,7 @@ alias srr='spring rake routes'
 
 # Navigation
 alias cda='cd $HOME/rails/about-corp-finance'
+alias cdd='cd $HOME/php/drytec-www'
 alias cde='cd $HOME/rails/eme-server'
 alias cdv='cd $HOME/rails/vizamyl-app'
 alias cdi='cd $HOME/ios/iPhone-App'

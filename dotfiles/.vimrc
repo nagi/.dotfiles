@@ -13,7 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles here:
 " Diable edit more
-Plugin 'DrowsySaturn/VIvid.vim.git'
 Plugin 'bling/vim-airline.git'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'

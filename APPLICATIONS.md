@@ -23,9 +23,11 @@ leiningen
 
 ### Editing
 
-Spacevim `curl -sLf https://spacevim.org/install.sh | bash`
-`git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d`
+`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+Start vim and :BundleInstall
 
+
+`git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d`
 See https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/javascript
 
 `sudo npm install -g tern` linting

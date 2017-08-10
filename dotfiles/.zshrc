@@ -15,9 +15,5 @@ source $HOME/.dotfiles/functions/functions.sh
 source $HOME/.dotfiles/functions/system-specific.sh
 source $HOME/.dotfiles/functions/ruby-managers.sh
 
-export BUNDLE_EDITOR=view
-export EDITOR=vim
-export VISUAL=vim
-
 # Confidential stuff
 [[ -s "$HOME/.dotfiles/functions/secrets.sh" ]] && source "$HOME/.dotfiles/functions/secrets.sh"

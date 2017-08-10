@@ -27,10 +27,11 @@ alias srr='spring rake routes'
 alias cda='cd $HOME/rails/about-corp-finance'
 alias cdd='cd $HOME/php/drytec-www'
 alias cde='cd $HOME/rails/eme-server'
-alias cdv='cd $HOME/rails/vizamyl-app'
 alias cdi='cd $HOME/ios/iPhone-App'
 alias cdk='cd $HOME/clojure/kapow'
 alias cdm='if [ -d $HOME/rails/mylocalplanet ] ; then ; cd $HOME/rails/mylocalplanet ; else ; cd /srv/rails/mylocalplanet/current ; fi '
+alias cdp='cd $HOME/clojure/polo-robo'
+alias cdv='cd $HOME/rails/vizamyl-app'
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
 
 # Misc.

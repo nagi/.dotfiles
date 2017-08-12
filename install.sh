@@ -6,5 +6,5 @@ DOTFILES=$(ls -A "$DOTFILES_DIR")
 
 for f in $DOTFILES
 do
-  [ ! -d "$HOME/$f" ] && ln -s "$DOTFILES_DIR/$f" "$HOME/$f"
+  [ ! -d "$HOME/$f" ] && ln -sf "$DOTFILES_DIR/$f" "$HOME/$f"
 done

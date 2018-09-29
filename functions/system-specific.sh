@@ -8,11 +8,11 @@ then
   export VAGRANT_HOME='/Volumes/Quicker/vagrant.d'
 else
   # Datomic
-  export PATH=$PATH:/usr/local/src/datomic-pro-0.9.5561/bin
+  # export PATH=$PATH:/usr/local/src/datomic-pro-0.9.5561/bin
   # export PATH=$PATH:/usr/local/src/datomic-free-0.9.5394/bin
 
   # Run ssh-agent: https://wiki.archlinux.org/index.php/SSH_keys#ssh-agent
-  eval `keychain --eval --agents ssh id_rsa --quiet`
+  # eval `keychain --eval --agents ssh id_rsa --quiet`
 
   # Debain / Ubuntu / Mint command not found
   if [ -f /etc/zsh_command_not_found ]

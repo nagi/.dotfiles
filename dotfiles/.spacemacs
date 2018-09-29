@@ -38,27 +38,29 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
-     better-defaults
+     ;; better-defaults
      csv
      (clojure :variables clojure-enable-fancify-symbols t)
      emacs-lisp
-     floobits
+     ;; floobits
      git
+     helm
      html
      javascript
      markdown
-     nginx
+     ;; nginx
      org
-     osx
+     ;; osx
      python
      ruby
      ruby-on-rails
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     spell-checking
+     ;; spell-checking
      sql
      syntax-checking
+     version-controll
      yaml
      )
    ;; List of additional packages that will be installed without being
@@ -78,7 +80,6 @@ values."
    ;; them if they become unused. `all' installs *all* packages supported by
    ;; Spacemacs and never uninstall them. (default is `used-only')
    dotspacemacs-install-packages 'used-only))
-
 (defun dotspacemacs/init ()
   "Initialization function.
 This function is called at the very startup of Spacemacs initialization
@@ -138,15 +139,17 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(monokai
-                         molokai
                          spacemacs-dark
                          spacemacs-light)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
+
    dotspacemacs-default-font '("Inconsolata for Powerline"
                                :size 16
+   ;; dotspacemacs-default-font '("Source Code Pro"
+   ;;                             :size 13
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -259,8 +262,18 @@ values."
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
    dotspacemacs-smooth-scrolling t
-   ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
-   ;; derivatives. If set to `relative', also turns on relative line numbers.
+   ;; Control line numbers activation.
+   ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
+   ;; `text-mode' derivatives. If set to `relative', line numbers are relative.
+   ;; This variable can also be set to a property list for finer control:
+   ;; '(:relative nil
+   ;;   :disabled-for-modes dired-mode
+   ;;                       doc-view-mode
+   ;;                       markdown-mode
+   ;;                       org-mode
+   ;;                       pdf-view-mode
+   ;;                       text-mode
+   ;;   :size-limit-kb 1000)
    ;; (default nil)
    dotspacemacs-line-numbers nil
    ;; Code folding method. Possible values are `evil' and `origami'.
@@ -303,26 +316,6 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-
-  (setq ;; foreground and background
-   ;; monokai-foreground     "#ABB2BF"
-   monokai-background "#151515"
-   ;; ;; highlights and comments
-   ;; monokai-comments       "#F8F8F0"
-   ;; monokai-emphasis       "#282C34"
-   ;; monokai-highlight      "#FFB269"
-   ;; monokai-highlight-alt  "#66D9EF"
-   ;; monokai-highlight-line "#1B1D1E"
-   ;; monokai-line-number    "#F8F8F0"
-   ;; ;; colours
-   ;; monokai-blue           "#61AFEF"
-   ;; monokai-cyan           "#56B6C2"
-   monokai-green "#80FF00"
-   ;; monokai-gray           "#3E4451"
-   monokai-red "#FF0090"
-   ;; monokai-orange         "#D19A66"
-   ;; monokai-yellow         "#E5C07B"
-   )
   )
 
 (defun dotspacemacs/user-config ()
@@ -347,8 +340,8 @@ you should place your code here."
   (my-setup-indent 2)
 
   ;; Scale fonts on Linux
-  (define-key global-map (kbd "H-=") 'text-scale-increase)
-  (define-key global-map (kbd "H--") 'text-scale-decrease)
+  (define-key global-map (kbd "s-=") 'text-scale-increase)
+  (define-key global-map (kbd "s--") 'text-scale-decrease)
 
   ;; This is needed in order to type a "#" on MacOS
   (setq-default mac-right-option-modifier nil)
@@ -376,7 +369,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode org-category-capture winum unfill powerline pcre2el parent-mode fuzzy flx anzu goto-chg undo-tree diminish eval-sexp-fu seq spinner pkg-info epl f s popup nginx-mode async sql-indent yaml-mode packed evil avy dash iedit csv-mode bind-key request smartparens bind-map highlight projectile helm helm-core hydra rake pcache org alert log4e gntp mwim markdown-mode skewer-mode simple-httpd json-snatcher json-reformat js2-mode haml-mode gitignore-mode flyspell-correct-ivy flyspell-correct pos-tip flycheck magit magit-popup git-commit with-editor web-completion-data dash-functional tern company inflections edn multiple-cursors paredit peg cider queue clojure-mode inf-ruby yasnippet anaconda-mode pythonic auto-complete wgrep smex ivy-hydra define-word counsel-projectile counsel swiper ivy yapfify xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit spacemacs-theme spaceline smeargle slim-mode shell-pop scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv rainbow-delimiters quelpa pyvenv pytest pyenv-mode py-isort pug-mode projectile-rails popwin pip-requirements persp-mode pbcopy paradox osx-trash osx-dictionary orgit org-projectile org-present org-pomodoro org-plus-contrib org-download org-bullets open-junk-file neotree multi-term move-text monokai-theme mmm-mode minitest markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode linum-relative link-hint less-css-mode launchctl json-mode js2-refactor js-doc info+ indent-guide ido-vertical-mode hy-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flyspell-correct-helm flycheck-pos-tip flx-ido floobits fill-column-indicator feature-mode fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav editorconfig dumb-jump cython-mode company-web company-tern company-statistics company-anaconda column-enforce-mode coffee-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu chruby bundler auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+    (sesman phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode org-category-capture winum unfill powerline pcre2el parent-mode fuzzy flx anzu goto-chg undo-tree diminish eval-sexp-fu seq spinner pkg-info epl f s popup nginx-mode async sql-indent yaml-mode packed evil avy dash iedit csv-mode bind-key request smartparens bind-map highlight projectile helm helm-core hydra rake pcache org alert log4e gntp mwim markdown-mode skewer-mode simple-httpd json-snatcher json-reformat js2-mode haml-mode gitignore-mode flyspell-correct-ivy flyspell-correct pos-tip flycheck magit magit-popup git-commit with-editor web-completion-data dash-functional tern company inflections edn multiple-cursors paredit peg cider queue clojure-mode inf-ruby yasnippet anaconda-mode pythonic auto-complete wgrep smex ivy-hydra define-word counsel-projectile counsel swiper ivy yapfify xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit spacemacs-theme spaceline smeargle slim-mode shell-pop scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv rainbow-delimiters quelpa pyvenv pytest pyenv-mode py-isort pug-mode projectile-rails popwin pip-requirements persp-mode pbcopy paradox osx-trash osx-dictionary orgit org-projectile org-present org-pomodoro org-plus-contrib org-download org-bullets open-junk-file neotree multi-term move-text monokai-theme mmm-mode minitest markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode linum-relative link-hint less-css-mode launchctl json-mode js2-refactor js-doc info+ indent-guide ido-vertical-mode hy-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flyspell-correct-helm flycheck-pos-tip flx-ido floobits fill-column-indicator feature-mode fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav editorconfig dumb-jump cython-mode company-web company-tern company-statistics company-anaconda column-enforce-mode coffee-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu chruby bundler auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

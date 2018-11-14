@@ -1,50 +1,75 @@
+# New Development Environment Setup
+
 ### Packages
 
+```
+zsh
 ack
 tmux
-tmuxinator (Ruby Gems)
-zsh
+htop
 jq
 git
-namcap
 tree
-xchat
 dos2unix
-xclip
 ruby
-keychain
-chromium
+docker
+wget
+curl
+```
 
+##### On MacOS...
+
+Grab homebrew from [brew.sh]( https://brew.sh/ )
+
+##### on Linux
+
+```
+htop
+xclip
+xsel
+```
+
+##### Clojure...
+
+```
 rlwrap
 maven
-jdk8-openjdk
-
+openjdk
 leiningen
+```
+
+##### Arch...
+
+```
+namcap
+keychain
+```
 
 ### Editing
 
 `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-Start vim and :BundleInstall
+
+Then start vim and `:BundleInstall`
 
 
 `git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d`
-See https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/javascript
+
+See the [spacemacs javascript layer README](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/javascript)
 
 `sudo npm install -g tern` linting
 `sudo npm install -g eslint` linting
-`sudo npm -g install js-beautify`
+`sudo npm -g install js-beautify` formatting
 
-### tmux
+### tmux configuration
 
 The tmux plugins need to be installed with `^j I`.
 
-To install powerline fonts: `yaourt -S powerline-fonts-git`
+Install xsel (or xclip) to ensure copy and paste works.
 
-To change font settings in rxvt-unicode, edit ~/.extend.Xresources, then run `xrdb -merge .extend.Xresources`.
+##### Arch...
 
-### Window manager
-
-`sudo npm install -g i3-run-or-raise`
+  * To install powerline fonts: `yaourt -S powerline-fonts-git`
+  * To change font settings in rxvt-unicode, edit ~/.extend.Xresources, then run `xrdb -merge .extend.Xresources`.
 
 ### SSH
 
@@ -57,3 +82,20 @@ https://gorails.com for ruby / rbevn instructions
 ### Dropbox
 
 https://www.dropbox.com/install-linux
+
+### Window management
+
+##### I3
+
+`sudo npm install -g i3-run-or-raise`
+
+##### Gnome3
+
+![Gnome 3 settings](./gnome3.png)
+
+##### MacOS
+
+Install:
+
+* [slate](https://github.com/jigish/slate#direct-download).
+* [karabiner](https://pqrs.org/osx/karabiner/)

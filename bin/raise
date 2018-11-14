@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# for run-or-raise
+# wmctrl -x -a "$1" || $2
+
+wmctrl -x -a "$1"

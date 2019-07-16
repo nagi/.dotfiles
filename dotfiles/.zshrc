@@ -17,3 +17,5 @@ source $HOME/.dotfiles/functions/ruby-managers.sh
 
 # Confidential stuff
 [[ -s "$HOME/.dotfiles/functions/secrets.sh" ]] && source "$HOME/.dotfiles/functions/secrets.sh"
+export PATH="/usr/local/opt/mongodb@3.0/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"

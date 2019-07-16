@@ -145,7 +145,6 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-
    dotspacemacs-default-font '("Inconsolata for Powerline"
                                :size 22
    ;; dotspacemacs-default-font '("Source Code Pro"
@@ -343,6 +342,10 @@ you should place your code here."
   ;; Scale fonts on Linux
   (define-key global-map (kbd "s-=") 'text-scale-increase)
   (define-key global-map (kbd "s--") 'text-scale-decrease)
+
+  ;; Turn on horizontal scrolling with mouse wheel
+  (global-set-key (kbd "<triple-wheel-left>") 'scroll-right)
+  (global-set-key (kbd "<triple-wheel-right>") 'scroll-left)
 
   ;; This is needed in order to type a "#" on MacOS
   (setq-default mac-right-option-modifier nil)

@@ -3,4 +3,7 @@
 # for run-or-raise
 # wmctrl -x -a "$1" || $2
 
+# to list windows
+# wmctrl -l
+
 wmctrl -x -a "$1"

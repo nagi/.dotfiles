@@ -31,7 +31,6 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     php
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -51,7 +50,9 @@ values."
      ;; nginx
      org
      ;; osx
+     php
      python
+     react
      ruby
      ruby-on-rails
      (shell :variables
@@ -147,7 +148,7 @@ values."
    ;; quickly tweak the mode-line size to make separators look not too crappy.
 
    dotspacemacs-default-font '("Inconsolata for Powerline"
-                               :size 22
+                               :size 16
    ;; dotspacemacs-default-font '("Source Code Pro"
    ;;                             :size 13
                                :weight normal

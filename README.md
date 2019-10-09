@@ -8,7 +8,7 @@ My config files for both Mac and Linux systems.
 * Run this:
 
 ``` sh
-git clone git://github.com/nagi/dotfiles ~/.dotfiles
+git clone git://github.com/nagi/.dotfiles
 cd ~/.dotfiles
 ./install
 

@@ -31,6 +31,10 @@ alias cdd='cd $HOME/php/drytec-www'
 alias cdk='cd $HOME/clojure/kapow'
 alias cds='cd $HOME/rails/sauce'
 alias cdv='cd $HOME/rails/vizamyl-app'
+alias cdh='cd /mnt/diddy/VVV/www/hmo/public_html'
+alias cdhq='cd /mnt/diddy/VVV/www/hmo/public_html/wp-content/plugins/hmo-quote-form'
+alias cdq='cd $HOME/js/hmo-quote-form'
+
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
 
 # Misc.

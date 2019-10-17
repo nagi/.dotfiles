@@ -3,7 +3,7 @@
 [[ -x "$HOME/.rvm/scripts/rvm" ]] && PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # rbenv
-if [ -d "$HOME/.rbenv/bin" ]; then
+if [ -d "$HOME/.rbenv/version" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
   rbenv global > /dev/null

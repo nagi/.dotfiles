@@ -361,7 +361,7 @@ you should place your code here."
   (add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
 
   ;; Only lint ruby for syntax
-  (setq flycheck-rubocop-lint-only t)
+  ;; (setq flycheck-rubocop-lint-only t)
   ;; Don't auto insert the encoding magic comment
   (setq ruby-insert-encoding-magic-comment nil)
 

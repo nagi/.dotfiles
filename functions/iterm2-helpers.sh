@@ -43,7 +43,7 @@ then
   title_help2;
 fi
 }
-alias title='set_iterm_title'
+# alias title='set_iterm_title'
 
 function titlepwd() {
   set_terminal_title `pwd`

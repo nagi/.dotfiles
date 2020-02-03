@@ -27,6 +27,10 @@ Grab homebrew from [brew.sh]( https://brew.sh/ )
 htop
 xclip
 xsel
+
+sudo add-apt-repository ppa:webupd8team/terminix
+sudo apt-get update
+sudo apt-get install tilix
 ```
 
 ##### Clojure...

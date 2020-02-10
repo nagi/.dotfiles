@@ -49,6 +49,7 @@ values."
      javascript
      markdown
      ;; nginx
+     octave
      org
      ;; osx
      php

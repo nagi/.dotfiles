@@ -28,9 +28,18 @@ htop
 xclip
 xsel
 
+# emoji
+Get more recent 'fonts-noto-color-emoji' deb file and install it.
+
+# Decent terminal
 sudo add-apt-repository ppa:webupd8team/terminix
 sudo apt-get update
 sudo apt-get install tilix
+
+# Latest emacs
+sudo update-alternatives --config emacs
+sudo add-apt-repository ppa:kelleyk/emacs
+sudo apt-get install emacsXX
 ```
 
 ##### Clojure...

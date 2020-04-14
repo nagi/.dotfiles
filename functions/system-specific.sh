@@ -13,6 +13,12 @@ then
     export VAGRANT_HOME='/Volumes/Quicker/vagrant.d'
 
     export ANDROID_HOME=/Volumes/Quicker/android-sdk-macosx
+
+    # Set java version
+    # https://www.kevinhooke.com/2017/10/05/switching-java-versions-on-mac-os/
+    if `/usr/libexec/java_home -v 1.8 &> /dev/null` ; then alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`" ; fi
+    if `/usr/libexec/java_home -v 11 &> /dev/null` ; then alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`" ; fi
+    if `/usr/libexec/java_home -v 13 &> /dev/null` ; then alias j13="export JAVA_HOME=`/usr/libexec/java_home -v 13`" ; fi
 else
     # Run ssh-agent: https://wiki.archlinux.org/index.php/SSH_keys#ssh-agent
     [[ -s /etc/arch-release ]] && eval `keychain --eval --agents ssh id_rsa --quiet`
@@ -33,4 +39,7 @@ else
 
     # Android studio
     export PATH="/opt/android-studio/bin:$PATH"
+
+    alias j8='echo "try this: sudo update-java-alternatives --set java-1.8.0-openjdk-amd64"'
+    alias j11='echo "try this: sudo update-java-alternatives --set java-1.11.0-openjdk-amd64"'
 fi

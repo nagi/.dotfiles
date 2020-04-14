@@ -26,23 +26,15 @@ alias srr='bin/spring rake routes'
 alias srt='bin/spring rake --tasks'
 
 # Navigation
-alias cda='cd $HOME/rails/about-corp-finance'
-alias cdd='cd $HOME/php/drytec-www'
-alias cdk='cd $HOME/clojure/kapow'
-alias cdm='cd $HOME/rails/middleman'
-alias cds='cd $HOME/rails/sauce'
-alias cdv='cd $HOME/rails/vizamyl-app'
-alias cdh='cd /mnt/data/VVV/www/hmo/public_html'
-alias cdhq='cd /mnt/data/VVV/www/hmo/public_html/wp-content/plugins/hmo-quote-form'
-alias cdq='cd $HOME/js/hmo-quote-form'
+alias cda='cd $HOME/code/rails/about-corp-finance'
+alias cdd='cd $HOME/code/php/drytec-www'
+alias cde='cd $HOME/code/exercism'
+alias cdk='cd $HOME/code/clojure/kapow'
+alias cdl='cd $HOME/code/ruby/leapfrog'
+alias cdr='cd $HOME/code/ruby/dcom_remarkable'
+alias cdv='cd $HOME/code/ruby/vizamyl-app'
 
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
-
-# Set java version
-# https://www.kevinhooke.com/2017/10/05/switching-java-versions-on-mac-os/
-if `/usr/libexec/java_home -v 1.8 &> /dev/null` ; then alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`" ; fi
-if `/usr/libexec/java_home -v 11 &> /dev/null` ; then alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`" ; fi
-if `/usr/libexec/java_home -v 13 &> /dev/null` ; then alias j13="export JAVA_HOME=`/usr/libexec/java_home -v 13`" ; fi
 
 # Misc.
 alias pp="ps axuf | pager"

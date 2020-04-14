@@ -11,3 +11,5 @@ bindkey -M vicmd v edit-command-line
 source $HOME/.dotfiles/functions/aliases.sh
 source $HOME/.dotfiles/functions/functions.sh
 source $ZSH/oh-my-zsh.sh
+
+source $HOME/.dotfiles/functions/ruby-managers.sh

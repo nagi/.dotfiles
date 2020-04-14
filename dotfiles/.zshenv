@@ -9,7 +9,6 @@ export GML_GFS_TEMPLATE="$HOME/.dotfiles/data/Land_Registry_Cadastral_Parcels.gf
 # Ensure ruby apps (i.e.Pow) work with rbenv
 [[ -d "$HOME/.rbenv/shims" ]] && export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 source $HOME/.dotfiles/functions/system-specific.sh
-source $HOME/.dotfiles/functions/ruby-managers.sh
 
 # Confidential stuff
 [[ -s "$HOME/.dotfiles/functions/secrets.sh" ]] && source "$HOME/.dotfiles/functions/secrets.sh"

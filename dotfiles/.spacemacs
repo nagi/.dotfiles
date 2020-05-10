@@ -38,6 +38,7 @@ values."
      ;; ----------------------------------------------------------------
      auto-completion
      ;; better-defaults
+     (colors :variables colors-enable-nyan-cat-progress-bar (display-graphic-p))
      csv
      (clojure :variables clojure-enable-fancify-symbols nil)
      emacs-lisp
@@ -243,11 +244,11 @@ values."
    dotspacemacs-fullscreen-at-startup nil
    ;; If non nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX. (default nil)
-   dotspacemacs-fullscreen-use-non-native nil
+   dotspacemacs-fullscreen-use-non-native t
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-maximized-at-startup t
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -371,7 +372,14 @@ you should place your code here."
   ;; (add-to-list 'projectile-globally-ignored-directories "*/node_modules")
   ;; (add-to-list 'projectile-globally-ignored-directories "-/*/node_modules")
   ;; (add-to-list 'projectile-globally-ignored-directories "-/**/node_modules")
-  )
+
+  (spacemacs/set-leader-keys "o-" 'text-scale-decrease)
+  (spacemacs/set-leader-keys "o=" 'text-scale-increase)
+  (spacemacs/set-leader-keys "of" 'font-lock-fontify-buffer)
+  (spacemacs/set-leader-keys "om" 'menu-bar-mode)
+
+  (spacemacs/set-leader-keys "oj" 'cider-jack-in-clj&cljs)
+  (setq cider-default-cljs-repl 'figwheel))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -382,7 +390,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (emoji-cheat-sheet-plus company-emoji 4clojure company-emacs-eclim eclim git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter diff-hl lv parseedn parseclj a transient org-mime ghub sesman phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode org-category-capture winum unfill powerline pcre2el parent-mode fuzzy flx anzu goto-chg undo-tree diminish eval-sexp-fu seq spinner pkg-info epl f s popup nginx-mode async sql-indent yaml-mode packed evil avy dash iedit csv-mode bind-key request smartparens bind-map highlight projectile helm helm-core hydra rake pcache org alert log4e gntp mwim markdown-mode skewer-mode simple-httpd json-snatcher json-reformat js2-mode haml-mode gitignore-mode flyspell-correct-ivy flyspell-correct pos-tip flycheck magit magit-popup git-commit with-editor web-completion-data dash-functional tern company inflections edn multiple-cursors paredit peg cider queue clojure-mode inf-ruby yasnippet anaconda-mode pythonic auto-complete wgrep smex ivy-hydra define-word counsel-projectile counsel swiper ivy yapfify xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit spacemacs-theme spaceline smeargle slim-mode shell-pop scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv rainbow-delimiters quelpa pyvenv pytest pyenv-mode py-isort pug-mode projectile-rails popwin pip-requirements persp-mode pbcopy paradox osx-trash osx-dictionary orgit org-projectile org-present org-pomodoro org-plus-contrib org-download org-bullets open-junk-file neotree multi-term move-text monokai-theme mmm-mode minitest markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode linum-relative link-hint less-css-mode launchctl json-mode js2-refactor js-doc info+ indent-guide ido-vertical-mode hy-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flyspell-correct-helm flycheck-pos-tip flx-ido floobits fill-column-indicator feature-mode fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav editorconfig dumb-jump cython-mode company-web company-tern company-statistics company-anaconda column-enforce-mode coffee-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu chruby bundler auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
+    (rainbow-mode rainbow-identifiers color-identifiers-mode emoji-cheat-sheet-plus company-emoji 4clojure company-emacs-eclim eclim git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter diff-hl lv parseedn parseclj a transient org-mime ghub sesman phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode org-category-capture winum unfill powerline pcre2el parent-mode fuzzy flx anzu goto-chg undo-tree diminish eval-sexp-fu seq spinner pkg-info epl f s popup nginx-mode async sql-indent yaml-mode packed evil avy dash iedit csv-mode bind-key request smartparens bind-map highlight projectile helm helm-core hydra rake pcache org alert log4e gntp mwim markdown-mode skewer-mode simple-httpd json-snatcher json-reformat js2-mode haml-mode gitignore-mode flyspell-correct-ivy flyspell-correct pos-tip flycheck magit magit-popup git-commit with-editor web-completion-data dash-functional tern company inflections edn multiple-cursors paredit peg cider queue clojure-mode inf-ruby yasnippet anaconda-mode pythonic auto-complete wgrep smex ivy-hydra define-word counsel-projectile counsel swiper ivy yapfify xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit spacemacs-theme spaceline smeargle slim-mode shell-pop scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv rainbow-delimiters quelpa pyvenv pytest pyenv-mode py-isort pug-mode projectile-rails popwin pip-requirements persp-mode pbcopy paradox osx-trash osx-dictionary orgit org-projectile org-present org-pomodoro org-plus-contrib org-download org-bullets open-junk-file neotree multi-term move-text monokai-theme mmm-mode minitest markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode linum-relative link-hint less-css-mode launchctl json-mode js2-refactor js-doc info+ indent-guide ido-vertical-mode hy-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flyspell-correct-helm flycheck-pos-tip flx-ido floobits fill-column-indicator feature-mode fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav editorconfig dumb-jump cython-mode company-web company-tern company-statistics company-anaconda column-enforce-mode coffee-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu chruby bundler auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
  '(safe-local-variable-values (quote ((eval progn (pp-buffer) (indent-buffer))))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

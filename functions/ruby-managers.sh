@@ -3,7 +3,7 @@
 [[ -x "$HOME/.rvm/scripts/rvm" ]] && PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # rbenv
-[[ -f "$HOME/.rbenv/version" ]] && eval "$(rbenv init -)"
+[[ -f "$HOME/.rbenv/README.md" ]] && eval "$($HOME/.rbenv/libexec/rbenv init -)"
 
 # chruby
 [[ -s /usr/local/share/chruby/chruby.sh ]] && source /usr/local/share/chruby/chruby.sh

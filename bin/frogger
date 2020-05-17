@@ -1,0 +1,10 @@
+#/bin/bash
+
+
+if [ -t 1 ] # Writing to terminal or pipe?
+then
+  psql -t --command "SELECT page FROM superlemma_pages WHERE superlemma_id = '$1' AND partition = '$2';" leapfrog_development | jq . -C | less -r
+else
+  psql -t --command "SELECT page FROM superlemma_pages WHERE superlemma_id = '$1' AND partition = '$2';" leapfrog_development | jq . | cat
+fi
+

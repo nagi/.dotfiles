@@ -20,8 +20,11 @@ curl
 ##### On MacOS...
 
 Grab homebrew from [brew.sh]( https://brew.sh/ )
+Brew install powerline fonts
 
 ##### on Linux
+
+sudo apt-get install fonts-powerline
 
 ```
 htop

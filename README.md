@@ -9,6 +9,7 @@ My config files for both Mac and Linux systems.
 
 ``` sh
 git clone git://github.com/nagi/.dotfiles
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cd ~/.dotfiles
 ./install
 

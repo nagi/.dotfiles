@@ -4,7 +4,10 @@ My config files for both Mac and Linux systems.
 
 ### Installation
 
-* Install fonts
+* Install powerline
+* Install zsh
+* Install tmux
+* `chsh`
 * Run this:
 
 ``` sh

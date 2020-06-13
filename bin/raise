@@ -6,4 +6,4 @@
 # to list windows
 # wmctrl -l
 
-wmctrl -x -a "$1"
+wmctrl -R "$1"

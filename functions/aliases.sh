@@ -47,3 +47,5 @@ alias ectagit='/usr/local/bin/ctags -R --exclude=.git --exclude=log --exclude=tm
 alias ectagall='ectagit . $(bundle list --paths)'
 alias pgd='postgres -D /usr/local/var/postgres'
 alias myd='mysql.server start'
+# Run a web server
+alias ss='python2 -m SimpleHTTPServer 8888'

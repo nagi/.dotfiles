@@ -358,12 +358,18 @@ you should place your code here."
   (setq-default mac-right-option-modifier nil)
 
   ;; Ensures _ and - are not word boundaries
-  (add-hook 'clojure-mode-hook #'(lambda () (modify-syntax-entry ?- "w")))
-  (add-hook 'clojure-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
-  (add-hook 'js2-mode-hook #'(lambda () (modify-syntax-entry ?- "w")))
-  (add-hook 'js2-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
-  (add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?- "w")))
-  (add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  ;; (add-hook 'clojure-mode-hook #'(lambda () (modify-syntax-entry ?- "w")))
+  ;; (add-hook 'clojure-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  ;; (add-hook 'js2-mode-hook #'(lambda () (modify-syntax-entry ?- "w")))
+  ;; (add-hook 'js2-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  ;; (add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?- "w")))
+  ;; (add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+
+  (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?- "w")))
+  (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+
+  ;; needs to be fixed upstream
+  ;; (global-superword-mode t)
 
   ;; Only lint ruby for syntax
   (setq flycheck-rubocop-lint-only t)

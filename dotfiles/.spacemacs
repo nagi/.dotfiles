@@ -39,6 +39,7 @@ values."
      auto-completion
      ;; better-defaults
      (colors :variables colors-enable-nyan-cat-progress-bar (display-graphic-p))
+     coffeescript
      csv
      (clojure :variables clojure-enable-fancify-symbols nil)
      emacs-lisp
@@ -326,12 +327,12 @@ before packages are loaded. If you are unsure, you should try in setting them in
   )
 
 (defun dotspacemacs/user-config ()
-  "Configuration function for user code.
-This function is called at the very end of Spacemacs initialization after
-layers configuration.
-This is the place where most of your configurations should be done. Unless it is
-explicitly specified that a variable should be set before a package is loaded,
-you should place your code here."
+  "Configuration function for user code. This function is called at the very end
+of Spacemacs initialization after layers configuration. This is the place where
+most of your configurations should be done. Unless it is explicitly specified
+that a variable should be set before a package is loaded, you should place your
+code here."
+
   (defun my-setup-indent (n)
     (setq c-basic-offset n) ;; java/c/c++
     (setq coffee-tab-width n) ; coffeescript
@@ -385,7 +386,8 @@ you should place your code here."
   (spacemacs/set-leader-keys "o=" 'text-scale-increase)
   (spacemacs/set-leader-keys "of" 'font-lock-fontify-buffer)
   (spacemacs/set-leader-keys "om" 'menu-bar-mode)
-
+  (defun set-display-env () (setenv "DISPLAY" ":0"))
+  (spacemacs/set-leader-keys "od" 'set-display-env)
   (spacemacs/set-leader-keys "oj" 'cider-jack-in-clj&cljs)
   (setq cider-default-cljs-repl 'figwheel))
 

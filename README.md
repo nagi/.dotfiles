@@ -3,7 +3,7 @@
 My config files for both Mac and Linux systems.
 
 ### Installation
-
+* Install git
 * Install powerline
 * Install zsh
 * Install tmux
@@ -13,13 +13,11 @@ My config files for both Mac and Linux systems.
 ``` sh
 git clone git://github.com/nagi/.dotfiles
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~/.dotfiles
-./install
-
 git submodule init
 git submodule update
-
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+./install
 ```
 
 ### Applications

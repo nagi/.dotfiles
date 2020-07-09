@@ -389,6 +389,7 @@ code here."
   (defun set-display-env () (setenv "DISPLAY" ":0"))
   (spacemacs/set-leader-keys "od" 'set-display-env)
   (spacemacs/set-leader-keys "oj" 'cider-jack-in-clj&cljs)
+  (spacemacs/set-leader-keys "op" 'helm-project-do-ag)
   (setq cider-default-cljs-repl 'figwheel))
 
 ;; Do not write anything past this comment. This is where Emacs will

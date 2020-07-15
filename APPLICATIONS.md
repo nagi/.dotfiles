@@ -1,74 +1,9 @@
 # New Development Environment Setup
 
-### Packages
-
-```
-zsh
-ack
-tmux
-htop
-jq
-git
-tree
-dos2unix
-ruby
-docker
-wget
-curl
-```
-
-##### On MacOS...
-
-Grab homebrew from [brew.sh]( https://brew.sh/ )
-Brew install powerline fonts
-
-##### on Linux
-
-sudo apt-get install fonts-powerline
-
-```
-htop
-xclip
-xsel
-
-# emoji
-Get more recent 'fonts-noto-color-emoji' deb file and install it.
-
-# Decent terminal
-sudo add-apt-repository ppa:webupd8team/terminix
-sudo apt-get update
-sudo apt-get install tilix
-
-# Latest emacs
-sudo update-alternatives --config emacs
-sudo add-apt-repository ppa:kelleyk/emacs
-sudo apt-get install emacsXX
-```
-
-##### Clojure...
-
-```
-rlwrap
-maven
-openjdk
-leiningen
-```
-
-##### Arch...
-
-```
-namcap
-keychain
-```
+The tmux plugins need to be installed with `^j I`.
+Start vim and `:BundleInstall`
 
 ### Editing
-
-`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-
-Then start vim and `:BundleInstall`
-
-
-`git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d`
 
 See the [spacemacs javascript layer README](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/javascript)
 
@@ -76,20 +11,49 @@ See the [spacemacs javascript layer README](https://github.com/syl20bnr/spacemac
 `sudo npm install -g eslint` linting
 `sudo npm -g install js-beautify` formatting
 
-### tmux configuration
 
-The tmux plugins need to be installed with `^j I`.
+### Packages
 
-Install xsel (or xclip) to ensure copy and paste works.
+```
+ack
+ag
+curl
+docker
+dos2unix
+git
+htop
+jq
+leiningen
+maven
+openjdk
+phantomjs
+rlwrap
+ruby
+tmux
+tree
+wget
+xclip
+xsel
+zsh
+```
 
-##### Arch...
+### dnsm dnsmasq
 
-  * To install powerline fonts: `yaourt -S powerline-fonts-git`
-  * To change font settings in rxvt-unicode, edit ~/.extend.Xresources, then run `xrdb -merge .extend.Xresources`.
+sudo apt-get install dnsmasq
+sudo systemctl stop systemd-resolved
+sudo systemctl disable systemd-resolved
 
-### SSH
+sudo vim /etc/dnsmasq.conf
 
-Drop in old `~/.ssh`
+server=8.8.8.8
+server=8.8.4.4
+address=/test/127.0.0.1
+
+sudo service dnsmasq restart
+
+Edit /etc/NetworkManager/NetworkManager.conf and after [Main] add or change to dns=none. Save the file.
+
+sudo apt-get install fonts-powerline
 
 ### Ruby Dev
 
@@ -100,10 +64,6 @@ https://gorails.com for ruby / rbevn instructions
 https://www.dropbox.com/install-linux
 
 ### Window management
-
-##### I3
-
-`sudo npm install -g i3-run-or-raise`
 
 ##### Gnome3
 

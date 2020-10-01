@@ -50,3 +50,16 @@ alias pgd='postgres -D /usr/local/var/postgres'
 alias myd='mysql.server start'
 # Run a web server
 alias ss='python2 -m SimpleHTTPServer 8888'
+# Tensorflow
+alias tdrun='docker run \
+  -it \
+  --network=host \
+  --device=/dev/kfd \
+  --device=/dev/dri \
+  --ipc=host \
+  --shm-size 12G \
+  --group-add video \
+  --cap-add=SYS_PTRACE \
+  --security-opt seccomp=unconfined \
+  -v $HOME/dockerx:/dockerx \
+  rocm/tensorflow:latest'

@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# This file runs when you use a graphical login like gdm3 or slim
+
+Set_desktop_wallpaper () {
+    BACKGROUND=$HOME/.dotfiles/linux/assets/my-x-background.jpg
+
+    if [ -f $BACKGROUND ]; then
+        feh --bg-scale $BACKGROUND
+    fi
+}
+
+Noppoo_keyboard_detect () {
+    NOPPOO_KEYBOARD_DEV_ID=1006:0022
+    lsusb | grep -q $NOPPOO_KEYBOARD_DEV_ID
+}
+
+Map_noppoo () {
+    /usr/bin/xmodmap $HOME/.dotfiles/linux/Xmodmap.noppoo
+}
+
+Map_compaq () {
+    /usr/bin/xmodmap $HOME/.dotfiles/linux/Xmodmap.compaq
+}
+
+Map_keys () {
+    Noppoo_keyboard_detect
+    if [ $? -eq 0 ]
+    then
+        Map_noppoo
+    else
+        Map_compaq
+    fi
+}
+
+Map_keys

@@ -8,12 +8,9 @@ then
 
     export PATH="/usr/local/opt/mongodb@3.0/bin:$PATH"
     export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
-    export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
-    # Put vagrant boxes on pendrive
+    # Put stuff on pendrive
     export VAGRANT_HOME='/Volumes/Quicker/vagrant.d'
-
     export ANDROID_HOME=/Volumes/Quicker/android-sdk-macosx
-
     # Set java version
     # https://www.kevinhooke.com/2017/10/05/switching-java-versions-on-mac-os/
     if `/usr/libexec/java_home -v 1.8 &> /dev/null` ; then alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`" ; fi
@@ -36,6 +33,7 @@ else
     # Datomic
     export PATH=$PATH:/usr/local/src/datomic-pro-0.9.5561/bin
     export PATH=$PATH:/usr/local/src/datomic-free-0.9.5394/bin
+    export PATH=$PATH:$HOME/.local/bin
 
     # Android studio
     export PATH="/opt/android-studio/bin:$PATH"

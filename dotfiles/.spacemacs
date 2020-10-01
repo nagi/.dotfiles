@@ -39,7 +39,6 @@ values."
      auto-completion
      ;; better-defaults
      (colors :variables colors-enable-nyan-cat-progress-bar (display-graphic-p))
-     coffeescript
      csv
      (clojure :variables clojure-enable-fancify-symbols nil)
      emacs-lisp

@@ -7,9 +7,11 @@ Start vim and `:BundleInstall`
 
 See the [spacemacs javascript layer README](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/javascript)
 
-`sudo npm install -g tern` linting
-`sudo npm install -g eslint` linting
-`sudo npm -g install js-beautify` formatting
+```
+sudo npm install -g tern
+sudo npm install -g eslint
+sudo npm -g install js-beautify
+```
 
 ### Packages
 
@@ -74,6 +76,7 @@ pip3 install runorraise
 
 ### dnsm dnsmasq
 
+```
 sudo apt-get install dnsmasq
 sudo systemctl stop systemd-resolved
 sudo systemctl disable systemd-resolved
@@ -85,6 +88,7 @@ server=8.8.4.4
 address=/test/127.0.0.1
 
 sudo service dnsmasq restart
+```
 
 Edit /etc/NetworkManager/NetworkManager.conf and after [Main] add or change to dns=none. Save the file.
 

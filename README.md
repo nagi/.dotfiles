@@ -6,24 +6,30 @@ My config files for both Mac and Linux systems.
 * Install git
 * Install powerline
 * Install fonts-font-awesome
-* Install zsh
 * Install tmux
+* Install zsh
 * `chsh`
 * Log out then in again
 * Run this:
 
 ``` sh
-git clone git://github.com/nagi/.dotfiles
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+mkdir -p ~/.fonts
 mkdir -p ~/.rbenv/plugins
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+mkdir -p ~/.vim/backup
+
+git clone git://github.com/nagi/.dotfiles
 push ~/.dotfiles
 git submodule init
 git submodule update
 ./install
 popd
+cp .dotfiles/fonts/* ~/.fonts
+fc-cache -f -v
+
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions

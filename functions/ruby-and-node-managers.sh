@@ -9,3 +9,5 @@
 [[ -s /usr/local/share/chruby/chruby.sh ]] && source /usr/local/share/chruby/chruby.sh
 [[ -s /usr/local/share/chruby/auto.sh ]] && source /usr/local/share/chruby/auto.sh
 which chruby > /dev/null && chruby 2.2.2
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

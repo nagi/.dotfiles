@@ -37,6 +37,7 @@ plugins=(
   lein
   node
   npm
+  nvm
   osx
   pip
   postgres
@@ -61,7 +62,7 @@ source $HOME/.dotfiles/functions/aliases.sh
 source $HOME/.dotfiles/functions/functions.sh
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/.dotfiles/functions/ruby-managers.sh
+source $HOME/.dotfiles/functions/ruby-and-node-managers.sh
 
 if not_in_emacs
 then

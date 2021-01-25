@@ -11,13 +11,18 @@ See the [spacemacs javascript layer README](https://github.com/syl20bnr/spacemac
 sudo npm install -g tern
 sudo npm install -g eslint
 sudo npm -g install js-beautify
+sudo gem install sass
 ```
+
+### NVM
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
 ### Packages
 
 ```
 ack
-ag
+silversearcher-ag
 curl
 ccrypt
 docker

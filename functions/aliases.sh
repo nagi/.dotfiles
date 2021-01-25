@@ -34,6 +34,8 @@ alias cdl='cd $HOME/code/ruby/leapfrog'
 alias cdr='cd $HOME/code/ruby/dcom_remarkable'
 alias cds='cd $HOME/code/clojure/snek'
 alias cdv='cd $HOME/code/ruby/vizamyl-app'
+alias cdx='cd $HOME/VVV/www/vyxeos.eu/public_html/wp-content/themes/vyxeos'
+
 
 alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
 

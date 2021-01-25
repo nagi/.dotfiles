@@ -26,8 +26,8 @@ alias srr='bin/spring rake routes'
 alias srt='bin/spring rake --tasks'
 
 # Navigation
-alias cda='cd $HOME/code/rails/about-corp-finance'
-alias cdd='cd $HOME/code/php/drytec-www'
+alias cda='cd $HOME/code/ruby/about-corp-finance'
+alias cdd='cd $HOME/code/js/drone-alone'
 alias cde='cd $HOME/code/exercism'
 alias cdk='cd $HOME/code/clojure/kapow'
 alias cdl='cd $HOME/code/ruby/leapfrog'
@@ -49,7 +49,8 @@ alias ectagall='ectagit . $(bundle list --paths)'
 alias pgd='postgres -D /usr/local/var/postgres'
 alias myd='mysql.server start'
 # Run a web server
-alias ss='python2 -m SimpleHTTPServer 8888'
+alias ss2='python2 -m SimpleHTTPServer 8888'
+alias ss='python3 -m http.server'
 # Tensorflow
 alias tdrun='docker run \
   -it \

@@ -155,7 +155,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 20
+                               :size 16
                                :weight normal
                                :width normal
                                :powerline-scale 1.4)
@@ -389,8 +389,9 @@ code here."
   (spacemacs/set-leader-keys "od" 'set-display-env)
   (spacemacs/set-leader-keys "oj" 'cider-jack-in-clj&cljs)
   (spacemacs/set-leader-keys "op" 'helm-project-do-ag)
-  (setq cider-default-cljs-repl 'figwheel))
-
+  (setq cider-default-cljs-repl 'figwheel)
+  ;; Fix for npm
+  (setq create-lockfiles nil))
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables

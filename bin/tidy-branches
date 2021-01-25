@@ -1,0 +1,13 @@
+#!/bin/bash
+
+git remote prune origin
+git branch --merged | grep -v master | grep -v develop | grep -v staging | grep -v production > /tmp/merged-branches
+echo "-----------------------------------------------------"
+echo "Edit this list of merged branchs (git branch --merged)"
+echo
+echo "Deleting any branches you want to keep."
+echo
+echo
+echo "Press any key."
+read
+vi /tmp/merged-branches && xargs git branch -d </tmp/merged-branches

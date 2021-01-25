@@ -17,6 +17,7 @@ See the [spacemacs javascript layer README](https://github.com/syl20bnr/spacemac
 ack
 ag
 curl
+ccrypt
 docker
 dos2unix
 git
@@ -24,8 +25,9 @@ gitk
 htop
 imagemagick
 jq
-leiningen
+#  leiningen see below (untested)
 maven
+openssh-server
 openjdk
 phantomjs
 python3
@@ -39,6 +41,20 @@ xclip
 xsel
 zsh
 ```
+
+##### leingingen
+
+curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > ~/.local/bin
+chmod a+x ~/.local/bin/lein
+# test
+cd
+which lein
+lein
+# ...should all return 0
+
+##### for Root
+
+sym link my .bashrc, .vim, and .vimrc
 
 ##### for rails
 

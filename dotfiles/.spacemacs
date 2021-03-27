@@ -38,6 +38,7 @@ values."
      ;; ----------------------------------------------------------------
      auto-completion
      ;; better-defaults
+     coffeescript
      (colors :variables colors-enable-nyan-cat-progress-bar (display-graphic-p))
      csv
      (clojure :variables clojure-enable-fancify-symbols nil)
@@ -345,6 +346,13 @@ code here."
     )
 
   (my-setup-indent 2)
+
+  (add-hook 'php-mode-hook 'my-php-mode-hook)
+  (defun my-php-mode-hook ()
+    "My PHP mode configuration."
+    (setq indent-tabs-mode t
+          tab-width 4
+          c-basic-offset 4))
 
   ;; Scale fonts on Linux
   (define-key global-map (kbd "s-=") 'text-scale-increase)

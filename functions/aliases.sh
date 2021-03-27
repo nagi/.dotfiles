@@ -34,6 +34,7 @@ alias cdl='cd $HOME/code/ruby/leapfrog'
 alias cdr='cd $HOME/code/ruby/dcom_remarkable'
 alias cds='cd $HOME/code/clojure/snek'
 alias cdv='cd $HOME/code/ruby/vizamyl-app'
+alias cdss='cd $HOME/VVV/www/vyx/public_html/wp-content/themes/vyxeos-by-seven-stones'
 alias cdx='cd $HOME/VVV/www/vyxeos.eu/public_html/wp-content/themes/vyxeos'
 
 

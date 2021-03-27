@@ -83,8 +83,6 @@ pip3 install runorraise
 
 ```
 sudo apt-get install dnsmasq
-sudo systemctl stop systemd-resolved
-sudo systemctl disable systemd-resolved
 
 sudo vim /etc/dnsmasq.conf
 
@@ -92,10 +90,16 @@ server=8.8.8.8
 server=8.8.4.4
 address=/test/127.0.0.1
 
+sudo systemctl stop systemd-resolved
+sudo systemctl disable systemd-resolved
+
+sudo vim /etc/NetworkManager/NetworkManager.conf # and after [Main] add or change to dns=none. Save the file.
+
+sudo systemctl restart NetworkManager
+sudo systemctl restart dnsmasq
 sudo service dnsmasq restart
 ```
 
-Edit /etc/NetworkManager/NetworkManager.conf and after [Main] add or change to dns=none. Save the file.
 
 sudo apt-get install fonts-powerline
 

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+aplay "$HOME/.dotfiles/linux/assets/shipsbell.wav" > /dev/null 2>&1

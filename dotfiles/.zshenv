@@ -1,4 +1,5 @@
 export PATH=$PATH:$HOME/.dotfiles/bin
+export PATH=$PATH:/opt/google/chrome
 export RUBYMINE_HOME=/Applications/Rubymine.app
 export BUNDLE_EDITOR=view
 export EDITOR=vim

@@ -5,22 +5,24 @@
 --type-set=sass=.sass,.scss
 --type-set=slim=.slim
 
+--ignore-dir=.idea
 --ignore-dir=.sass-cache
 --ignore-dir=coverage
 --ignore-dir=dragonfly
 --ignore-dir=javascripts/lib
+--ignore-dir=lexdata
 --ignore-dir=log
 --ignore-dir=node_modules/
 --ignore-dir=public/system
 --ignore-dir=test
 --ignore-dir=tmp
 --ignore-dir=vendor
---ignore-dir=.idea
 
 --ignore-file=ext:bak
 --ignore-file=ext:pdf
 --ignore-file=is:tags
 
+--ignore-file=match:.eslintcache
 --ignore-file=match:.gitignore
 --ignore-file=match:.powrc
 --ignore-file=match:.rbenv-version

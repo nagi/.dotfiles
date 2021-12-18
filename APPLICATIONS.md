@@ -12,6 +12,8 @@ sudo npm install -g tern
 sudo npm install -g eslint
 sudo npm -g install js-beautify
 sudo gem install sass
+# For exporting Org-Mode docs
+sudo apt install texlive-latex-base texlive-latex-extra                       
 ```
 
 ### NVM
@@ -63,7 +65,7 @@ lein
 
 sym link my .bashrc, .vim, and .vimrc
 
-##### for rails
+##### Ruby on Rails
 
 ```
 sudo apt install curl
@@ -75,7 +77,7 @@ sudo apt-get update
 sudo apt-get install git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
 ```
 
-##### for i3
+##### i3
 
 sudo add-apt-repository ppa:regolith-linux/release
 sudo apt install regolith-desktop-standard
@@ -83,6 +85,7 @@ sudo apt install python3-pip
 pip3 install raiseorlaunch
 sudo mv /etc/regolith/i3/config /etc/regolith/i3/config_ORIGINAL
 sudo ln -s /home/nagi/.dotfiles/linux/regolith-i3-config /etc/regolith/i3/config
+pip3 install raiseorlaunch
 
 ### dnsm dnsmasq
 

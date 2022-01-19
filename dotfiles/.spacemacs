@@ -241,6 +241,12 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(monokai
                          spacemacs-dark
+                         soft-charcoal
+                         django
+                         farmhouse-dark
+                         flatland
+                         bubbleberry
+                         badwolf
                          spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -530,7 +536,11 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-home-shorten-agenda-source nil
 
    ;; If non-nil then byte-compile some of Spacemacs files.
-   dotspacemacs-byte-compile nil))
+   dotspacemacs-byte-compile nil
+
+   ;; Added by me
+   ;; If non nil `Y' is remapped to `y$' in Evil states. (default nil)
+   dotspacemacs-remap-Y-to-y$ t))
 
 (defun dotspacemacs/user-env ()
   "Environment variables setup.
@@ -601,9 +611,9 @@ code here."
   ;; (add-hook 'js2-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
   ;; (add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?- "w")))
   ;; (add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
-
-  (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?- "w")))
-  (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  ;;
+  ;; (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?- "w")))
+  ;; (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
 
   ;; needs to be fixed upstream
   ;; (global-superword-mode t)

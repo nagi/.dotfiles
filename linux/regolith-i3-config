@@ -720,7 +720,7 @@ set $ws_ff FireFox
 
 # wmctrl -l
 # xwininfo -tree -root
-bindsym $hyper+c exec --no-startup-id $raiseorlaunch -w 'Chrome' -c 'Google-chrome' -e 'chrome'
+bindsym $hyper+c exec --no-startup-id $raiseorlaunch -w 'Chrome' -c 'Google-chrome' -e 'google-chrome'
 bindsym $hyper+$alt+c exec --no-startup-id chrome;
 bindsym $hyper+shift+c move container to workspace $ws_chromium; workspace $ws_chromium
 
@@ -762,6 +762,6 @@ bindsym $hyper+d exec --no-startup-id sleep 1 && aplay /home/nagi/.dotfiles/linu
 # For Nopoo Choc Mini or Compaq keyboards...
 #
 # bindsym $mod+x exec /home/nagi/.dotfiles/dotfiles/.xprofile
-exec --no-startup-id xmodmap -e 'add Mod3 = Hyper_R'
 exec --no-startup-id xmodmap -e 'keycode 135 = Hyper_R' 
+exec --no-startup-id xmodmap -e 'add Mod3 = Hyper_R'
 exec --no-startup-id xset -r 135

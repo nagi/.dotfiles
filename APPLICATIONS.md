@@ -77,7 +77,12 @@ sudo apt-get install git-core zlib1g-dev build-essential libssl-dev libreadline-
 
 ##### for i3
 
-pip3 install runorraise
+sudo add-apt-repository ppa:regolith-linux/release
+sudo apt install regolith-desktop-standard
+sudo apt install python3-pip
+pip3 install raiseorlaunch
+sudo mv /etc/regolith/i3/config /etc/regolith/i3/config_ORIGINAL
+sudo ln -s /home/nagi/.dotfiles/linux/regolith-i3-config /etc/regolith/i3/config
 
 ### dnsm dnsmasq
 

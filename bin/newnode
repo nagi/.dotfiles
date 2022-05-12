@@ -1,0 +1,57 @@
+#!/bin/env bash
+
+if [ -z "$1" ]
+  then
+    echo "No name argument supplied"
+fi
+
+mkdir $1
+cd $1
+npm init -y
+git init
+npm install --save-dev jest
+
+cat <<'EOF' > .gitignore
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.eslintcache
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+EOF
+
+cat <<'EOF' > index.js
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
+
+EOF
+
+cat <<'EOF' > index.test.js
+const sum = require('./index');
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
+});
+
+EOF
+
+sed -i '/test":/ s/ "echo.*/ "jest"/' package.json
+

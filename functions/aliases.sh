@@ -25,9 +25,12 @@ alias sr='bin/spring rake'
 alias srr='bin/spring rake routes'
 alias srt='bin/spring rake --tasks'
 
+# Node
+alias dbj="node inspect $(npm bin)/jest --runInBand"
+alias j="npm exec jest"
+
 # Navigation
 alias cda='cd $HOME/code/ruby/about-corp-finance'
-alias cdd='cd $HOME/code/js/drone-alone'
 alias cde='cd $HOME/code/exercism'
 alias cdi='cd $HOME/code/js/iv'
 alias cdk='cd $HOME/code/clojure/kapow'
@@ -37,9 +40,6 @@ alias cds='cd $HOME/code/clojure/snek'
 alias cdv='cd $HOME/code/ruby/vizamyl-app'
 alias cdss='cd $HOME/VVV/www/vyx/public_html/wp-content/themes/vyxeos-by-seven-stones'
 alias cdx='cd $HOME/VVV/www/vyxeos.eu/public_html/wp-content/themes/vyxeos'
-
-
-alias cdw='if [ -d $HOME/rails/web_app ] ; then ; cd $HOME/rails/web_app ; else ; cd /srv/rails/web_app/current ; fi '
 
 # Misc.
 alias pp="ps axuf | pager"

@@ -16,6 +16,11 @@ sudo gem install sass
 sudo apt install texlive-latex-base texlive-latex-extra                       
 ```
 
+In emacs:
+```
+M-x all-the-icons-install-fonts
+```
+
 ### NVM
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash

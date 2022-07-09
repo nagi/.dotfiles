@@ -6,7 +6,6 @@
   "Layer configuration:
 This function should only modify configuration layer settings."
   (setq-default
-   vim-style-remap-Y-to-y$ t
    ;; Base distribution to use. This is a layer contained in the directory
    ;; `+distribution'. For now available distributions are `spacemacs-base'
    ;; or `spacemacs'. (default 'spacemacs)
@@ -84,7 +83,7 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(all-the-icons)
+   dotspacemacs-additional-packages '()
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -185,9 +184,7 @@ It should only modify the values of Spacemacs settings."
    ;; with `:variables' keyword (similar to layers). Check the editing styles
    ;; section of the documentation for details on available variables.
    ;; (default 'vim)
-   dotspacemacs-editing-style '(vim :variables
-                                    ;; Remap `Y' to `y$'
-                                    vim-style-remap-Y-to-y$ t)
+   dotspacemacs-editing-style '(vim :variables vim-style-remap-Y-to-y$ t)
 
    ;; If non-nil, show vim-like empty line indicators at the end of files.
    ;; Takes effect only if `spacemacs-evil' layer is enabled.

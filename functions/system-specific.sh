@@ -4,10 +4,11 @@ then
     [[ -s ~/.dotfiles/functions/iterm2-helpers.sh ]] && source ~/.dotfiles/functions/iterm2-helpers.sh
 
     # Prefer homebrew applications.
-    export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/games:/usr/local/mysql/bin:$PATH
+    export PATH="/opt/homebrew/bin:$PATH"
 
     export PATH="/usr/local/opt/mongodb@3.0/bin:$PATH"
     export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
+
     # Put stuff on pendrive
     export VAGRANT_HOME='/Volumes/Quicker/vagrant.d'
     export ANDROID_HOME=/Volumes/Quicker/android-sdk-macosx

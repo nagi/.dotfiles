@@ -3,34 +3,47 @@
 # This file runs when you use a graphical login like gdm3 or slim
 
 Set_desktop_wallpaper () {
-    BACKGROUND=$HOME/.dotfiles/linux/assets/my-x-background.jpg
+  BACKGROUND=$HOME/.dotfiles/linux/assets/my-x-background.jpg
 
-    if [ -f $BACKGROUND ]; then
-        feh --bg-scale $BACKGROUND
-    fi
+  if [ -f $BACKGROUND ]; then
+    feh --bg-scale $BACKGROUND
+  fi
 }
 
 Noppoo_keyboard_detect () {
-    NOPPOO_KEYBOARD_DEV_ID=1006:0022
-    lsusb | grep -q $NOPPOO_KEYBOARD_DEV_ID
+  NOPPOO_KEYBOARD_DEV_ID=1006:0022
+  lsusb | grep -q $NOPPOO_KEYBOARD_DEV_ID
+}
+
+T8_keyboard_detect () {
+  T8_KEYBOARD_DEV_ID=320f:505b
+  lsusb | grep -q $T8_KEYBOARD_DEV_ID
 }
 
 Map_noppoo () {
-    /usr/bin/xmodmap $HOME/.dotfiles/linux/Xmodmap.noppoo
+  /usr/bin/xmodmap $HOME/.dotfiles/linux/Xmodmap.noppoo
+}
+
+Map_t8 () {
+  /usr/bin/xmodmap $HOME/.dotfiles/linux/Xmodmap.t8
 }
 
 Map_compaq () {
-    /usr/bin/xmodmap $HOME/.dotfiles/linux/Xmodmap.compaq
+  /usr/bin/xmodmap $HOME/.dotfiles/linux/Xmodmap.compaq
 }
 
 Map_keys () {
-    Noppoo_keyboard_detect
-    if [ $? -eq 0 ]
-    then
-        Map_noppoo
-    else
-        Map_compaq
-    fi
+  Noppoo_keyboard_detect
+  if [ $? -eq 0 ]
+  then
+    Map_noppoo
+  fi
+
+  T8_keyboard_detect
+  if [ $? -eq 0 ]
+  then
+    Map_t8
+  fi
 }
 
 Map_keys

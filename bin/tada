@@ -1,0 +1,12 @@
+#!/bin/bash
+
+TADA_SOUNDS_DIR="$HOME/Dropbox/assets" 
+
+if [ -d "$TADA_SOUNDS_DIR" ]
+then
+  RANDOM_TADA_SOUND=$(ls $TADA_SOUNDS_DIR | sort -R | head -n 1)
+  aplay "$TADA_SOUNDS_DIR/$RANDOM_TADA_SOUND" # > /dev/null 2>&1 &
+else
+  aplay "$HOME/.dotfiles/linux/assets/tada.wav" # > /dev/null 2>&1 &
+fi
+

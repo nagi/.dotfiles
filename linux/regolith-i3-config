@@ -676,10 +676,12 @@ set_from_resource $i3-wm.program.3 i3-wm.program.3 :
 exec --no-startup-id $i3-wm.program.3
 
 ####################################
-# BEGIN NAGI CONFIGS. TODO: Move
+# BEGIN NAGI CONFIGS TODO: Move
 # custom workspaces
 
-set_from_resource $hyper  i3-wm.hyper Mod3
+set $hyper Mod3
+
+bindsym $mod+$hyper+Escape exec xdotool key Caps_Lock
 
 ## Navigate // Workspaces 1-10 // <> 0..9 ##
 bindsym $hyper+1 workspace number $ws1
@@ -717,10 +719,11 @@ set $ws_code Code
 set $ws_term Term
 set $ws_slack Slack
 set $ws_ff FireFox
+set $ws_opera Opera
 
 # wmctrl -l
 # xwininfo -tree -root
-bindsym $hyper+c exec --no-startup-id $raiseorlaunch -w 'Chrome' -c 'Google-chrome' -e 'google-chrome'
+bindsym $hyper+c exec --no-startup-id $raiseorlaunch -w 'Chrome' -c 'Google-chrome' -e 'chrome'
 bindsym $hyper+$alt+c exec --no-startup-id chrome;
 bindsym $hyper+shift+c move container to workspace $ws_chromium; workspace $ws_chromium
 
@@ -740,28 +743,20 @@ bindsym $hyper+s exec --no-startup-id $raiseorlaunch -w $ws_slack -c Slack
 bindsym $hyper+$alt+s exec --no-startup-id slack
 bindsym $hyper+shift+s move container to workspace $ws_slack; workspace $ws_slack
 
-bindsym $hyper+f exec --no-startup-id $raiseorlaunch -w $ws_ff -c Firefox
+bindsym $hyper+f exec --no-startup-id $raiseorlaunch -w $ws_ff -c firefox
 bindsym $hyper+$alt+f exec --no-startup-id firefox
 bindsym $hyper+shift+f move container to workspace $ws_ff; workspace $ws_ff
 
-bindsym $hyper+Up [class=".*"] move workspace to output DisplayPort-0; workspace $ws_slack; move workspace to output HDMI-A-0; workspace $ws8; move workspace to output HDMI-A-0; workspace $ws9; move workspace to output HDMI-A-0; workspace $ws10; move workspace to output HDMI-A-0; workspace $ws_ff; move workspace to output HDMI-A-0; workspace $ws_chromium
+bindsym $hyper+o exec --no-startup-id $raiseorlaunch -w $ws_opera -c Opera -e opera
+bindsym $hyper+$alt+o exec --no-startup-id opera
+bindsym $hyper+shift+o move container to workspace $ws_opera; workspace $ws_opera
+
+bindsym $hyper+Up [class=".*"] move workspace to output DisplayPort-0; workspace $ws_slack; move workspace to output HDMI-A-0; workspace $ws8; move workspace to output HDMI-A-0; workspace $ws9; move workspace to output HDMI-A-0; workspace $ws10; move workspace to output HDMI-A-0; workspace $ws_opera; move workspace to output HDMI-A-0; workspace $ws_ff; move workspace to output HDMI-A-0; workspace $ws_chromium
 
 bindsym $hyper+Left move workspace to output DisplayPort-0;
 bindsym $hyper+Right move workspace to output HDMI-A-0;
 
-bindsym $hyper+d exec --no-startup-id sleep 1 && aplay /home/nagi/.dotfiles/linux/assets/tada.wav
+bindsym $hyper+d exec --no-startup-id /home/nagi/.dotfiles/bin/tada
 
-# TODO Automate
-#
-# if grep -q 'HP EliteBook 840 G6' /sys/class/dmi/id/product_name; then
-#   echo found
-# else
-#   echo not found
-# fi
-
-# For Nopoo Choc Mini or Compaq keyboards...
-#
-# bindsym $mod+x exec /home/nagi/.dotfiles/dotfiles/.xprofile
-exec --no-startup-id xmodmap -e 'keycode 135 = Hyper_R' 
-exec --no-startup-id xmodmap -e 'add Mod3 = Hyper_R'
-exec --no-startup-id xset -r 135
+# Source xprofile
+bindsym $mod+x exec /home/nagi/.dotfiles/dotfiles/.xprofile

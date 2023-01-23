@@ -7,4 +7,4 @@ export VISUAL=vim
 export NVM_DIR="$HOME/.nvm"
 
 export GML_GFS_TEMPLATE="$HOME/.dotfiles/data/Land_Registry_Cadastral_Parcels.gfs"
-eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"

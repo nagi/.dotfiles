@@ -1,0 +1,83 @@
+####################################
+set $hyper Mod3
+
+# Not required to T8
+# bindsym $mod+$hyper+Escape exec xdotool key Caps_Lock
+
+## Navigate // Workspaces 1-10 // <> 0..9 ##
+bindsym $hyper+1 workspace number $ws1
+bindsym $hyper+2 workspace number $ws2
+bindsym $hyper+3 workspace number $ws3
+bindsym $hyper+4 workspace number $ws4
+bindsym $hyper+5 workspace number $ws5
+bindsym $hyper+6 workspace number $ws6
+bindsym $hyper+7 workspace number $ws7
+bindsym $hyper+8 workspace number $ws8
+bindsym $hyper+9 workspace number $ws9
+bindsym $hyper+0 workspace number $ws10
+## Navigate // Workspace 11 - 19 // <><Ctrl> 0..9 ##
+bindsym $hyper+Ctrl+1 workspace number $ws11
+bindsym $hyper+Ctrl+2 workspace number $ws12
+bindsym $hyper+Ctrl+3 workspace number $ws13
+bindsym $hyper+Ctrl+4 workspace number $ws14
+bindsym $hyper+Ctrl+5 workspace number $ws15
+bindsym $hyper+Ctrl+6 workspace number $ws16
+bindsym $hyper+Ctrl+7 workspace number $ws17
+bindsym $hyper+Ctrl+8 workspace number $ws18
+bindsym $hyper+Ctrl+9 workspace number $ws19
+
+set $raiseorlaunch /home/nagi/.local/bin/raiseorlaunch
+
+# set $ws_chromium 
+# set $ws_im 
+# set $ws_mail 
+# set $ws_files 
+# set $ws_gimp 6:
+# set $ws_ff 
+set $ws_chromium Chrome
+set $ws_emacs Emacs
+set $ws_code Code
+set $ws_term Term
+set $ws_slack Slack
+set $ws_ff FireFox
+set $ws_opera Opera
+
+# wmctrl -l
+# xwininfo -tree -root
+bindsym $hyper+c exec --no-startup-id $raiseorlaunch -w 'Chrome' -c 'Google-chrome' -e 'chrome'
+bindsym $hyper+$alt+c exec --no-startup-id chrome;
+bindsym $hyper+shift+c move container to workspace $ws_chromium; workspace $ws_chromium
+
+bindsym $hyper+e exec --no-startup-id $raiseorlaunch -w $ws_emacs -c Emacs;
+bindsym $hyper+$alt+e exec --no-startup-id emacs
+bindsym $hyper+shift+e move container to workspace $ws_emacs; workspace $ws_emacs
+
+bindsym $hyper+v exec --no-startup-id $raiseorlaunch -w $ws_code -s 'Visual Studio Code' -e '/snap/bin/code -r'
+bindsym $hyper+$alt+v exec --no-startup-id code
+bindsym $hyper+shift+v move container to workspace $ws_code; workspace $ws_code
+
+bindsym $hyper+t exec --no-startup-id $raiseorlaunch -w $ws_term -s gnome-terminal-server -e /usr/bin/x-terminal-emulator;
+bindsym $hyper+$alt+t exec --no-startup-id /usr/bin/x-terminal-emulator;
+bindsym $hyper+shift+t move container to workspace $ws_term; workspace $ws_term
+
+bindsym $hyper+s exec --no-startup-id $raiseorlaunch -w $ws_slack -c Slack
+bindsym $hyper+$alt+s exec --no-startup-id slack
+bindsym $hyper+shift+s move container to workspace $ws_slack; workspace $ws_slack
+
+bindsym $hyper+f exec --no-startup-id $raiseorlaunch -w $ws_ff -c firefox
+bindsym $hyper+$alt+f exec --no-startup-id firefox
+bindsym $hyper+shift+f move container to workspace $ws_ff; workspace $ws_ff
+
+bindsym $hyper+o exec --no-startup-id $raiseorlaunch -w $ws_opera -c Opera -e opera
+bindsym $hyper+$alt+o exec --no-startup-id opera
+bindsym $hyper+shift+o move container to workspace $ws_opera; workspace $ws_opera
+
+bindsym $hyper+Up [class=".*"] move workspace to output DisplayPort-0; workspace $ws_slack; move workspace to output HDMI-A-0; workspace $ws8; move workspace to output HDMI-A-0; workspace $ws9; move workspace to output HDMI-A-0; workspace $ws10; move workspace to output HDMI-A-0; workspace $ws_opera; move workspace to output HDMI-A-0; workspace $ws_ff; move workspace to output HDMI-A-0; workspace $ws_chromium
+
+bindsym $hyper+Left move workspace to output DisplayPort-0;
+bindsym $hyper+Right move workspace to output HDMI-A-0;
+
+bindsym $hyper+d exec --no-startup-id /home/nagi/.dotfiles/bin/tada
+
+# Source xprofile
+bindsym $mod+x exec /home/nagi/.dotfiles/dotfiles/.xprofile

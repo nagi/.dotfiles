@@ -47,3 +47,6 @@ Map_keys () {
 }
 
 Map_keys
+
+# Exit OK
+true

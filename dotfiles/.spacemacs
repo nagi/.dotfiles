@@ -38,29 +38,31 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
+     ;; auto-completion
      ;; better-defaults
      c-c++
-     coffeescript
+     ;; coffeescript
      (colors :variables colors-enable-nyan-cat-progress-bar (display-graphic-p))
      csv
      (clojure :variables clojure-enable-fancify-symbols nil)
-     docker
+     ;; docker
      emacs-lisp
-     emoji
+     ;; emoji
      ;; floobits
      git
+     ;; haskell
      helm
      html
-     java
+     ;; java
      javascript
      markdown
      ;; nginx
      multiple-cursors
-     octave
+     ;; octave
      org
+     ;; spacemacs-org
      ;; osx
-     php
+     ;; php
      python
      react
      (ruby :variables ruby-enable-enh-ruby-mode t)
@@ -69,10 +71,10 @@ This function should only modify configuration layer settings."
             shell-default-height 30
             shell-default-position 'bottom)
      spell-checking
-     sql
-     syntax-checking
+     ;; sql
+     ;; syntax-checking
      treemacs
-     version-control
+     ;; version-control
      yaml)
 
    ;; List of additional packages that will be installed without being wrapped
@@ -285,7 +287,7 @@ It should only modify the values of Spacemacs settings."
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 22
+                               :size 18
                                :weight normal
                                :width normal
                                :powerline-scale 1.4)
@@ -391,8 +393,8 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-maximized-at-startup nil
 
    ;; If non-nil the frame is undecorated when Emacs starts up. Combine this
-   ;; variable with `dotspacemacs-maximized-at-startup' in OSX to obtain
-   ;; borderless fullscreen. (default nil)
+   ;; variable with `dotspacemacs-maximized-at-startup' to obtain fullscreen
+   ;; without external boxes. Also disables the internal border. (default nil)
    dotspacemacs-undecorated-at-startup nil
 
    ;; A value from the range (0..100), in increasing opacity, which describes
@@ -404,6 +406,11 @@ It should only modify the values of Spacemacs settings."
    ;; the transparency level of a frame when it's inactive or deselected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
    dotspacemacs-inactive-transparency 90
+
+   ;; A value from the range (0..100), in increasing opacity, which describes the
+   ;; transparency level of a frame background when it's active or selected. Transparency
+   ;; can be toggled through `toggle-background-transparency'. (default 90)
+   dotspacemacs-background-transparency 90
 
    ;; If non-nil show the titles of transient states. (default t)
    dotspacemacs-show-transient-state-title t
@@ -517,7 +524,7 @@ It should only modify the values of Spacemacs settings."
    ;; Color highlight trailing whitespace in all prog-mode and text-mode derived
    ;; modes such as c++-mode, python-mode, emacs-lisp, html-mode, rst-mode etc.
    ;; (default t)
-   dotspacemacs-show-trailing-whitespace t 
+   dotspacemacs-show-trailing-whitespace t
 
    ;; Delete whitespace while saving buffer. Possible values are `all'
    ;; to aggressively delete empty line and long sequences of whitespace,

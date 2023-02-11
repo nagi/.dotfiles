@@ -40,7 +40,6 @@ plugins=(
   node
   npm
   nvm
-  osx
   pip
   postgres
   rake
@@ -64,7 +63,6 @@ bindkey -M vicmd v edit-command-line
 source $HOME/.dotfiles/functions/system-specific.sh # Me first
 source $HOME/.dotfiles/functions/aliases.sh
 source $HOME/.dotfiles/functions/functions.sh
-source $HOME/.dotfiles/functions/secrets.sh
 source $ZSH/oh-my-zsh.sh
 
 # Confidential stuff

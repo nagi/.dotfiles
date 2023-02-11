@@ -44,7 +44,7 @@ set $ws_opera Opera
 
 # wmctrl -l
 # xwininfo -tree -root
-bindsym $hyper+c exec --no-startup-id $raiseorlaunch -w 'Chrome' -c 'Google-chrome' -e 'chrome'
+bindsym $hyper+c exec --no-startup-id $raiseorlaunch -w $ws_chromium -c 'Google-chrome' -e 'google-chrome'
 bindsym $hyper+$alt+c exec --no-startup-id chrome;
 bindsym $hyper+shift+c move container to workspace $ws_chromium; workspace $ws_chromium
 

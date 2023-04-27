@@ -20,6 +20,11 @@ T8_keyboard_detect () {
   lsusb | grep -q $T8_KEYBOARD_DEV_ID
 }
 
+Pampers_keyboard_detect () {
+  PAMPERS_KEYBOARD_DEV_ID=2f81:2608
+  lsusb | grep -q $PAMPERS_KEYBOARD_DEV_ID
+}
+
 Map_noppoo () {
   /usr/bin/xmodmap $HOME/.dotfiles/linux/Xmodmap.noppoo
 }
@@ -43,6 +48,12 @@ Map_keys () {
   if [ $? -eq 0 ]
   then
     Map_t8
+  fi
+
+  Pampers_keyboard_detect
+  if [ $? -eq 0 ]
+  then
+    Map_t8 # Same as t8
   fi
 }
 

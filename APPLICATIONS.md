@@ -88,6 +88,8 @@ sudo add-apt-repository ppa:regolith-linux/release
 sudo apt install regolith-desktop-standard
 sudo apt install python3-pip
 ln -s $HOME/.dotfiles/linux/nagi-regolith-i3-config $HOME/.config/regolith2/i3/config.d
+
+mv /usr/lib/python3.x/EXTERNALLY-MANAGED /usr/lib/python3.x/EXTERNALLY-MANAGED_disabled_by_nagi
 pip3 install raiseorlaunch
 
 ### dnsm dnsmasq

@@ -78,6 +78,6 @@ bindsym $hyper+Left move workspace to output DisplayPort-0;
 bindsym $hyper+Right move workspace to output HDMI-A-0;
 
 bindsym $hyper+d exec --no-startup-id /home/nagi/.dotfiles/bin/tada
-
+bindsym $hyper+p exec --no-startup-id /home/nagi/.dotfiles/bin/xcolorpick
 # Source xprofile
 bindsym $mod+x exec /home/nagi/.dotfiles/dotfiles/.xprofile

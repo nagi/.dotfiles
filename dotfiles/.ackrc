@@ -7,6 +7,7 @@
 
 --ignore-dir=.idea
 --ignore-dir=.sass-cache
+--ignore-dir=.shadow-cljs
 --ignore-dir=coverage
 --ignore-dir=dragonfly
 --ignore-dir=javascripts/lib

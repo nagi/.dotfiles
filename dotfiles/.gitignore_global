@@ -1,11 +1,7 @@
 # https://github.com/github/gitignore
 
-
-
 # MacOS
 #######
-
-
 
 *.DS_Store
 .AppleDouble
@@ -34,12 +30,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-
-
 # Emacs
 #######
-
-
 
 # -*- mode: gitignore; -*-
 *~
@@ -78,9 +70,6 @@ dist/
 # Flycheck
 flycheck_*.el
 
-# server auth directory
-/server/
-
 # projectiles files
 .projectile
 
@@ -88,12 +77,8 @@ flycheck_*.el
 .dir-locals.el
 Contact GitHub API Training Shop Blog About
 
-
-
 # VIM
 #####
-
-
 
 # swap
 [._]*.s[a-v][a-z]

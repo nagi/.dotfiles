@@ -8,6 +8,8 @@ function ff() { find . -iname "*$@*"; }
 
 function fp() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
 
+function smell80() { sudo lsof -i:80; sudo lsof -tnP -i:80 | xargs -n 1 ps -p }
+
 function remove_lines_from() { grep -F -x -v -f $2 $1; }
 
 function mkcd() { mkdir $1 && cd $1; }

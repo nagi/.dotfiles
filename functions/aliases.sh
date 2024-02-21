@@ -33,6 +33,7 @@ alias j="npm exec jest"
 
 # Navigation
 alias cda='cd $HOME/code/ruby/about-corp-finance'
+alias cdb='cd $HOME/code/php/bone-health/app/public/wp-content/themes/bone-health'
 alias cdc='cd $HOME/code/leetcode/clojure/solutions'
 alias cde='cd $HOME/code/exercism'
 alias cdee='cd $HOME/VVV/www/falk-hub/public_html/wp-content/themes/eoe'
@@ -42,8 +43,9 @@ alias cdk='cd $HOME/code/clojure/kapow'
 alias cdq='cd $HOME/code/ruby/vizquiz'
 alias cdr='cd $HOME/code/leetcode/solution_template'
 alias cds='cd $HOME/code/clojure/snek'
-alias cdss='cd $HOME/VVV/www/vyx/public_html/wp-content/themes/vyxeos-by-seven-stones'
 alias cdv='cd $HOME/code/ruby/vizamyl-app'
+alias cdq='cd $HOME/code/ruby/vizquiz'
+alias cdss='cd $HOME/VVV/www/vyx/public_html/wp-content/themes/vyxeos-by-seven-stones'
 alias cdvv='cd $HOME/VVV/www/vyx/public_html/wp-content/themes/vyxeos-by-seven-stones'
 
 # Misc.

@@ -16,6 +16,7 @@
 --ignore-dir=public/system
 --ignore-dir=tmp
 --ignore-dir=vendor
+--ignore-dir=patched-gems
 
 --ignore-file=ext:bak
 --ignore-file=ext:pdf

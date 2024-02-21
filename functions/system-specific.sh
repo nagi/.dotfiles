@@ -17,6 +17,9 @@ then
     if `/usr/libexec/java_home -v 1.8 &> /dev/null` ; then alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`" ; fi
     if `/usr/libexec/java_home -v 11 &> /dev/null` ; then alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`" ; fi
     if `/usr/libexec/java_home -v 13 &> /dev/null` ; then alias j13="export JAVA_HOME=`/usr/libexec/java_home -v 13`" ; fi
+
+    # Remember SSH key password
+    ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 else
     # Run ssh-agent: https://wiki.archlinux.org/index.php/SSH_keys#ssh-agent
     [[ -s /etc/arch-release ]] && eval `keychain --eval --agents ssh id_rsa --quiet`

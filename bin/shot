@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd $HOME/Dropbox/backgrounds
+
+scrot --autoselect 62,276,1377,1000 --overwrite $HOME/Dropbox/backgrounds/board.png
+
+convert board.png -fill black -colorize 50% board.png
+convert -background none radial.png board.png -gravity Center -composite -layers flatten board.png
+
+exit 0

@@ -599,6 +599,11 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
+  ;; for serbea teamplates. They are like liquid templates.
+  (add-to-list 'auto-mode-alist '("\\.serb\\'" . web-mode))
+  (setq web-mode-engines-alist
+        '(("liquid"    . "\\.serb\\'")))
+
   (defun my-setup-indent (n)
     (setq c-basic-offset n) ;; java/c/c++
     (setq coffee-tab-width n) ; coffeescript

@@ -1,17 +1,30 @@
 #!/bin/bash
 
-cd $HOME/Dropbox/backgrounds
+DIR=$HOME/Dropbox/backgrounds/board/
+FILE_NAME=4mac-board_$(date +%s%N).png
+IMAGE=$DIR$FILE_NAME
+
+cd $DIR
+rm 4mac-board_*
 
 if [ `uname` = Darwin ]
 then
-  screencapture board.png -m
-  convert board.png -crop 2300x500+100+800 board.png
+  screencapture -m $FILE_NAME
+  convert $FILE_NAME -crop 2300x500+100+800 $FILE_NAME
+  convert $FILE_NAME -fill black -colorize 50% $FILE_NAME
+  convert -background none radial.png $FILE_NAME -gravity Center -composite -layers flatten $FILE_NAME
+  osascript \
+    -e 'tell application "System Events"' \
+    -e '  tell every desktop' \
+    -e "    set picture to \"$IMAGE\"" \
+    -e '  end tell' \
+    -e 'end tell'
+  cp $FILE_NAME board.png
 else
-  scrot --autoselect 62,276,1377,1000 --overwrite $HOME/Dropbox/backgrounds/board.png
+  scrot --autoselect 62,276,1377,1000 --overwrite $DIR/board.png
+  convert board.png -fill black -colorize 50% board.png
+  convert -background none radial.png board.png -gravity Center -composite -layers flatten board.png
+  cp board.png $(ls 4mac-board_*)
 fi
-
-# Darken the image a bit
-convert board.png -fill black -colorize 50% board.png
-convert -background none radial.png board.png -gravity Center -composite -layers flatten board.png
 
 exit 0

@@ -2,8 +2,15 @@
 
 cd $HOME/Dropbox/backgrounds
 
-scrot --autoselect 62,276,1377,1000 --overwrite $HOME/Dropbox/backgrounds/board.png
+if [ `uname` = Darwin ]
+then
+  screencapture board.png -m
+  convert board.png -crop 2300x500+100+800 board.png
+else
+  scrot --autoselect 62,276,1377,1000 --overwrite $HOME/Dropbox/backgrounds/board.png
+fi
 
+# Darken the image a bit
 convert board.png -fill black -colorize 50% board.png
 convert -background none radial.png board.png -gravity Center -composite -layers flatten board.png
 

@@ -5,10 +5,10 @@ FILE_NAME=4mac-board_$(date +%s%N).png
 IMAGE=$DIR$FILE_NAME
 
 cd $DIR
-rm 4mac-board_*
 
 if [ `uname` = Darwin ]
 then
+  rm 4mac-board_*
   screencapture -m $FILE_NAME
   convert $FILE_NAME -crop 2300x500+100+800 $FILE_NAME
   convert $FILE_NAME -fill black -colorize 50% $FILE_NAME

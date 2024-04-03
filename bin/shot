@@ -21,7 +21,7 @@ then
     -e 'end tell'
   cp $FILE_NAME board.png
 else
-  scrot --autoselect 62,276,1377,1000 --overwrite $DIR/board.png
+  scrot --autoselect 62,452,1415,300 --overwrite $DIR/board.png
   convert board.png -fill black -colorize 50% board.png
   convert -background none radial.png board.png -gravity Center -composite -layers flatten board.png
   cp board.png $(ls 4mac-board_*)

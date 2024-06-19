@@ -10,7 +10,7 @@ if [ `uname` = Darwin ]
 then
   rm 4mac-board_*
   screencapture -m $FILE_NAME
-  convert $FILE_NAME -crop 2300x500+100+800 $FILE_NAME
+  convert $FILE_NAME -crop 2480x480+100+950 $FILE_NAME
   convert $FILE_NAME -fill black -colorize 50% $FILE_NAME
   convert -background none radial.png $FILE_NAME -gravity Center -composite -layers flatten $FILE_NAME
   osascript \
